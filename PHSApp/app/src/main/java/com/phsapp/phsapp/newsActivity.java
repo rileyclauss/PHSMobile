@@ -17,7 +17,6 @@ public class newsActivity extends AppCompatActivity {
         websettings.setJavaScriptEnabled(true);
         myWebView.setWebViewClient(new WebViewClient());
         myWebView.loadUrl("https://penn.phmschools.org/news");
-//comment
 
     }
 }
