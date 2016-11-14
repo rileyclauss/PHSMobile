@@ -2,6 +2,7 @@ package com.phsapp.phsapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.*;
@@ -18,14 +19,17 @@ public class newsActivity extends AppCompatActivity {
         myWebView.setWebViewClient(new WebViewClient());
         final WebView webview = (WebView)findViewById(R.id.webview2);
         webview.getSettings().setJavaScriptEnabled(true);
+        myWebView.loadUrl("https://penn.phmschools.org/news");
         webview.setWebViewClient(new WebViewClient() {
             @Override
-            public void onPageFinished(WebView view, String url)
-            {
-                myWebView.loadUrl("javascript:(function() { " + "document.getElementByClass('1-header')[0].style.display=(none); " + "})()");
+            public void onPageFinished(WebView view, String url) {
+                webview.loadUrl("javascript:(function() { " +
+                        "var head = document.getElementsByTagName('header')[0];"
+                        + "head.parentNode.removeChild(head);"+
+                        "})()");
+
             }
         });
-        myWebView.loadUrl("https://penn.phmschools.org/news");
 
     }
 }
