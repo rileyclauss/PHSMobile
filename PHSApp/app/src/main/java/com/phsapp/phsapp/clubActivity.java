@@ -27,6 +27,7 @@ public class clubActivity extends AppCompatActivity {
                         + "head.parentNode.removeChild(head);"+
                         "})()");
 
+
             }
         });
     }

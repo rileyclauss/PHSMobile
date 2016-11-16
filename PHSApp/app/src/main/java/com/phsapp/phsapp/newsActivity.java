@@ -17,19 +17,25 @@ public class newsActivity extends AppCompatActivity {
         WebSettings websettings = myWebView.getSettings();
         websettings.setJavaScriptEnabled(true);
         myWebView.setWebViewClient(new WebViewClient());
-        final WebView webview = (WebView)findViewById(R.id.webview2);
-        webview.getSettings().setJavaScriptEnabled(true);
-        myWebView.loadUrl("https://penn.phmschools.org/news");
-        webview.setWebViewClient(new WebViewClient() {
+        myWebView.getSettings().setJavaScriptEnabled(true);
+        myWebView.loadUrl("http://penn.phmschools.org/news");
+        myWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
-                webview.loadUrl("javascript:(function() { " +
-                        "var head = document.getElementsByTagName('header')[0];"
-                        + "head.parentNode.removeChild(head);"+
-                        "})()");
-
+                super.onPageFinished(view, url);
             }
         });
 
     }
+
+ /**   public void onPageFinished(WebView view, String url) {
+
+        webview.loadUrl("javascript:(function() { " +
+                "var head = document.getElementsByClassName('header'); head.[0].style.display='none'; })()");
+        webview.loadUrl("javascript:(function() { " +
+                "var bott = document.getElementsByClassName('sidebar-homepage')[0];"
+                + "bott.parentNode.removeChild(bott);"+
+                "})()");
+
+    }**/
 }
