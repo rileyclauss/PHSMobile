@@ -1,7 +1,6 @@
 package com.phsapp.phsapp;
 import android.os.Bundle;
 import android.content.Intent;
-import android.os.*;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 

@@ -30,18 +30,5 @@ public class newsActivity extends AppCompatActivity {
                 myWebView.setVisibility(View.VISIBLE);
             }
         });
-
     }
-
-
-  /**  public void onPageFinished(WebView view, String url) {
-
-        myWebView.loadUrl("javascript:(function() { " +
-                "var head = document.getElementsByClassName('header'); head.[0].style.display='none'; })()");
-        mywebview.loadUrl("javascript:(function() { " +
-                "var bott = document.getElementsByClassName('sidebar-homepage')[0];"
-                + "bott.parentNode.removeChild(bott);"+
-                "})()");
-
-    } **/
 }

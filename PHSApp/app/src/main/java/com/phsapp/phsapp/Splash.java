@@ -3,7 +3,6 @@ package com.phsapp.phsapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.*;
 import android.content.Intent;
-import android.view.View;
 
 public class Splash extends AppCompatActivity {
     @Override
