@@ -14,6 +14,7 @@ public class newsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
         final WebView myWebView = (WebView) findViewById(R.id.webview2);
+        myWebView.setVisibility(View.INVISIBLE);
         WebSettings websettings = myWebView.getSettings();
         websettings.setJavaScriptEnabled(true);
         myWebView.setWebViewClient(new WebViewClient());
@@ -22,20 +23,25 @@ public class newsActivity extends AppCompatActivity {
         myWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
+                myWebView.loadUrl("javascript:(function() { " +
+                        "var head = document.getElementsByTagName('header')[0];"
+                        + "head.parentNode.removeChild(head);"+
+                        "})()");
+                myWebView.setVisibility(View.VISIBLE);
             }
         });
 
     }
 
- /**   public void onPageFinished(WebView view, String url) {
 
-        webview.loadUrl("javascript:(function() { " +
+  /**  public void onPageFinished(WebView view, String url) {
+
+        myWebView.loadUrl("javascript:(function() { " +
                 "var head = document.getElementsByClassName('header'); head.[0].style.display='none'; })()");
-        webview.loadUrl("javascript:(function() { " +
+        mywebview.loadUrl("javascript:(function() { " +
                 "var bott = document.getElementsByClassName('sidebar-homepage')[0];"
                 + "bott.parentNode.removeChild(bott);"+
                 "})()");
 
-    }**/
+    } **/
 }

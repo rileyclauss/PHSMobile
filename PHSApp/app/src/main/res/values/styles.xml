@@ -8,8 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="pennmeme">
-        <item name="android:windowBackground">@drawable/penguins</item>
-        <item name="android:background">@drawable/penguins</item>
+        <item name="android:windowBackground">@drawable/splashscreen</item>
+        <item name="android:background">@drawable/splashscreen</item>
 
     </style>
     <style name="penntheme" parent="Theme.AppCompat.NoActionBar" >

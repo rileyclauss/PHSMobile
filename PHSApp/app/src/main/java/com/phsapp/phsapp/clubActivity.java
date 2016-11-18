@@ -10,6 +10,7 @@ public class clubActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_club);
         WebView myWebView = (WebView) findViewById(R.id.webview1);
@@ -19,15 +20,13 @@ public class clubActivity extends AppCompatActivity {
         final WebView webview = (WebView)findViewById(R.id.webview1);
         webview.getSettings().setJavaScriptEnabled(true);
         myWebView.loadUrl("https://penn.phmschools.org/students-and-parents/get-involved/students");
-        webview.setWebViewClient(new WebViewClient() {
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                webview.loadUrl("javascript:(function() { " +
-                        "var head = document.getElementsByTagName('header')[0];"
-                        + "head.parentNode.removeChild(head);"+
-                        "})()");
-
-
+                webview.setWebViewClient(new WebViewClient() {
+                    @Override
+                    public void onPageFinished(WebView view, String url) {
+                        webview.loadUrl("javascript:(function() { " +
+                                "var head = document.getElementsByTagName('header')[0];"
+                                + "head.parentNode.removeChild(head);"+
+                                "})()");
             }
         });
     }
