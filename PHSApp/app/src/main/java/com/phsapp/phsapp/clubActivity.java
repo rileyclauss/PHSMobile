@@ -13,6 +13,8 @@ public class clubActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_club);
+        final pl.droidsonroids.gif.GifTextView loading;
+        loading = @loading;
         final WebView myWebView = (WebView) findViewById(R.id.webview1);
         myWebView.setVisibility(View.INVISIBLE);
         WebSettings websettings = myWebView.getSettings();
@@ -22,6 +24,7 @@ public class clubActivity extends AppCompatActivity {
         myWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
+                loading.setVisibility(View.INVISIBLE);
                 myWebView.loadUrl("javascript:(function() { " +
                         "var head = document.getElementsByTagName('header')[0];"
                         + "head.parentNode.removeChild(head);"+
