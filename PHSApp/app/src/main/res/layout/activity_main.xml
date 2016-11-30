@@ -366,5 +366,19 @@
         android:layout_toLeftOf="@+id/PhotoGalleryButton"
         android:layout_toStartOf="@+id/PhotoGalleryButton" />
 
+    <ImageButton
+        app:srcCompat="@drawable/scoreboard"
+        android:id="@+id/AthleticsButton"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:tag="photogallery"
+        android:onClick="photoAct"
+        android:cropToPadding="false"
+        android:layout_above="@+id/AthleticsText"
+        android:layout_marginLeft="179dp" />
+
 
 </RelativeLayout>

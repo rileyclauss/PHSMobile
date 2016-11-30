@@ -22,6 +22,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_6
     }
 }
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
@@ -34,4 +38,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:design:24.2.1'
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'
+    compile 'com.crazyhitty.chdev.ks:rss-manager:0.23'
+
 }
