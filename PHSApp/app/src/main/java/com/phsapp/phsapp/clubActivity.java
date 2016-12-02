@@ -16,7 +16,7 @@ public class clubActivity extends AppCompatActivity {
         setContentView(R.layout.activity_club);
         final pl.droidsonroids.gif.GifTextView loading = (pl.droidsonroids.gif.GifTextView) findViewById(R.id.load);
         final WebView myWebView = (WebView) findViewById(R.id.webview1);
-        final TextView ltext = (TextView) findViewById(R.id.loading);
+        final TextView ltext = (TextView) findViewById(R.id.textView);
         myWebView.setVisibility(View.INVISIBLE);
         WebSettings websettings = myWebView.getSettings();
         websettings.setJavaScriptEnabled(true);

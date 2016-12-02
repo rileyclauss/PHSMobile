@@ -169,36 +169,6 @@
         />
 
     <!-- clubsicon -->
-    <ImageButton
-        app:srcCompat="@drawable/clubs"
-        android:id="@+id/ClubsButton"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignTop="@+id/CounselingButton"
-        android:layout_alignLeft="@+id/AcademicsButton"
-        android:layout_alignStart="@+id/AcademicsButton"
-        android:tag="clubs"
-        android:onClick="clubAct"
-        />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:text="     Clubs"
-        android:ems="10"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingLeft="0dp"
-        android:layout_width="70dp"
-        android:id="@+id/ClubsText"
-        android:layout_alignBaseline="@+id/FineArtsText"
-        android:layout_alignBottom="@+id/FineArtsText"
-        android:layout_alignRight="@+id/ClubsButton"
-        android:layout_alignEnd="@+id/ClubsButton" />
 
     <TextView
         android:layout_height="wrap_content"
@@ -230,39 +200,8 @@
         android:layout_alignRight="@+id/PASText"
         android:layout_alignEnd="@+id/PASText" />
 <!-- about icon -->
-    <ImageButton
-        app:srcCompat="@drawable/abouticon"
-        android:id="@+id/AboutUsButton"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignTop="@+id/ContactUsButton"
-        android:layout_alignRight="@+id/ClubsText"
-        android:layout_alignEnd="@+id/ClubsText"
-        android:tag="about"
-        android:onClick="aboutAct"
-        />
-<!-- contact icon -->
-    <ImageButton
-        app:srcCompat="@drawable/contacticon"
-        android:id="@+id/ContactUsButton"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="38dp"
-        android:layout_below="@+id/AthleticsText"
-        android:layout_alignLeft="@+id/AthleticsText"
-        android:layout_alignStart="@+id/AthleticsText"
-        android:tag="contact"
-        android:onClick="contactAct"
-        />
-<!-- photo gallery icon -->
+    <!-- contact icon -->
+    <!-- photo gallery icon -->
     <ImageButton
         app:srcCompat="@drawable/photogallery"
         android:id="@+id/PhotoGalleryButton"
@@ -278,23 +217,6 @@
         android:tag="photogallery"
         android:onClick="photoAct"
         />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:text="Contact Us"
-        android:ems="10"
-        android:id="@+id/ContactUsText"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingLeft="0dp"
-        android:layout_width="wrap_content"
-        android:layout_marginRight="37dp"
-        android:layout_marginEnd="37dp"
-        android:layout_alignBaseline="@+id/StaffText"
-        android:layout_alignBottom="@+id/StaffText"
-        android:layout_alignRight="@+id/AboutUsButton"
-        android:layout_alignEnd="@+id/AboutUsButton" />
 
     <TextView
         android:layout_height="wrap_content"
@@ -326,27 +248,13 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:text="Counseling"
-        android:ems="10"
-        android:id="@+id/CounselingText"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingLeft="0dp"
-        android:layout_width="70dp"
-        android:layout_below="@+id/CounselingButton"
-        android:layout_alignLeft="@+id/CounselingButton"
-        android:layout_alignStart="@+id/CounselingButton" />
-
-    <TextView
-        android:layout_height="wrap_content"
         android:ems="10"
         android:id="@+id/PhotoGalleryText"
         android:textColor="?attr/colorControlNormal"
         android:textSize="12sp"
         android:paddingLeft="57dp"
         android:layout_width="wrap_content"
-        android:text=" Photo Gallery"
+        android:text="Photo Gallery"
         android:layout_below="@+id/ContactUsButton"
         android:layout_toLeftOf="@+id/ContactUsButton"
         android:layout_toStartOf="@+id/ContactUsButton" />
@@ -378,7 +286,98 @@
         android:onClick="photoAct"
         android:cropToPadding="false"
         android:layout_above="@+id/AthleticsText"
-        android:layout_marginLeft="179dp" />
+        android:layout_marginStart="179dp"
+        android:layout_marginLeft="179dp"/>
 
+    <ImageButton
+        app:srcCompat="@drawable/clubs"
+        android:id="@+id/ClubsButton"
+        android:scaleType="fitCenter"
+        android:cropToPadding="false"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:tag="clubs"
+        android:onClick="clubAct"
+        android:layout_above="@+id/ClubsText"
+        android:layout_alignRight="@+id/AcademicsText"
+        android:layout_alignEnd="@+id/AcademicsText" />
 
+    <TextView
+        android:layout_height="wrap_content"
+        android:text="Contact Us"
+        android:ems="10"
+        android:id="@+id/ContactUsText"
+        android:textColor="?attr/colorControlNormal"
+        android:textSize="12sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingLeft="0dp"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_alignBaseline="@+id/PhotoGalleryText"
+        android:layout_alignBottom="@+id/PhotoGalleryText"
+        android:layout_alignRight="@+id/AcademicsButton"
+        android:layout_alignEnd="@+id/AcademicsButton" />
+
+    <ImageButton
+        app:srcCompat="@drawable/abouticon"
+        android:id="@+id/AboutUsButton"
+        android:scaleType="fitCenter"
+        android:cropToPadding="false"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:tag="about"
+        android:onClick="aboutAct"
+        android:layout_above="@+id/AboutText"
+        android:layout_alignLeft="@+id/ClubsButton"
+        android:layout_alignStart="@+id/ClubsButton" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:text="     Clubs"
+        android:ems="10"
+        android:textColor="?attr/colorControlNormal"
+        android:textSize="12sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingLeft="0dp"
+        android:layout_width="70dp"
+        android:id="@+id/ClubsText"
+        android:layout_alignBaseline="@+id/FineArtsText"
+        android:layout_alignBottom="@+id/FineArtsText"
+        android:layout_alignRight="@+id/ClubsButton"
+        android:layout_alignEnd="@+id/ClubsButton" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:text=" Counseling"
+        android:ems="10"
+        android:id="@+id/CounselingText"
+        android:textColor="?attr/colorControlNormal"
+        android:textSize="12sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingLeft="0dp"
+        android:layout_width="70dp"
+        android:layout_below="@+id/CounselingButton"
+        android:layout_alignRight="@+id/CounselingButton"
+        android:layout_alignEnd="@+id/CounselingButton" />
+
+    <ImageButton
+        app:srcCompat="@drawable/contacticon"
+        android:id="@+id/ContactUsButton"
+        android:scaleType="fitCenter"
+        android:cropToPadding="false"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="38dp"
+        android:tag="contact"
+        android:onClick="contactAct"
+        android:layout_below="@+id/AthleticsText"
+        android:layout_alignLeft="@+id/AthleticsButton"
+        android:layout_alignStart="@+id/AthleticsButton" />
 </RelativeLayout>
