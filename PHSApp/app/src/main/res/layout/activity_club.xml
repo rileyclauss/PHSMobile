@@ -13,8 +13,29 @@
     <WebView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
+        android:id="@+id/webview1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/webview1" />
+        android:layout_alignParentStart="true" >
+    </WebView>
+
+    <pl.droidsonroids.gif.GifTextView
+        android:background="@drawable/loading"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:id="@+id/load"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/load"
+        android:layout_centerHorizontal="true"
+        android:typeface="sans"
+        android:textColorHighlight="@color/accent_material_dark_1"
+        android:textColor="@color/accent_material_dark_1" />
+
 </RelativeLayout>
