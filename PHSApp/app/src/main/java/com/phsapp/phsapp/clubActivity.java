@@ -7,9 +7,12 @@ import android.webkit.WebView;
 import android.webkit.WebSettings;
 import android.widget.*;
 import android.webkit.*;
+import com.crazyhitty.chdev.ks.rssmanager.*;
 
-public class clubActivity extends AppCompatActivity {
+import java.util.List;
 
+public class clubActivity extends AppCompatActivity implements OnRssLoadListener {
+/*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,25 @@ public class clubActivity extends AppCompatActivity {
     }
 
 
+*/
 
+    // Begin Work on RSS feeds here.
 
+    //load feeds
+    private void loadFeeds() {
+        //you can also pass multiple urls
+        String[] urlArr = {"http://feeds.bbci.co.uk/news/rss.xml"};
+        new RssReader(clubActivity.this)
+                .showDialog(true)
+                .urls(urlArr)
+                .parse(this);
+    }
+
+    public void onSuccess(List<RssItem> rssItems) {
+        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(0).getTitle(), Toast.LENGTH_SHORT).show();
+    }
+
+    public void onFailure(String message) {
+        Toast.makeText(clubActivity.this, "Error: "+message, Toast.LENGTH_SHORT).show();
+    }
 }

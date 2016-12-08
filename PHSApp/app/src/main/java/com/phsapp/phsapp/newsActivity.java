@@ -25,8 +25,6 @@ public class newsActivity extends AppCompatActivity {
         myWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
-                loading.setVisibility(View.INVISIBLE);
-                ltext.setVisibility(View.INVISIBLE);
                 myWebView.loadUrl("javascript:(function() { " +
                         "var head = document.getElementsByID('main-header')[0];"
                         + "head.parentNode.removeChild(head);"+
@@ -35,6 +33,8 @@ public class newsActivity extends AppCompatActivity {
                         "var head = document.getElementsByTagName('main-footer')[0];"
                         + "head.parentNode.removeChild(head);"+
                         "})()");
+                loading.setVisibility(View.INVISIBLE);
+                ltext.setVisibility(View.INVISIBLE);
                 myWebView.setVisibility(View.VISIBLE);
             }
         });
