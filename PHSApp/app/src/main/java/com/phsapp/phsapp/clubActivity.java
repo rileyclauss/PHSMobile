@@ -11,7 +11,40 @@ import com.crazyhitty.chdev.ks.rssmanager.*;
 
 import java.util.List;
 
+
 public class clubActivity extends AppCompatActivity implements OnRssLoadListener {
+
+    // Begin Work on RSS feeds here.
+
+    //load feeds
+    public void loadFeeds() {
+        //you can also pass multiple urls
+        String[] urlArr = {"https://penn.phmschools.org/rss.xml"};
+        new RssReader(clubActivity.this)
+                .showDialog(true)
+                .urls(urlArr)
+                .parse(this);
+    }
+
+    public void onSuccess(List<RssItem> rssItems) {
+        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(0).getTitle(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(1).getTitle(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(2).getTitle(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(3).getTitle(), Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void onFailure(String message) {
+        Toast.makeText(clubActivity.this, "Error: "+message, Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_club);
+        loadFeeds();
+
+    }
+}
 /*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,23 +75,4 @@ public class clubActivity extends AppCompatActivity implements OnRssLoadListener
 
 */
 
-    // Begin Work on RSS feeds here.
 
-    //load feeds
-    private void loadFeeds() {
-        //you can also pass multiple urls
-        String[] urlArr = {"http://feeds.bbci.co.uk/news/rss.xml"};
-        new RssReader(clubActivity.this)
-                .showDialog(true)
-                .urls(urlArr)
-                .parse(this);
-    }
-
-    public void onSuccess(List<RssItem> rssItems) {
-        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(0).getTitle(), Toast.LENGTH_SHORT).show();
-    }
-
-    public void onFailure(String message) {
-        Toast.makeText(clubActivity.this, "Error: "+message, Toast.LENGTH_SHORT).show();
-    }
-}
