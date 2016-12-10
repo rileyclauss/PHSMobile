@@ -8,6 +8,7 @@ import android.webkit.WebSettings;
 import android.widget.*;
 import android.webkit.*;
 import com.crazyhitty.chdev.ks.rssmanager.*;
+import android.support.v7.widget.AppCompatTextView;
 
 import java.util.List;
 
@@ -27,10 +28,12 @@ public class clubActivity extends AppCompatActivity implements OnRssLoadListener
     }
 
     public void onSuccess(List<RssItem> rssItems) {
-        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(0).getTitle(), Toast.LENGTH_SHORT).show();
-        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(1).getTitle(), Toast.LENGTH_SHORT).show();
-        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(2).getTitle(), Toast.LENGTH_SHORT).show();
-        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(3).getTitle(), Toast.LENGTH_SHORT).show();
+        TextView t2 = new TextView(this);
+        t2=(TextView)findViewById(R.id.textView2);
+        TextView t3 = new TextView(this);
+        t3=(TextView)findViewById(R.id.textView3);
+        t2.setText(rssItems.get(0).getTitle());
+        t3.setText(rssItems.get(1).getTitle());
 
     }
 
