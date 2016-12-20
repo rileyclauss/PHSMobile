@@ -1,5 +1,7 @@
 package com.phsapp.phsapp;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +9,8 @@ import android.webkit.WebView;
 import android.webkit.WebSettings;
 import android.widget.*;
 import android.webkit.*;
+import java.util.Arrays;
+
 import com.crazyhitty.chdev.ks.rssmanager.*;
 
 import java.util.List;
@@ -27,11 +31,21 @@ public class clubActivity extends AppCompatActivity implements OnRssLoadListener
     }
 
     public void onSuccess(List<RssItem> rssItems) {
-        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(0).getTitle(), Toast.LENGTH_SHORT).show();
-        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(1).getTitle(), Toast.LENGTH_SHORT).show();
-        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(2).getTitle(), Toast.LENGTH_SHORT).show();
-        Toast.makeText(clubActivity.this, "Item: "+rssItems.get(3).getTitle(), Toast.LENGTH_SHORT).show();
-
+        int yLoc = 20;
+        TextView textView2 = (TextView) findViewById(R.id.textView2);
+        textView2.setText(rssItems.get(0).getTitle());
+        TextView textView3 = (TextView) findViewById(R.id.textView3);
+        textView3.setText(rssItems.get(1).getTitle());
+        TextView textView4 = (TextView) findViewById(R.id.textView4);
+        textView4.setText(rssItems.get(2).getTitle());
+        TextView textView5 = (TextView) findViewById(R.id.textView5);
+        textView5.setText(rssItems.get(3).getTitle());
+        TextView textView6 = (TextView) findViewById(R.id.textView6);
+        textView6.setText(rssItems.get(4).getTitle());
+        TextView textView7 = (TextView) findViewById(R.id.textView7);
+        textView7.setText(rssItems.get(5).getTitle());
+        TextView textView8 = (TextView) findViewById(R.id.textView8);
+        textView8.setText(rssItems.get(6).getTitle());
     }
 
     public void onFailure(String message) {
