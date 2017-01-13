@@ -1,5 +1,6 @@
 package com.phsapp.phsapp;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -9,12 +10,12 @@ import android.webkit.WebView;
 import android.webkit.WebSettings;
 import android.widget.*;
 import android.webkit.*;
+import java.net.URL;
 import java.util.Arrays;
-
 import com.crazyhitty.chdev.ks.rssmanager.*;
-
 import java.util.List;
-
+import android.graphics.drawable.Drawable;
+import java.io.InputStream;
 
 public class clubActivity extends AppCompatActivity implements OnRssLoadListener {
 
@@ -29,9 +30,16 @@ public class clubActivity extends AppCompatActivity implements OnRssLoadListener
                 .urls(urlArr)
                 .parse(this);
     }
-
+    public static Drawable LoadImageFromWebOperations(String url) {
+        try {
+            InputStream is = (InputStream) new URL(url).getContent();
+            Drawable d = Drawable.createFromStream(is, "src name");
+            return d;
+        } catch (Exception e) {
+            return null;
+        }
+    }
     public void onSuccess(List<RssItem> rssItems) {
-        int yLoc = 20;
         TextView textView2 = (TextView) findViewById(R.id.textView2);
         textView2.setText(rssItems.get(0).getTitle());
         TextView textView3 = (TextView) findViewById(R.id.textView3);
@@ -46,15 +54,19 @@ public class clubActivity extends AppCompatActivity implements OnRssLoadListener
         textView7.setText(rssItems.get(5).getTitle());
         TextView textView8 = (TextView) findViewById(R.id.textView8);
         textView8.setText(rssItems.get(6).getTitle());
+        LoadImageFromWebOperations("https://penn.phmschools.org/sites/penn.phmschools.org/files/Bio.gif");
     }
 
     public void onFailure(String message) {
         Toast.makeText(clubActivity.this, "Error: "+message, Toast.LENGTH_SHORT).show();
-    }
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);}
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_club);
+
         loadFeeds();
 
     }

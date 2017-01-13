@@ -3,6 +3,7 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setTheme(R.style.penntheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTheme(R.style.pennmeme);
+        setTheme(R.style.backgroundtransparent);
     }
     public void newsAct(View v){
         Intent intent = new Intent(this, newsActivity.class);
@@ -42,5 +43,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, photogalleryActivity.class);
         startActivity(intent);
         }
+
 }
 
