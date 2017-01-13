@@ -3,7 +3,6 @@ package com.phsapp.phsapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import com.crazyhitty.chdev.ks.rssmanager.RssReader;
 
 
 public class athleticsActivity extends AppCompatActivity{

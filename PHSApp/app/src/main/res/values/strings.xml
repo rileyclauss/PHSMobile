@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">PHS Mobile</string>
     <string name="loading">Loading...</string>
-    <string name="pleasewait"></string>
+    <string name="pleasewait" />
 </resources>

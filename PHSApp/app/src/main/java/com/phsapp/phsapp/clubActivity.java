@@ -1,73 +1,67 @@
 package com.phsapp.phsapp;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebView;
-import android.webkit.WebSettings;
 import android.widget.*;
-import android.webkit.*;
 import java.net.URL;
-import java.util.Arrays;
 import com.crazyhitty.chdev.ks.rssmanager.*;
 import java.util.List;
 import android.graphics.drawable.Drawable;
 import java.io.InputStream;
+import android.view.View.OnClickListener;
 
-public class clubActivity extends AppCompatActivity implements OnRssLoadListener {
-
-    // Begin Work on RSS feeds here.
-
-    //load feeds
-    public void loadFeeds() {
-        //you can also pass multiple urls
+public class clubActivity extends AppCompatActivity implements OnRssLoadListener, OnClickListener {
+    private void loadFeeds() {
         String[] urlArr = {"https://penn.phmschools.org/rss.xml"};
         new RssReader(clubActivity.this)
                 .showDialog(true)
                 .urls(urlArr)
                 .parse(this);
     }
-    public static Drawable LoadImageFromWebOperations(String url) {
+    @Nullable
+    private static Drawable LoadImageFromWebOperations() {
         try {
-            InputStream is = (InputStream) new URL(url).getContent();
-            Drawable d = Drawable.createFromStream(is, "src name");
-            return d;
+            InputStream is = (InputStream) new URL("https://penn.phmschools.org/sites/penn.phmschools.org/files/Bio.gif").getContent();
+            return Drawable.createFromStream(is, "src name");
         } catch (Exception e) {
             return null;
         }
     }
     public void onSuccess(List<RssItem> rssItems) {
-        TextView textView2 = (TextView) findViewById(R.id.textView2);
-        textView2.setText(rssItems.get(0).getTitle());
-        TextView textView3 = (TextView) findViewById(R.id.textView3);
-        textView3.setText(rssItems.get(1).getTitle());
-        TextView textView4 = (TextView) findViewById(R.id.textView4);
-        textView4.setText(rssItems.get(2).getTitle());
-        TextView textView5 = (TextView) findViewById(R.id.textView5);
-        textView5.setText(rssItems.get(3).getTitle());
-        TextView textView6 = (TextView) findViewById(R.id.textView6);
-        textView6.setText(rssItems.get(4).getTitle());
-        TextView textView7 = (TextView) findViewById(R.id.textView7);
-        textView7.setText(rssItems.get(5).getTitle());
-        TextView textView8 = (TextView) findViewById(R.id.textView8);
-        textView8.setText(rssItems.get(6).getTitle());
-        LoadImageFromWebOperations("https://penn.phmschools.org/sites/penn.phmschools.org/files/Bio.gif");
+        String links[] = new String[9];
+        TextView texts[] = new TextView[9];
+        texts[0] = (TextView) findViewById(R.id.textView2);
+        texts[1] = (TextView) findViewById(R.id.textView3);
+        texts[2] = (TextView) findViewById(R.id.textView4);
+        texts[3] = (TextView) findViewById(R.id.textView5);
+        texts[4] = (TextView) findViewById(R.id.textView6);
+        texts[5] = (TextView) findViewById(R.id.textView7);
+        texts[6] = (TextView) findViewById(R.id.textView8);
+        texts[7] = (TextView) findViewById(R.id.textView9);
+        texts[8] = (TextView) findViewById(R.id.textView10);
+        texts[9] = (TextView) findViewById(R.id.textView11);
+        for(int i=0; i<10; i++){links[i] = rssItems.get(i).getLink();}
+        for(int i=0;i<10;i++){texts[i].setText(rssItems.get(i).getTitle());}
+        texts[9].setText(rssItems.get(9).getImageUrl());  // MAY OR MAY NOT WORK, the image link seems to be stored in the description rather than in an <imageurl> section
+        Drawable d = LoadImageFromWebOperations();
+        ImageView loadedimage = (ImageView)findViewById(R.id.imageView);
+        loadedimage.setImageDrawable(d);
     }
-
     public void onFailure(String message) {
         Toast.makeText(clubActivity.this, "Error: "+message, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);}
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_club);
-
         loadFeeds();
+    }
+    @Override
+    public void onClick(View view) {
 
     }
 }
