@@ -38,7 +38,7 @@
     <TextView
         android:id="@+id/CalendarText"
         android:layout_height="wrap_content"
-        android:text="Calendar"
+        android:text="@string/calendar"
         android:ems="10"
         android:layout_width="60dp"
         android:textColor="?attr/colorControlNormal"
@@ -64,7 +64,7 @@
         android:adjustViewBounds="false"
         android:tag="counseling"
         android:onClick="counselingAct"
-        />
+        android:contentDescription="@string/counselingbutton" />
 <!-- calendar button -->
     <ImageButton
         app:srcCompat="@drawable/calendar"
@@ -82,6 +82,7 @@
         android:layout_toEndOf="@+id/NewsIcon"
         android:tag="calendar"
         android:onClick="calendarAct"
+        android:contentDescription="@string/calendaract"
        />
 <!-- news icon -->
     <ImageButton
@@ -101,6 +102,7 @@
         android:layout_alignParentStart="true"
         android:tag="news"
         android:onClick="newsAct"
+        android:contentDescription="@string/newsact"
        />
 
     <TextView
@@ -108,7 +110,7 @@
         android:ems="10"
         android:lines="2"
         android:id="@+id/PASText"
-        android:text="Students and Parents"
+        android:text="@string/sap"
         android:textColor="?attr/colorControlNormal"
         android:textSize="12sp"
         android:layout_width="80dp"
@@ -122,7 +124,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:text="Academics"
+        android:text="@string/academics"
         android:ems="10"
         android:id="@+id/AcademicsText"
         android:textColor="?attr/colorControlNormal"
@@ -147,37 +149,23 @@
         android:layout_toRightOf="@+id/PASText"
         android:layout_toEndOf="@+id/PASText"
         android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:tag="academics"
         android:onClick="academAct"
-        />
+        android:contentDescription="@string/academicsact" />
 <!-- pas icon -->
-    <ImageButton
-        app:srcCompat="@drawable/pasicon"
-        android:id="@+id/PASButton"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignTop="@+id/CalendarButton"
-        android:layout_toLeftOf="@+id/AcademicsButton"
-        android:layout_toStartOf="@+id/AcademicsButton"
-        android:layout_marginRight="10dp"
-        android:tag="pas"
-        android:onClick="pasAct"
-        />
 
     <!-- clubsicon -->
 
     <TextView
         android:layout_height="wrap_content"
-        android:text="Fine Arts"
+        android:text="@string/farts"
         android:ems="10"
         android:id="@+id/FineArtsText"
         android:textColor="?attr/colorControlNormal"
         android:textSize="12sp"
         android:gravity="center_vertical|center_horizontal"
+        android:paddingStart="0dp"
         android:paddingLeft="0dp"
         android:layout_width="70dp"
         android:layout_alignBaseline="@+id/CounselingText"
@@ -187,21 +175,19 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:text="Athletics"
+        android:text="@string/athletics"
         android:ems="10"
         android:id="@+id/AthleticsText"
         android:textColor="?attr/colorControlNormal"
         android:textSize="12sp"
         android:gravity="center_vertical|center_horizontal"
         android:paddingLeft="0dp"
+        android:paddingStart="0dp"
         android:layout_width="70dp"
         android:layout_alignBaseline="@+id/ClubsText"
         android:layout_alignBottom="@+id/ClubsText"
         android:layout_alignRight="@+id/PASText"
         android:layout_alignEnd="@+id/PASText" />
-<!-- about icon -->
-    <!-- contact icon -->
-    <!-- photo gallery icon -->
     <ImageButton
         app:srcCompat="@drawable/photogallery"
         android:id="@+id/PhotoGalleryButton"
@@ -216,17 +202,18 @@
         android:layout_alignStart="@+id/FineArtsText"
         android:tag="photogallery"
         android:onClick="photoAct"
-        />
+        android:contentDescription="@string/pgact" />
 
     <TextView
         android:layout_height="wrap_content"
-        android:text=" About Penn"
+        android:text="@string/abtpenn"
         android:ems="10"
         android:id="@+id/AboutText"
         android:textColor="?attr/colorControlNormal"
         android:textSize="12sp"
         android:gravity="center_vertical|center_horizontal"
         android:paddingLeft="0dp"
+        android:paddingStart="0dp"
         android:layout_width="wrap_content"
         android:layout_alignBaseline="@+id/ContactUsText"
         android:layout_alignBottom="@+id/ContactUsText"
@@ -235,7 +222,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:text="News"
+        android:text="@string/news"
         android:ems="10"
         android:id="@+id/NewsText"
         android:layout_width="60dp"
@@ -253,21 +240,23 @@
         android:textColor="?attr/colorControlNormal"
         android:textSize="12sp"
         android:paddingLeft="57dp"
+        android:paddingStart="57dp"
         android:layout_width="wrap_content"
-        android:text="Photo Gallery"
+        android:text="@string/pgallery"
         android:layout_below="@+id/ContactUsButton"
         android:layout_toLeftOf="@+id/ContactUsButton"
         android:layout_toStartOf="@+id/ContactUsButton" />
 
     <TextView
         android:layout_height="wrap_content"
-        android:text="Staff"
+        android:text="@string/staff"
         android:ems="10"
         android:id="@+id/StaffText"
         android:textColor="?attr/colorControlNormal"
         android:textSize="12sp"
         android:gravity="center_vertical|center_horizontal"
         android:paddingLeft="0dp"
+        android:paddingStart="0dp"
         android:layout_width="wrap_content"
         android:layout_alignBaseline="@+id/PhotoGalleryText"
         android:layout_alignBottom="@+id/PhotoGalleryText"
@@ -287,7 +276,8 @@
         android:cropToPadding="false"
         android:layout_above="@+id/AthleticsText"
         android:layout_marginStart="179dp"
-        android:layout_marginLeft="179dp"/>
+        android:layout_marginLeft="179dp"
+        android:contentDescription="@string/athbtn" />
 
     <ImageButton
         app:srcCompat="@drawable/clubs"
@@ -302,7 +292,8 @@
         android:onClick="clubAct"
         android:layout_above="@+id/ClubsText"
         android:layout_alignRight="@+id/AcademicsText"
-        android:layout_alignEnd="@+id/AcademicsText" />
+        android:layout_alignEnd="@+id/AcademicsText"
+        android:contentDescription="" />
 
     <TextView
         android:layout_height="wrap_content"
@@ -378,6 +369,21 @@
         android:tag="contact"
         android:onClick="contactAct"
         android:layout_below="@+id/AthleticsText"
+        android:layout_alignLeft="@+id/AthleticsButton"
+        android:layout_alignStart="@+id/AthleticsButton" />
+
+    <ImageButton
+        app:srcCompat="@drawable/pasicon"
+        android:id="@+id/PASButton"
+        android:scaleType="fitCenter"
+        android:cropToPadding="false"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:tag="pas"
+        android:onClick="pasAct"
+        android:layout_above="@+id/PASText"
         android:layout_alignLeft="@+id/AthleticsButton"
         android:layout_alignStart="@+id/AthleticsButton" />
 

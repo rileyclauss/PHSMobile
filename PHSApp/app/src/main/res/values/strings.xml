@@ -1,5 +1,21 @@
 <resources>
     <string name="app_name">PHS Mobile</string>
     <string name="loading">Loading...</string>
-    <string name="pleasewait" />
+    <string name="test">Test asset, ignore</string>
+    <string name="calendar">Calendar</string>
+    <string name="counselingbutton">counseling button</string>
+    <string name="calendaract">calendar button</string>
+    <string name="newsact">news button</string>
+    <string name="sap">Students and Parents</string>
+    <string name="academics">Academics</string>
+    <string name="academicsact">academics button</string>
+    <string name="farts">Fine Arts</string> <!-- it's short for fine arts -->
+    <string name="athletics">Athletics</string>
+    <string name="pgact">photo gallery button</string>
+    <string name="abtpenn"> About Penn</string>
+    <string name="news">News</string>
+    <string name="pgallery">Photo Gallery</string>
+    <string name="staff">Staff</string>
+    <string name="athbtn">athletics button</string>
+    <string name="clubsbtn">clubs button</string>
 </resources>

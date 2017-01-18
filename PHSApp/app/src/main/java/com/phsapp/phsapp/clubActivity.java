@@ -14,6 +14,10 @@ import java.io.InputStream;
 import android.view.View.OnClickListener;
 
 public class clubActivity extends AppCompatActivity implements OnRssLoadListener, OnClickListener {
+    TextView texts[] = new TextView[9];
+    String links[] = new String[9];
+    final pl.droidsonroids.gif.GifTextView loading = (pl.droidsonroids.gif.GifTextView) findViewById(R.id.load);
+    final TextView ltext = (TextView) findViewById(R.id.textView);
     private void loadFeeds() {
         String[] urlArr = {"https://penn.phmschools.org/rss.xml"};
         new RssReader(clubActivity.this)
@@ -31,8 +35,8 @@ public class clubActivity extends AppCompatActivity implements OnRssLoadListener
         }
     }
     public void onSuccess(List<RssItem> rssItems) {
-        String links[] = new String[9];
-        TextView texts[] = new TextView[9];
+        loading.setVisibility(View.INVISIBLE);
+        ltext.setVisibility(View.INVISIBLE);
         texts[0] = (TextView) findViewById(R.id.textView2);
         texts[1] = (TextView) findViewById(R.id.textView3);
         texts[2] = (TextView) findViewById(R.id.textView4);
@@ -51,6 +55,8 @@ public class clubActivity extends AppCompatActivity implements OnRssLoadListener
         loadedimage.setImageDrawable(d);
     }
     public void onFailure(String message) {
+        loading.setVisibility(View.INVISIBLE);
+        ltext.setVisibility(View.INVISIBLE);
         Toast.makeText(clubActivity.this, "Error: "+message, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);}
@@ -58,6 +64,9 @@ public class clubActivity extends AppCompatActivity implements OnRssLoadListener
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_club);
+        for(int i=0; i<10; i++){texts[i].setOnClickListener(clubActivity.this);}
+        loading.setVisibility(View.VISIBLE);
+        ltext.setVisibility(View.VISIBLE);
         loadFeeds();
     }
     @Override
@@ -65,17 +74,13 @@ public class clubActivity extends AppCompatActivity implements OnRssLoadListener
 
     }
 }
-/*
-    @Override
+/*@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_club);
         final pl.droidsonroids.gif.GifTextView loading = (pl.droidsonroids.gif.GifTextView) findViewById(R.id.load);
         final WebView myWebView = (WebView) findViewById(R.id.webview1);
         final TextView ltext = (TextView) findViewById(R.id.textView);
-        myWebView.setVisibility(View.INVISIBLE);
-        WebSettings websettings = myWebView.getSettings();
-        websettings.setJavaScriptEnabled(true);
         myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.loadUrl("https://penn.phmschools.org/students-and-parents/get-involved/students");
         myWebView.setWebViewClient(new WebViewClient() {

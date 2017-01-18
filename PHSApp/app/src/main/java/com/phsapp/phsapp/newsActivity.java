@@ -12,10 +12,12 @@ import com.crazyhitty.chdev.ks.rssmanager.OnRssLoadListener;
 import com.crazyhitty.chdev.ks.rssmanager.RssItem;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
 import java.util.List;
-import android.view.View.OnClickListener;
 
 
-public class newsActivity extends AppCompatActivity implements OnRssLoadListener, OnClickListener  {
+public class newsActivity extends AppCompatActivity implements OnRssLoadListener, View.OnClickListener{
+    String links[] = new String[9];
+    TextView texts[] = new TextView[9];
+
   /*  @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,8 +56,6 @@ public class newsActivity extends AppCompatActivity implements OnRssLoadListener
                 .parse(this);
     }
     public void onSuccess(List<RssItem> rssItems) {
-        String links[] = new String[9];
-        TextView texts[] = new TextView[9];
         texts[0] = (TextView) findViewById(R.id.textView2);
         texts[1] = (TextView) findViewById(R.id.textView3);
         texts[2] = (TextView) findViewById(R.id.textView4);
