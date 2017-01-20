@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
+import pl.droidsonroids.gif.*;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
@@ -15,10 +16,19 @@ import java.util.List;
 
 
 public class newsActivity extends AppCompatActivity implements OnRssLoadListener, View.OnClickListener{
-    String links[] = new String[9];
-    TextView texts[] = new TextView[9];
-
-  /*  @Override
+     String links[] = new String[10];
+     TextView texts[] = new TextView[10];
+    private TextView loadtext = null;
+    private pl.droidsonroids.gif.GifTextView loadgif = null;
+   @Override
+   public void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_news);
+       loadtext = (TextView)findViewById(R.id.textView);
+       loadgif = (pl.droidsonroids.gif.GifTextView)findViewById(R.id.load);
+       loadFeeds();
+   }
+  /*  @Override                                                                                      KEEP THIS CODE, DELETE WHEN WE'VE FINALIZED IT
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
@@ -56,6 +66,8 @@ public class newsActivity extends AppCompatActivity implements OnRssLoadListener
                 .parse(this);
     }
     public void onSuccess(List<RssItem> rssItems) {
+        loadgif.setVisibility(View.INVISIBLE);
+        loadtext.setVisibility(View.INVISIBLE);
         texts[0] = (TextView) findViewById(R.id.textView2);
         texts[1] = (TextView) findViewById(R.id.textView3);
         texts[2] = (TextView) findViewById(R.id.textView4);
@@ -68,6 +80,7 @@ public class newsActivity extends AppCompatActivity implements OnRssLoadListener
         texts[9] = (TextView) findViewById(R.id.textView11);
         for(int i=0; i<10; i++){links[i] = rssItems.get(i).getLink();}
         for(int i=0;i<10;i++){texts[i].setText(rssItems.get(i).getTitle());}
+        Toast.makeText(newsActivity.this, "This is a test message", Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onClick(View view) {
@@ -81,11 +94,5 @@ public class newsActivity extends AppCompatActivity implements OnRssLoadListener
         Toast.makeText(newsActivity.this, "Error: "+message, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-    }
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news);
-        loadFeeds();
     }
 }

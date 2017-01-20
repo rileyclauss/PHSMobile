@@ -19,141 +19,120 @@
           android:layout_alignParentStart="true" >
       </WebView>
  -->
-      <pl.droidsonroids.gif.GifTextView
-          android:background="@drawable/loading"
-          android:layout_width="175dp"
-          android:layout_height="175dp"
-          android:id="@+id/load"
-          android:layout_centerVertical="true"
-          android:layout_centerHorizontal="true" />
-    <TextView
-        android:text="@string/loading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:layout_marginTop="14dp"
-        android:layout_below="@+id/load"
-        android:layout_centerHorizontal="true"
-        android:typeface="sans"
-        android:textColorHighlight="@color/accent_material_dark_1"
-        android:textColor="@color/accent_material_dark_1" />
 
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textAlignment="textStart"
-        android:gravity="start"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textAlignment="textStart"
-        android:gravity="start" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView7"
-        android:layout_below="@+id/textView6"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textAlignment="textStart"
-        android:gravity="start" />
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView8"
-        android:textAlignment="textStart"
-        android:gravity="start"
-        android:layout_below="@+id/textView7"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView10"
-        android:textAlignment="textStart"
-        android:gravity="start"
-        android:layout_below="@+id/textView9"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView11"
-        android:textAlignment="textStart"
-        android:gravity="start"
-        android:layout_below="@+id/textView10"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/textView9"
-    android:textAlignment="textStart"
-        android:gravity="start"
-        android:layout_below="@+id/textView8"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView6"
-        android:textAlignment="textStart"
-        android:gravity="start"
-        android:layout_below="@+id/textView5"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:textAlignment="textStart"
-        android:gravity="start"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textAlignment="textStart"
-        android:gravity="start"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/common_full_open_on_phone"
-        android:id="@+id/imageView"
-        android:layout_below="@+id/textView11"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:contentDescription="" />
+            <TextView
+                android:text="American Sign Language (ASL) Club"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/textView"
+                android:onClick="onClick"
+                android:clickable="true"/>
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="5dp"/>
+            <TextView
+                android:text="Amnesty International"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1" />
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="5dp"/>
+            <TextView
+                android:text="Art Club"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2" />
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="5dp"/>
+            <TextView
+                android:text="Book Club"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3" />
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="5dp"/>
+            <TextView
+                android:text="Bowling Club"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4" />
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="5dp"/>
+            <TextView
+                android:text="Chess Club"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5" />
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="5dp"/>
+            <TextView
+                android:text="Chinese Club"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6" />
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="5dp"/>
+            <TextView
+                android:text="Composers Forum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7" />
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="5dp"/>
+
+            <TextView
+                android:text="Computer Club"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8" />
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="5dp"/>
+            <TextView
+                android:text="DECA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9" />
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="5dp"/>
+            <TextView
+                android:text="Dream Commission Society"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView10" />
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="5dp"/>
+            <TextView
+                android:text="Drones and Remote Sensing R/C Club"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView11" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
