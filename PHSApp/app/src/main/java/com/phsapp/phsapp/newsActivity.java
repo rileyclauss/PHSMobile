@@ -28,7 +28,7 @@ public class newsActivity extends AppCompatActivity implements OnRssLoadListener
        loadgif = (pl.droidsonroids.gif.GifTextView)findViewById(R.id.load);
        loadFeeds();
    }
-  /*  @Override                                                                                      //TODO KEEP THIS CODE, DELETE WHEN WE'VE FINALIZED IT
+  /*  @Override                      TODO KEEP THIS CODE, DELETE WHEN WE'VE FINALIZED IT
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
@@ -80,7 +80,6 @@ public class newsActivity extends AppCompatActivity implements OnRssLoadListener
         texts[9] = (TextView) findViewById(R.id.textView11);
         for(int i=0; i<10; i++){links[i] = rssItems.get(i).getLink();}
         for(int i=0;i<10;i++){texts[i].setText(rssItems.get(i).getTitle());}
-        Toast.makeText(newsActivity.this, "This is a test message", Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onClick(View view) {

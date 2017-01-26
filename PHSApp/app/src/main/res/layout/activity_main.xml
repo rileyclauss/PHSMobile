@@ -252,8 +252,9 @@
         android:background="@null"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:tag="photogallery"
-        android:onClick="photoAct"
+        android:tag="athlectsButton"
+        android:clickable="true"
+        android:onClick="athleticsAct"
         android:cropToPadding="false"
         android:layout_above="@+id/AthleticsText"
         android:layout_marginStart="179dp"
@@ -274,7 +275,7 @@
         android:layout_above="@+id/ClubsText"
         android:layout_alignRight="@+id/AcademicsText"
         android:layout_alignEnd="@+id/AcademicsText"
-        android:contentDescription="" />
+        android:contentDescription="clubs button" />
 
     <TextView
         android:layout_height="wrap_content"

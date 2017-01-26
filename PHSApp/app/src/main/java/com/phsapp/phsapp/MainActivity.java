@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);}
     public void photoAct(View v){
         Intent intent = new Intent(this, photogalleryActivity.class);
+        startActivity(intent);}
+    public void athleticsAct(View v) {
+        Intent intent = new Intent(this, athleticsActivity.class);
         startActivity(intent);
         }
 

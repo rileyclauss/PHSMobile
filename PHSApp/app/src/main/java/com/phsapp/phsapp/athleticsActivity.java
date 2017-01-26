@@ -6,14 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import com.crazyhitty.chdev.ks.rssmanager.OnRssLoadListener;
 import com.crazyhitty.chdev.ks.rssmanager.RssItem;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
-import android.os.Bundle;
-import android.view.View;
+
 import android.widget.*;
-import android.support.customtabs.CustomTabsIntent;
+
 import java.util.List;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.*;
 
 public class athleticsActivity extends AppCompatActivity implements OnRssLoadListener{
     @Override
@@ -30,11 +26,14 @@ public class athleticsActivity extends AppCompatActivity implements OnRssLoadLis
                 .showDialog(true)
                 .urls(urlArr)
                 .parse(this);
+
     }
 
     @Override
     public void onSuccess(List<RssItem> rssItems) {
-        Toast.makeText(athleticsActivity.this, "Item: "+rssItems.get(0).getTitle(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(athleticsActivity.this, rssItems.get(0).getTitle(), Toast.LENGTH_SHORT).show();
+        ImageView img= (ImageView) findViewById(R.id.imageView);
+        img.setImageResource(R.drawable.blacksquare);
     }
 
     @Override

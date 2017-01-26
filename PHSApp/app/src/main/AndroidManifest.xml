@@ -32,6 +32,7 @@
         <activity android:name=".aboutActivity" />
         <activity android:name=".contactActivity" />
         <activity android:name=".photogalleryActivity" />
+        <activity android:name=".athleticsActivity"/>
     </application>
 
 </manifest>
