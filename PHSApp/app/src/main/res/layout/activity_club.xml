@@ -21,14 +21,14 @@
  -->
 
 
-    <TextView
-        android:text="Clubs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewTop"
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/clubsHead"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:textSize="36sp"
-        android:onClick="onClick"/>
+        android:onClick="onClick"
+        app:srcCompat="@drawable/clubshead" />
 
 
     <ScrollView
@@ -36,7 +36,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textViewTop">
+        android:layout_below="@+id/clubsHead">
 
         <LinearLayout
             android:layout_width="match_parent"
