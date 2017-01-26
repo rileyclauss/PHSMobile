@@ -28,7 +28,7 @@ public class newsActivity extends AppCompatActivity implements OnRssLoadListener
        loadgif = (pl.droidsonroids.gif.GifTextView)findViewById(R.id.load);
        loadFeeds();
    }
-  /*  @Override                                                                                      KEEP THIS CODE, DELETE WHEN WE'VE FINALIZED IT
+  /*  @Override                                                                                      //TODO KEEP THIS CODE, DELETE WHEN WE'VE FINALIZED IT
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);

@@ -37,7 +37,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:design:24.2.1'
-    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.7'
     compile 'com.crazyhitty.chdev.ks:rss-manager:0.23'
     compile 'com.android.support:customtabs:24.0.0'
 

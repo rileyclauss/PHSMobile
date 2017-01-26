@@ -8,7 +8,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        //coded by Riley Clauss and Micah Focht, class of 2019
+        //Long Live the Serbs
         setTheme(R.style.penntheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

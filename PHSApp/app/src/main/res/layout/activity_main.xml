@@ -85,25 +85,6 @@
         android:contentDescription="@string/calendaract"
        />
 <!-- news icon -->
-    <ImageButton
-        app:srcCompat="@drawable/newsicon"
-        android:id="@+id/NewsIcon"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_marginLeft="17dp"
-        android:layout_marginStart="17dp"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="27dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:tag="news"
-        android:onClick="newsAct"
-        android:contentDescription="@string/newsact"
-       />
 
     <TextView
         android:layout_height="wrap_content"
@@ -386,5 +367,23 @@
         android:layout_above="@+id/PASText"
         android:layout_alignLeft="@+id/AthleticsButton"
         android:layout_alignStart="@+id/AthleticsButton" />
+
+    <ImageButton
+        app:srcCompat="@drawable/newsicon"
+        android:id="@+id/NewsIcon"
+        android:scaleType="fitCenter"
+        android:cropToPadding="false"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:tag="news"
+        android:onClick="newsAct"
+        android:contentDescription="@string/newsact"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
