@@ -7,7 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="pennmeme">
+    <style name="backgroundtransparent">
         <item name="android:windowBackground">@drawable/splashscreen</item>
         <item name="android:background">@drawable/splashscreen</item>
 
@@ -20,6 +20,10 @@
         <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
         <item name="android:colorForeground">@color/accent_material_dark_1</item>
         <item name="android:textColorPrimary">@color/accent_material_dark_1</item>
+        <item name="android:textColorSecondary">@color/common_google_signin_btn_text_dark</item>
+        <item name="android:textColorSecondaryInverse">
+            @color/common_google_signin_btn_text_dark_disabled
+        </item>
     </style>
 
     <style name="ContentTheme" parent="android:Theme.DeviceDefault" />

@@ -9,7 +9,7 @@ public class Splash extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout);
-        int secondsDelayed = 2000;
+        int secondsDelayed = 1999;
         new Handler().postDelayed(new Runnable() {
             public void run() {
                 startActivity(new Intent(Splash.this, MainActivity.class));
