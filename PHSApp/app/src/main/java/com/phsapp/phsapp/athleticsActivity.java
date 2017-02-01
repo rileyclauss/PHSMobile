@@ -1,21 +1,20 @@
 package com.phsapp.phsapp;
-
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import com.crazyhitty.chdev.ks.rssmanager.OnRssLoadListener;
 import com.crazyhitty.chdev.ks.rssmanager.RssItem;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
-
 import android.widget.*;
-
 import java.util.List;
 
 public class athleticsActivity extends AppCompatActivity implements OnRssLoadListener{
+    String links[] = new String[10];
+    TextView texts[] = new TextView[10];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_athletics);
+
         loadFeeds();
 
     }
@@ -34,6 +33,9 @@ public class athleticsActivity extends AppCompatActivity implements OnRssLoadLis
         Toast.makeText(athleticsActivity.this, rssItems.get(0).getTitle(), Toast.LENGTH_SHORT).show();
         ImageView img= (ImageView) findViewById(R.id.imageView);
         img.setImageResource(R.drawable.blacksquare);
+        texts[0] = (TextView) findViewById(R.id.textView54);
+        for(int i=0; i<10; i++){links[i] = rssItems.get(i).getLink();}
+        for(int i=0;i<10;i++){texts[i].setText(rssItems.get(i).getTitle());}
     }
 
     @Override
