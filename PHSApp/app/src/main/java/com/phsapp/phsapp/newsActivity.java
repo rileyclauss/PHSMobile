@@ -14,6 +14,7 @@ import java.util.List;
 public class newsActivity extends AppCompatActivity implements OnRssLoadListener, View.OnClickListener{
      String links[] = new String[10];
      TextView texts[] = new TextView[10];
+    String images[] = new String[10];
     private TextView loadtext = null;
     private pl.droidsonroids.gif.GifTextView loadgif = null;
    @Override
@@ -44,9 +45,15 @@ public class newsActivity extends AppCompatActivity implements OnRssLoadListener
         texts[7] = (TextView) findViewById(R.id.textView9);
         texts[8] = (TextView) findViewById(R.id.textView10);
         texts[9] = (TextView) findViewById(R.id.textView11);
-        TextView text55 = (TextView) findViewById(R.id.textView55);
-        String newVal = rssItems.get(0).getDescription().substring(0,70);
-        text55.setText(newVal);
+        int x = 0, y = 0;
+        for(int i=0;i<10;i++){
+           x = rssItems.get(0).getDescription().indexOf("itok=");
+            x+= 8;
+            y = rssItems.get(0).getDescription().indexOf("http://penn.phmschools.org/sites/penn.phmschools.org/files/styles/article_image/public/");
+            images[i] = rssItems.get(i).getDescription().substring(y, x);
+            x = 0;
+            y = 0;
+        }
         for(int i=0; i<10; i++){links[i] = rssItems.get(i).getLink();}
         for(int i=0;i<10;i++){texts[i].setText(rssItems.get(i).getTitle());}
     }
