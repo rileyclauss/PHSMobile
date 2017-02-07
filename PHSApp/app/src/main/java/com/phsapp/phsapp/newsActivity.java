@@ -1,13 +1,10 @@
 package com.phsapp.phsapp;
-import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
-import android.support.customtabs.CustomTabsIntent;
 import com.crazyhitty.chdev.ks.rssmanager.*;
 import java.util.List;
 
@@ -45,12 +42,15 @@ public class newsActivity extends AppCompatActivity implements OnRssLoadListener
         texts[7] = (TextView) findViewById(R.id.textView9);
         texts[8] = (TextView) findViewById(R.id.textView10);
         texts[9] = (TextView) findViewById(R.id.textView11);
+        TextView textViewMain = (TextView) findViewById(R.id.textView55);
         int x = 0, y = 0;
         for(int i=0;i<10;i++){
-           x = rssItems.get(0).getDescription().indexOf("itok=");
-            x+= 8;
-            y = rssItems.get(0).getDescription().indexOf("http://penn.phmschools.org/sites/penn.phmschools.org/files/styles/article_image/public/");
+            x = rssItems.get(0).getDescription().indexOf("itok=");
+            x -=19;
+            y = rssItems.get(0).getDescription().indexOf("article_image");
+            y -=67;
             images[i] = rssItems.get(i).getDescription().substring(y, x);
+            textViewMain.setText(images[1]);
             x = 0;
             y = 0;
         }
