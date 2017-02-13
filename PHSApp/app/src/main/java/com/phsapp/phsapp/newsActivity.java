@@ -1,17 +1,22 @@
 package com.phsapp.phsapp;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
 import com.crazyhitty.chdev.ks.rssmanager.*;
+
+import java.io.InputStream;
+import java.net.URL;
 import java.util.List;
 
 public class newsActivity extends AppCompatActivity implements OnRssLoadListener, View.OnClickListener{
-     String links[] = new String[10];
-     TextView texts[] = new TextView[10];
-    String images[] = new String[10];
+    String links[] = new String[10];
+    TextView texts[] = new TextView[10];
+    Drawable images[] = new Drawable[10];
+    ImageView views[] = new ImageView[10];
     private TextView loadtext = null;
     private pl.droidsonroids.gif.GifTextView loadgif = null;
    @Override
@@ -32,6 +37,7 @@ public class newsActivity extends AppCompatActivity implements OnRssLoadListener
     public void onSuccess(List<RssItem> rssItems) {
         loadgif.setVisibility(View.INVISIBLE);
         loadtext.setVisibility(View.INVISIBLE);
+        //views[0] = (ImageView) findViewById(R.id.imageView3);
         texts[0] = (TextView) findViewById(R.id.textView2);
         texts[1] = (TextView) findViewById(R.id.textView3);
         texts[2] = (TextView) findViewById(R.id.textView4);
@@ -42,18 +48,14 @@ public class newsActivity extends AppCompatActivity implements OnRssLoadListener
         texts[7] = (TextView) findViewById(R.id.textView9);
         texts[8] = (TextView) findViewById(R.id.textView10);
         texts[9] = (TextView) findViewById(R.id.textView11);
-        TextView textViewMain = (TextView) findViewById(R.id.textView55);
-        int x = 0, y = 0;
-        for(int i=0;i<10;i++){
-            x = rssItems.get(0).getDescription().indexOf("itok=");
-            x -=19;
-            y = rssItems.get(0).getDescription().indexOf("article_image");
+        int x, y;
+     /*   for(int i=0;i<10;i++){
+            x = rssItems.get(i).getDescription().indexOf(" width=");
+            x-= 1;
+            y = rssItems.get(i).getDescription().indexOf("article_image");
             y -=67;
-            images[i] = rssItems.get(i).getDescription().substring(y, x);
-            textViewMain.setText(images[1]);
-            x = 0;
-            y = 0;
-        }
+            images[i] = LoadImageFromWebOperations(rssItems.get(i).getDescription().substring(y, x));
+        } */
         for(int i=0; i<10; i++){links[i] = rssItems.get(i).getLink();}
         for(int i=0;i<10;i++){texts[i].setText(rssItems.get(i).getTitle());}
     }
@@ -69,5 +71,14 @@ public class newsActivity extends AppCompatActivity implements OnRssLoadListener
         Toast.makeText(newsActivity.this, "Error: "+message, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+    public static Drawable LoadImageFromWebOperations(String url) {
+        try {
+            InputStream is = (InputStream) new URL(url).getContent();
+            Drawable d = Drawable.createFromStream(is, "src name");
+            return d;
+        } catch (Exception e) {
+            return null;
+        }
     }
 }
