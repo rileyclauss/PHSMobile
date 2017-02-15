@@ -16,13 +16,12 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="Button"
+        android:text="    The Pennant     "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button2"
         android:layout_alignBaseline="@+id/Info"
         android:layout_alignBottom="@+id/Info"
-        android:layout_toRightOf="@+id/textView54"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -33,30 +32,57 @@
         android:layout_alignParentStart="true"
         android:layout_above="@+id/Info">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/blacksquare"
+                android:id="@+id/imageView1"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="33dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/textView54" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/blacksquare"
+                android:id="@+id/imageView2"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="33dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/textView55" />
+        </RelativeLayout>
     </ScrollView>
 
-    <ImageView
+    <Space
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/blacksquare"
-        android:id="@+id/imageView"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="33dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView54" />
+        android:layout_below="@+id/scrollView2"
+        android:layout_toRightOf="@+id/Info"
+        android:layout_toEndOf="@+id/Info"
+        android:layout_marginTop="7dp" />
 
 </RelativeLayout>

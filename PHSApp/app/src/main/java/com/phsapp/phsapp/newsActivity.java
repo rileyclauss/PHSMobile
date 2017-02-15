@@ -1,4 +1,5 @@
 package com.phsapp.phsapp;
+
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
@@ -7,13 +8,13 @@ import android.view.View;
 import android.widget.*;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
 import com.crazyhitty.chdev.ks.rssmanager.*;
-
 import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
 
 public class newsActivity extends AppCompatActivity implements OnRssLoadListener, View.OnClickListener{
     String links[] = new String[10];
+    String imgLinks[] = new String[10];
     TextView texts[] = new TextView[10];
     Drawable images[] = new Drawable[10];
     ImageView views[] = new ImageView[10];
@@ -49,15 +50,15 @@ public class newsActivity extends AppCompatActivity implements OnRssLoadListener
         texts[8] = (TextView) findViewById(R.id.textView10);
         texts[9] = (TextView) findViewById(R.id.textView11);
         int x, y;
-     /*   for(int i=0;i<10;i++){
+        for(int i=0;i<10;i++){
             x = rssItems.get(i).getDescription().indexOf(" width=");
-            x-= 1;
+            x -= 1;
             y = rssItems.get(i).getDescription().indexOf("article_image");
             y -=67;
-            images[i] = LoadImageFromWebOperations(rssItems.get(i).getDescription().substring(y, x));
-        } */
-        for(int i=0; i<10; i++){links[i] = rssItems.get(i).getLink();}
-        for(int i=0;i<10;i++){texts[i].setText(rssItems.get(i).getTitle());}
+            imgLinks[i] = rssItems.get(i).getDescription().substring(y, x);
+        }
+      //  for(int i=0; i<10; i++){links[i] = rssItems.get(i).getLink();}
+      //  for(int i=0;i<10;i++){texts[i].setText(rssItems.get(i).getTitle());}
     }
     @Override
     public void onClick(View view) {
