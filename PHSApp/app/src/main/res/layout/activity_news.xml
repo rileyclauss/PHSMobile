@@ -20,6 +20,7 @@
         android:layout_alignParentStart="true" >
     </WebView>
 -->
+
     <pl.droidsonroids.gif.GifTextView
         android:background="@drawable/loading"
         android:layout_width="175dp"
@@ -27,7 +28,6 @@
         android:id="@+id/load"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
-
     <TextView
         android:text="@string/loading"
         android:layout_width="wrap_content"
@@ -40,139 +40,97 @@
         android:textColorHighlight="@color/accent_material_dark_1"
         android:textColor="@color/accent_material_dark_1" />
 
-
-    <TextView
+    <Space
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:textAlignment="textStart"
-        android:gravity="start"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="onClick"
-        android:clickable="true"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:textAlignment="textStart"
-        android:gravity="start"
-        android:onClick="onClick"
-        android:clickable="true"
-        />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textAlignment="textStart"
-        android:onClick="onClick"
-        android:clickable="true"
-        android:gravity="start" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textAlignment="textStart"
-        android:clickable="true"
-        android:onClick="onClick"
-        android:gravity="start" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView6"
-        android:layout_below="@+id/textView5"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textAlignment="textStart"
-        android:clickable="true"
-        android:onClick="onClick"
-        android:gravity="start" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView8"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView7"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textAlignment="textStart"
-        android:gravity="start" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView7"
-        android:layout_below="@+id/textView6"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textAlignment="textStart"
-        android:gravity="start" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView9"
-        android:textAlignment="textStart"
-        android:gravity="start"
-        android:layout_below="@+id/textView8"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView10"
-        android:textAlignment="textStart"
-        android:gravity="start"
-        android:layout_below="@+id/textView9"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView11"
-        android:textAlignment="textStart"
-        android:gravity="start"
-        android:layout_below="@+id/textView10"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_height="70dp" />
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/common_full_open_on_phone"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/newshead"
         android:id="@+id/imageView2"
-        android:layout_below="@+id/textView11"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:contentDescription="@string/test" />
+        android:layout_alignParentStart="true" />
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/space"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--  <ScrollView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/imageView2"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true">
+          <RelativeLayout
+              android:orientation="vertical"
+          android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fillViewport="true">
+
+              <Space
+                  android:layout_width="match_parent"
+                  android:layout_below="@+id/textView2"
+
+                  android:layout_height="135dp" />
+
+              <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:srcCompat="@drawable/blacksquare"
+                  android:id="@+id/imageView3"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true" />
+
+              <TextView
+                  android:text="TextView"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/textView2"
+                  android:layout_below="@+id/imageView3"
+                  android:layout_alignLeft="@+id/textView56"
+                  android:layout_alignStart="@+id/textView56" />
+
+              <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:srcCompat="@drawable/blacksquare"
+                  android:id="@+id/imageView4"
+                  android:layout_below="@+id/textView2"
+                  android:layout_alignLeft="@+id/imageView3"
+                  android:layout_alignStart="@+id/imageView3" />
+
+              <TextView
+                  android:text="TextView"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/textView56"
+                  android:layout_below="@+id/imageView4"
+                  android:layout_centerHorizontal="true" />
+
+              <Space
+                  android:layout_width="match_parent"
+                  android:id="@+id/space5"
+                  android:layout_alignParentTop="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:layout_height="135dp" />
+
+          </RelativeLayout>
+      </ScrollView>
+  -->
 </RelativeLayout>

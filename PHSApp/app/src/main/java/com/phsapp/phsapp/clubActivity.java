@@ -33,7 +33,6 @@ public class clubActivity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.textView:
                 return "https://penn.phmschools.org/asl-club";
-
             case R.id.textView1:
                 return "https://penn.phmschools.org/amnesty-international";
             case R.id.textView2:
