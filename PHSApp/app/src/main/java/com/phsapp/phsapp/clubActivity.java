@@ -24,8 +24,6 @@ public class clubActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_club);
-        TextView t0 = new TextView(this);
-        t0=(TextView)findViewById(R.id.textView);
         Toast.makeText(clubActivity.this, "Tap on any club for more information.",
                 Toast.LENGTH_LONG).show();
     }
@@ -152,7 +150,6 @@ public class clubActivity extends AppCompatActivity {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
-
         Builder builder = new Builder();
         builder.setToolbarColor(Color.DKGRAY);
         CustomTabsIntent customTabsIntent = builder.build();
