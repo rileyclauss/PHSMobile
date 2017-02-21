@@ -8,8 +8,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //coded by Riley Clauss and Micah Focht, class of 2019
-        //Long Live the Serbs
         setTheme(R.style.penntheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -44,8 +42,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);}
     public void athleticsAct(View v) {
         Intent intent = new Intent(this, athleticsActivity.class);
-        startActivity(intent);
-        }
-
+        startActivity(intent);}
+    public void fartsAct(View v) {
+        Intent intent = new Intent(this, fartsActivity.class);
+        startActivity(intent);}
+    public void staffAct(View v) {
+        Intent intent = new Intent(this, staffActivity.class);
+        startActivity(intent);}
 }
 

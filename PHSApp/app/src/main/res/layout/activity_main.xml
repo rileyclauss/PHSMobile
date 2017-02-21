@@ -275,11 +275,11 @@
         android:layout_above="@+id/ClubsText"
         android:layout_alignRight="@+id/AcademicsText"
         android:layout_alignEnd="@+id/AcademicsText"
-        android:contentDescription="clubs button" />
+        android:contentDescription="@string/clubs_button" />
 
     <TextView
         android:layout_height="wrap_content"
-        android:text="Contact Us"
+        android:text="@string/contact_us"
         android:ems="10"
         android:id="@+id/ContactUsText"
         android:textColor="?attr/colorControlNormal"
@@ -294,24 +294,9 @@
         android:layout_alignRight="@+id/AcademicsButton"
         android:layout_alignEnd="@+id/AcademicsButton" />
 
-    <ImageButton
-        app:srcCompat="@drawable/abouticon"
-        android:id="@+id/AboutUsButton"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:tag="about"
-        android:onClick="aboutAct"
-        android:layout_above="@+id/AboutText"
-        android:layout_alignLeft="@+id/ClubsButton"
-        android:layout_alignStart="@+id/ClubsButton" />
-
     <TextView
         android:layout_height="wrap_content"
-        android:text="     Clubs"
+        android:text="@string/clubs"
         android:ems="10"
         android:textColor="?attr/colorControlNormal"
         android:textSize="12sp"
@@ -326,7 +311,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:text=" Counseling"
+        android:text="@string/counseling"
         android:ems="10"
         android:id="@+id/CounselingText"
         android:textColor="?attr/colorControlNormal"
@@ -386,5 +371,51 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <ImageButton
+        app:srcCompat="@drawable/abouticon"
+        android:id="@+id/AboutUsButton"
+        android:scaleType="fitCenter"
+        android:cropToPadding="false"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:tag="about"
+        android:onClick="aboutAct"
+        android:layout_above="@+id/AboutText"
+        android:layout_alignLeft="@+id/ClubsText"
+        android:layout_alignStart="@+id/ClubsText" />
+
+    <ImageButton
+        app:srcCompat="@drawable/key"
+        android:id="@+id/StaffIcon"
+        android:scaleType="fitCenter"
+        android:cropToPadding="false"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:tag="staff"
+        android:onClick="staffAct"
+        android:contentDescription="@string/newsact"
+        android:layout_above="@+id/PhotoGalleryText"
+        android:layout_alignRight="@+id/CounselingText"
+        android:layout_alignEnd="@+id/CounselingText" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:scaleType="fitCenter"
+        android:layout_height="60dp"
+        android:tag="about"
+        android:background="@null"
+        app:srcCompat="@drawable/musicnote"
+        android:clickable="true"
+        android:onClick="fartsAct"
+        android:id="@+id/fartsbutton"
+        android:paddingLeft="3dp"
+        android:layout_above="@+id/FineArtsText"
+        android:layout_alignLeft="@+id/FineArtsText"
+        android:layout_alignStart="@+id/FineArtsText" />
 
 </RelativeLayout>

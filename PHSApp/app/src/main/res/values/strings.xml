@@ -72,5 +72,9 @@
     <string name="ultimateFrisbee">Ultimate Frisbee Club</string>
     <string name="writersGuild">Writers\' Guild</string>
     <string name="hourTheatre">24-Hour Theatre/Talent Show</string>
+    <string name="clubs">Clubs</string>
+    <string name="counseling">Counseling</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="clubs_button">clubs button</string>
 
 </resources>
