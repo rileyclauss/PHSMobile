@@ -40,7 +40,7 @@ dependencies {
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.7'
     compile 'com.crazyhitty.chdev.ks:rss-manager:0.23'
     compile 'com.android.support:customtabs:24.0.0'
-
+    compile 'com.mcxiaoke.volley:library:1.0.19'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     compile 'com.android.support:support-v4:25.1.1'
 }
