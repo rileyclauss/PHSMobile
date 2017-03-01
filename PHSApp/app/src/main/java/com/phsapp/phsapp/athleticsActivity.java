@@ -35,9 +35,9 @@ public class athleticsActivity extends AppCompatActivity implements OnRssLoadLis
     @Override
     public void onSuccess(List<RssItem> rssItems) {
         Toast.makeText(athleticsActivity.this, rssItems.get(1).getTitle(), Toast.LENGTH_SHORT).show();
-        //texts[0] = (TextView) findViewById(R.id.textView54);
+        //textViews[0] = (TextView) findViewById(R.id.textView54);
         //for(int i=0; i<10; i++){links[i] = rssItems.get(i).getLink();}
-        //for(int i=0;i<10;i++){texts[i].setText(rssItems.get(i).getTitle());}
+        //for(int i=0;i<10;i++){textViews[i].setText(rssItems.get(i).getTitle());}
     }
 
     @Override

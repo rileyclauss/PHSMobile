@@ -1,9 +1,7 @@
 package com.phsapp.phsapp;
 
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.TextView;
 import com.prolificinteractive.materialcalendarview.*;
 
 public class calendarActivity extends AppCompatActivity {
@@ -12,7 +10,6 @@ public class calendarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
         MaterialCalendarView mcv = (MaterialCalendarView) findViewById(R.id.calendarView);
-
         mcv.setShowOtherDates(MaterialCalendarView.SHOW_NONE);
     }
 

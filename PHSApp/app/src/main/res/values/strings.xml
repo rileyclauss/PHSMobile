@@ -76,5 +76,13 @@
     <string name="counseling">Counseling</string>
     <string name="contact_us">Contact Us</string>
     <string name="clubs_button">clubs button</string>
+    <string name="newsitemfive">NewsItemFive</string>
+    <string name="newsitemfour">NewsItemFour</string>
+    <string name="newsitemone">NewsItemOne</string>
+    <string name="newsitemsix">NewsItemSix</string>
+    <string name="newsitemthree">NewsItemThree</string>
+    <string name="newsitemtwo">NewsItemTwo</string>
+    <string name="picture_of_article">Picture of article</string>
+    <string name="header_of_tab">Header of tab</string>
 
 </resources>
