@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_about"
     android:layout_width="match_parent"
@@ -10,6 +9,20 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.phsapp.phsapp.aboutActivity">
+
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView3"
+        android:text="@string/comittedexcelence"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,7 +42,7 @@
                 android:layout_height="5dp"/>
 
             <TextView
-                android:text="Penn High School is a large public high school located in suburban northern Indiana. As the flagship school of the Penn-Harris-Madison School Corporation, Penn serves all the district’s 9th through 12th grade students as well as hundreds of out-of-district students who have made Penn High School their school of choice."
+                android:text="@string/introtext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView57" />
@@ -38,7 +51,7 @@
                 android:layout_height="5dp"/>
 
             <TextView
-                android:text="Penn's national reputation for excellence is based on its outstanding academic, athletic and fine arts programs. "
+                android:text="@string/introtext2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView58" />
@@ -48,7 +61,7 @@
                 android:layout_height="5dp"/>
 
             <TextView
-                android:text="Penn is an elite 90-25-90 School because it exceeds three critical benchmarks of academic success, including graduation rate. Penn’s graduation rate is over 97%!"
+                android:text="@string/introstats"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView59" />
@@ -56,7 +69,7 @@
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
             <TextView
-                android:text="The Penn High community is focused on graduating responsible young adults who are college and career ready."
+                android:text="@string/introtext3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView60" />
@@ -65,7 +78,7 @@
                 android:layout_height="5dp"/>
 
             <TextView
-                android:text="Points of Pride"
+                android:text="@string/points_of_pride"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView61"
@@ -77,7 +90,7 @@
                 android:layout_height="5dp"/>
 
             <TextView
-                android:text="US News and World Report included Penn on its list of national “Best High Schools”"
+                android:text="@string/POP1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView62" />
@@ -87,7 +100,7 @@
                 android:layout_height="5dp"/>
 
             <TextView
-                android:text="The Washington Post identified Penn as one of “America’s Most Challenging High Schools”"
+                android:text="@string/POP2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView63" />
@@ -97,7 +110,7 @@
                 android:layout_height="5dp"/>
 
             <TextView
-                android:text="The Indiana Department of Education has named Penn a 4-Star School for four consecutive years "
+                android:text="@string/POP3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView64" />
@@ -107,7 +120,7 @@
                 android:layout_height="5dp"/>
 
             <TextView
-                android:text="Indiana Department of Education recognized Penn as a School of Promising Practices for its delivery of “Problem-based Learning” "
+                android:text="@string/POP4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView65" />
@@ -117,7 +130,7 @@
                 android:layout_height="5dp"/>
 
             <TextView
-                android:text="Penn’s STEM Academy has been certified as a Full STEM Certified Program by the Indiana Department of Education.  "
+                android:text="@string/POP5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView66" />
@@ -125,7 +138,7 @@
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
             <TextView
-                android:text="All of this is made possible by Penn’s exemplary teachers, educational support staff and guidance counselors led by Mr. Steve Hope, 2015 Indiana Principal of the Year. "
+                android:text="@string/POP6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView67" />
@@ -133,7 +146,7 @@
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
             <TextView
-                android:text="Quick Facts "
+                android:text="@string/quick_facts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView68"
@@ -143,7 +156,7 @@
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
             <TextView
-                android:text="2016-2017 enrollment: 3,517 "
+                android:text="@string/enrollmentfact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView69" />
@@ -151,7 +164,7 @@
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
             <TextView
-                android:text="Teachers and Staff: approximately 300  "
+                android:text="@string/tasfact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView70" />
@@ -159,7 +172,7 @@
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
             <TextView
-                android:text="Start time: 8:25 a.m. Dismissal: 3:17 p.m. "
+                android:text="@string/schedule"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView71" />
@@ -167,7 +180,7 @@
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
             <TextView
-                android:text="School colors: Black and Gold "
+                android:text="@string/schoolcolors"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView72" />
@@ -175,7 +188,7 @@
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
             <TextView
-                android:text="Mascot/nickname: The Kingsmen "
+                android:text="@string/mascot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView73" />
@@ -183,7 +196,7 @@
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
             <TextView
-                android:text="Constructed: 1958 "
+                android:text="@string/constructed_1958"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView74" />
@@ -191,7 +204,7 @@
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
             <TextView
-                android:text="Extensively renovated: 1996 "
+                android:text="@string/extensively_renovated_1996"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView75" />
@@ -199,7 +212,7 @@
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
             <TextView
-                android:text="Building size: 581,621 sq. ft. "
+                android:text="@string/buildingsize"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView76" />
@@ -207,7 +220,7 @@
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
             <TextView
-                android:text="Class structure: Four-Block schedule in every-other-day rotation "
+                android:text="@string/class_structure"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView77" />
@@ -215,7 +228,7 @@
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
             <TextView
-                android:text="School year: 180 day traditional calendar (Aug-June) "
+                android:text="@string/schoolschedule"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView78" />
@@ -231,30 +244,5 @@
                 android:layout_weight="0.05" />
         </LinearLayout>
     </ScrollView>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/abouthead"
-        android:id="@+id/imageView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:cropToPadding="true"
-        android:adjustViewBounds="true"
-        android:contentDescription="About Penn" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView56"
-        android:text="Penn High School is committed to excellence in education!"
-        android:textSize="18sp"
-        android:textStyle="normal|bold"
-        android:textAlignment="center"
-        android:layout_below="@+id/imageView3"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

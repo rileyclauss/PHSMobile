@@ -1,14 +1,13 @@
 package com.phsapp.phsapp;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import com.crazyhitty.chdev.ks.rssmanager.OnRssLoadListener;
 import com.crazyhitty.chdev.ks.rssmanager.RssItem;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
 
-import android.support.v7.widget.AppCompatImageView;
-import android.widget.*;
 import java.util.List;
 
 public class athleticsActivity extends AppCompatActivity implements OnRssLoadListener{
@@ -35,9 +34,9 @@ public class athleticsActivity extends AppCompatActivity implements OnRssLoadLis
     @Override
     public void onSuccess(List<RssItem> rssItems) {
         Toast.makeText(athleticsActivity.this, rssItems.get(1).getTitle(), Toast.LENGTH_SHORT).show();
-        //textViews[0] = (TextView) findViewById(R.id.textView54);
+        //texts[0] = (TextView) findViewById(R.id.textView54);
         //for(int i=0; i<10; i++){links[i] = rssItems.get(i).getLink();}
-        //for(int i=0;i<10;i++){textViews[i].setText(rssItems.get(i).getTitle());}
+        //for(int i=0;i<10;i++){texts[i].setText(rssItems.get(i).getTitle());}
     }
 
     @Override

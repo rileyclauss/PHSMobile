@@ -11,7 +11,7 @@
         android:id="@+id/Info"
         android:layout_marginBottom="25dp"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/textView54"
+
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -39,7 +39,6 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/blacksquare"
                 android:id="@+id/imageView1"
                 android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
@@ -58,7 +57,6 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/blacksquare"
                 android:id="@+id/imageView2"
                 android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"

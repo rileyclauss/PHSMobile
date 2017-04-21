@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorPrimaryInverse">@android:color/darker_gray</item>
     </style>
-    <style name="backgroundtransparent">
+   <style name="backgroundtransparent">
         <item name="android:windowBackground">@drawable/splashscreen</item>
         <item name="android:background">@drawable/splashscreen</item>
     </style>

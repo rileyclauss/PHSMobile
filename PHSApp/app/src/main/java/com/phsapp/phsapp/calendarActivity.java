@@ -10,6 +10,7 @@ public class calendarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
         MaterialCalendarView mcv = (MaterialCalendarView) findViewById(R.id.calendarView);
+
         mcv.setShowOtherDates(MaterialCalendarView.SHOW_NONE);
     }
 

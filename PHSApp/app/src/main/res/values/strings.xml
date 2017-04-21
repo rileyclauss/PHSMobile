@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">PHS Mobile</string>
-    <string name="loading">Loading...</string>
+    <string name="loading">Loading…</string>
     <string name="test">Test asset, ignore</string>
-    <string name="calendar">Calendar</string>
+    <string name="calendar">Calendars</string>
     <string name="counselingbutton">counseling button</string>
     <string name="calendaract">calendar button</string>
     <string name="newsact">news button</string>
@@ -12,10 +12,10 @@
     <string name="farts">Fine Arts</string> <!-- it's short for fine arts -->
     <string name="athletics">Athletics</string>
     <string name="pgact">photo gallery button</string>
-    <string name="abtpenn"> About Penn</string>
+    <string name="abtpenn">About Penn</string>
     <string name="news">News</string>
     <string name="pgallery">Photo Gallery</string>
-    <string name="staff">Staff</string>
+    <string name="staff">Staff Links</string>
     <string name="athbtn">athletics button</string>
     <string name="clubsbtn">clubs button</string>
     <string name="aslClub">American Sign Language (ASL) Club</string>
@@ -37,7 +37,7 @@
     <string name="FIRSTRobotics">FIRST Robotics FTC, FRC Team</string>
     <string name="frenchClub">French Club</string>
     <string name="FotLC">Friends of the Library Club</string>
-    <string name="FFAPHM">FFA, PHM (Furter For Agriculture)</string>
+    <string name="FFAPHM">FFA, PHM (Furture For Agriculture)</string>
     <string name="gameClub">Game Club</string>
     <string name="GSA">Gay-Straight Alliance (GSA)</string>
     <string name="germanClub">German Club</string>
@@ -76,13 +76,31 @@
     <string name="counseling">Counseling</string>
     <string name="contact_us">Contact Us</string>
     <string name="clubs_button">clubs button</string>
-    <string name="newsitemfive">NewsItemFive</string>
-    <string name="newsitemfour">NewsItemFour</string>
-    <string name="newsitemone">NewsItemOne</string>
-    <string name="newsitemsix">NewsItemSix</string>
-    <string name="newsitemthree">NewsItemThree</string>
-    <string name="newsitemtwo">NewsItemTwo</string>
-    <string name="picture_of_article">Picture of article</string>
-    <string name="header_of_tab">Header of tab</string>
+    <string name="introtext">Penn High School is a large public high school located in suburban northern Indiana. As the flagship school of the Penn-Harris-Madison School Corporation, Penn serves all the district’s 9th through 12th grade students as well as hundreds of out-of-district students who have made Penn High School their school of choice.</string>
+    <string name="introtext2">Penn\'s national reputation for excellence is based on its outstanding academic, athletic and fine arts programs.</string>
+    <string name="introstats">Penn is an elite 90–25–90 School because it exceeds three critical benchmarks of academic success, including graduation rate. Penn’s graduation rate is over 97%!</string>
+    <string name="introtext3">The Penn High community is focused on graduating responsible young adults who are college and career ready.</string>
+    <string name="points_of_pride">Points of Pride</string>
+    <string name="POP1">US News and World Report included Penn on its list of national “Best High Schools”</string>
+    <string name="POP2">The Washington Post identified Penn as one of “America’s Most Challenging High Schools”</string>
+    <string name="POP3">The Indiana Department of Education has named Penn a 4-Star School for four consecutive years</string>
+    <string name="POP4">Indiana Department of Education recognized Penn as a School of Promising Practices for its delivery of “Problem-based Learning”</string>
+    <string name="POP5">Penn’s STEM Academy has been certified as a Full STEM Certified Program by the Indiana Department of Education.</string>
+    <string name="POP6">All of this is made possible by Penn’s exemplary teachers, educational support staff and guidance counselors led by Mr. Steve Hope, 2015 Indiana Principal of the Year.</string>
+    <string name="quick_facts">Quick Facts</string>
+    <string name="enrollmentfact">2016–2017 enrollment: 3,517</string>
+    <string name="tasfact">Teachers and Staff: approximately 300</string>
+    <string name="schedule">Start time: 8:25 a.m. Dismissal: 3:17 p.m.</string>
+    <string name="schoolcolors">School colors: Black and Gold</string>
+    <string name="mascot">Mascot/nickname: The Kingsmen</string>
+    <string name="constructed_1958">Constructed: 1958</string>
+    <string name="extensively_renovated_1996">Extensively renovated: 1996</string>
+    <string name="buildingsize">Building size: 581,621 sq. ft.</string>
+    <string name="class_structure">Class structure: Four-Block schedule in every-other-day rotation</string>
+    <string name="schoolschedule">School year: 180 day traditional calendar (Aug-June)</string>
+    <string name="abouttext">About Penn</string>
+    <string name="comittedexcelence">Penn High School is committed to excellence in education!</string>
+    <string name="parents_and_students_button">Parents and Students Button</string>
+    <string name="staff_button">Staff Button</string>
 
 </resources>
