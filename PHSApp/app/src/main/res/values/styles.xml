@@ -12,7 +12,7 @@
         <item name="android:windowBackground">@drawable/splashscreen</item>
         <item name="android:background">@drawable/splashscreen</item>
     </style>
-    <style name="penntheme" parent="Theme.AppCompat.NoActionBar" >
+    <style name="penntheme" parent="Theme.AppCompat" >
         <item name="android:windowBackground">@null</item>
         <item name="android:background">@null</item>
         <item name="colorAccent">@color/accent_material_dark_1</item>

@@ -1,30 +1,36 @@
 apply plugin: 'com.android.application'
 
 android {
+
     compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    buildToolsVersion '25.0.3'
     defaultConfig {
+
         applicationId "com.phsapp.phsapp"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
+
         release {
-            minifyEnabled false
+
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
         }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_6
-        targetCompatibility JavaVersion.VERSION_1_6
+
     }
 }
+
 repositories {
+
     maven {
+
         url "https://jitpack.io"
+
     }
 
     mavenCentral()
@@ -32,21 +38,20 @@ repositories {
 
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.google.android.gms:play-services-gcm:9.6.0'
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:percent:25.1.1'
+
+    compile 'com.google.android.gms:play-services-gcm:10.2.1'
+    compile 'com.android.support:percent:25.3.1'
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.android.support:support-v4:25.1.0'
-    compile 'com.android.support:appcompat-v7:25.1.1'
-    compile 'com.android.support:design:25.1.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.7'
     compile 'com.crazyhitty.chdev.ks:rss-manager:0.23'
-    compile 'com.android.support:customtabs:25.1.1'
+    compile 'com.android.support:customtabs:25.3.1'
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
-    compile 'com.android.support:support-v4:25.1.1'
+    compile 'com.android.support:support-v4:25.3.1'
     compile 'com.github.prolificinteractive:material-calendarview:v1.4.3'
     compile 'com.google.android.gms:play-services-ads:10.2.1'
     compile 'com.google.android.gms:play-services-maps:10.2.1'
+    androidTestCompile 'junit:junit:4.12'
 }
