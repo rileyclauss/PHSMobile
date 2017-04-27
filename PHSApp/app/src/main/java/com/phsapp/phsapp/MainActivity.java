@@ -9,7 +9,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.penntheme);
+        setTheme(R.style.NewPennTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTheme(R.style.backgroundtransparent);
