@@ -170,11 +170,13 @@
             <Space
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>
+
             <TextView
-                android:text="@string/schedule"
+                android:id="@+id/textView71"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView71" />
+                android:text="@string/schedule" />
+
             <Space
                 android:layout_width="1dp"
                 android:layout_height="5dp"/>

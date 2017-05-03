@@ -39,7 +39,6 @@ repositories {
 
 dependencies {
 
-    compile 'com.google.android.gms:play-services-gcm:10.2.1'
     compile 'com.android.support:percent:25.3.1'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.android.support:appcompat-v7:25.3.1'
@@ -51,7 +50,14 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.github.prolificinteractive:material-calendarview:v1.4.3'
-    compile 'com.google.android.gms:play-services-ads:10.2.1'
-    compile 'com.google.android.gms:play-services-maps:10.2.1'
+    compile 'com.google.android.gms:play-services-ads:10.2.4'
+    compile 'com.google.android.gms:play-services-maps:10.2.4'
+    compile 'pub.devrel:easypermissions:0.2.1'
+    compile('com.google.api-client:google-api-client-android:1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile('com.google.apis:google-api-services-calendar:v3-rev243-1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
     androidTestCompile 'junit:junit:4.12'
 }

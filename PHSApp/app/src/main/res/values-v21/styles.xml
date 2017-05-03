@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="ContentTheme" parent="android:Theme.DeviceDefault">
-        <item name="android:colorAccent">@color/accent_material_dark</item>
-    </style>
 
-    <style name="penntheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@null</item>
-        <item name="android:background">@null</item>
-        <item name="colorAccent">@color/accent_material_dark_1</item>
-        <item name="colorPrimary">@color/primary_dark_material_dark</item>
-        <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
+
+    <style name="NewPennTheme" parent="Theme.AppCompat.NoActionBar" >
         <item name="android:colorForeground">@color/accent_material_dark_1</item>
-        <item name="android:textColorPrimary">@color/accent_material_dark_1</item>
-        <item name="android:textColorSecondary">@color/common_google_signin_btn_text_dark</item>
-        <item name="android:textColorSecondaryInverse">@android:color/darker_gray</item>
-        <item name="android:textColorPrimaryInverse">@android:color/darker_gray</item>
-        <item name="android:navigationBarColor">?attr/actionModeSplitBackground</item>
-        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:textColorPrimary">?attr/colorAccent</item>
+        <item name="android:textColorSecondary">@color/accent_material_dark_1</item>
+        <item name="android:textColorSecondaryInverse">@color/accent_material_dark_1</item>
+        <item name="android:colorBackground">@color/common_google_signin_btn_text_dark_focused
+        </item>
     </style>
 </resources>

@@ -5,6 +5,8 @@
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
 
     <application
         android:allowBackup="true"
@@ -13,7 +15,7 @@
         android:supportsRtl="true"
         android:hardwareAccelerated="true"
         android:screenOrientation="portrait"
-        android:theme="@style/Theme.AppCompat"
+        android:theme="@style/NewPennTheme"
         android:fullBackupContent="true">
         <activity android:name=".Splash">
         <intent-filter>
