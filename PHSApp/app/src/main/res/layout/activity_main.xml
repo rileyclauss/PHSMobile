@@ -20,402 +20,371 @@
        ===========`-.`___`-.__\ \___  /__.-'_.'_.-'================
                                `= -=-'
                                may your code be bug free-->
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:theme="@style/penntheme"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="16dp"
-    android:paddingBottom="16dp"
-    tools:context="com.phsapp.phsapp.MainActivity"
-    android:background="@drawable/backgroundnew">
 
-    <TextView
-        android:id="@+id/CalendarText"
-        android:layout_height="wrap_content"
-        android:text="@string/calendar"
-        android:ems="10"
-        android:layout_width="60dp"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:layout_alignBaseline="@+id/NewsText"
-        android:layout_alignBottom="@+id/NewsText"
-        android:layout_alignLeft="@+id/CalendarButton"
-        android:layout_alignStart="@+id/CalendarButton" />
-<!-- counseling icon -->
-    <ImageButton
-        android:id="@+id/CounselingButton"
-        app:srcCompat="@drawable/counselingicon"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:background="@null"
-        android:layout_marginTop="39dp"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_below="@+id/PASText"
-        android:layout_alignLeft="@+id/NewsText"
-        android:layout_alignStart="@+id/NewsText"
-        android:adjustViewBounds="false"
-        android:tag="counseling"
-        android:onClick="counselingAct"
-        android:contentDescription="@string/counselingbutton" />
-<!-- calendar button -->
-    <ImageButton
-        app:srcCompat="@drawable/calendar"
-        android:id="@+id/CalendarButton"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp"
-        android:layout_alignTop="@+id/NewsIcon"
-        android:layout_toRightOf="@+id/NewsIcon"
-        android:layout_toEndOf="@+id/NewsIcon"
-        android:tag="calendar"
-        android:onClick="calendarAct"
-        android:contentDescription="@string/calendaract"
-       />
-<!-- news icon -->
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:lines="2"
-        android:id="@+id/PASText"
-        android:text="@string/sap"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:layout_width="80dp"
-        android:gravity="center_vertical|fill_vertical|center_horizontal"
-        android:layout_marginLeft="11dp"
-        android:layout_alignBaseline="@+id/CalendarText"
-        android:layout_alignBottom="@+id/CalendarText"
-        android:layout_toRightOf="@+id/CalendarText"
-        android:layout_toEndOf="@+id/CalendarText"
-        android:layout_marginStart="10dp" />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:text="@string/academics"
-        android:ems="10"
-        android:id="@+id/AcademicsText"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:layout_width="80dp"
-        android:layout_alignBaseline="@+id/PASText"
-        android:layout_alignBottom="@+id/PASText"
-        android:layout_toRightOf="@+id/PASText"
-        android:layout_toEndOf="@+id/PASText" />
-<!-- academics icon -->
-    <ImageButton
-    app:srcCompat="@drawable/academicsicon"
-    android:id="@+id/AcademicsButton"
-    android:scaleType="fitCenter"
-    android:cropToPadding="false"
-    android:adjustViewBounds="true"
-    android:background="@null"
-    android:layout_width="60dp"
-    android:layout_height="60dp"
-        android:layout_alignTop="@+id/PASButton"
-        android:layout_toRightOf="@+id/PASText"
-        android:layout_toEndOf="@+id/PASText"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:tag="academics"
-        android:onClick="academAct"
-        android:contentDescription="@string/academicsact" />
-<!-- pas icon -->
-
-    <!-- clubsicon -->
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:text="@string/farts"
-        android:ems="10"
-        android:id="@+id/FineArtsText"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingStart="0dp"
-        android:paddingLeft="0dp"
-        android:layout_width="70dp"
-        android:layout_alignBaseline="@+id/CounselingText"
-        android:layout_alignBottom="@+id/CounselingText"
-        android:layout_alignLeft="@+id/CalendarText"
-        android:layout_alignStart="@+id/CalendarText" />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:text="@string/athletics"
-        android:ems="10"
-        android:id="@+id/AthleticsText"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingLeft="0dp"
-        android:paddingStart="0dp"
-        android:layout_width="70dp"
-        android:layout_alignBaseline="@+id/ClubsText"
-        android:layout_alignBottom="@+id/ClubsText"
-        android:layout_alignRight="@+id/PASText"
-        android:layout_alignEnd="@+id/PASText" />
-    <ImageButton
-        app:srcCompat="@drawable/photogallery"
-        android:id="@+id/PhotoGalleryButton"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignTop="@+id/ContactUsButton"
-        android:layout_alignLeft="@+id/FineArtsText"
-        android:layout_alignStart="@+id/FineArtsText"
-        android:tag="photogallery"
-        android:onClick="photoAct"
-        android:contentDescription="@string/pgact" />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:text="@string/abtpenn"
-        android:ems="10"
-        android:id="@+id/AboutText"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingLeft="0dp"
-        android:paddingStart="0dp"
-        android:layout_width="wrap_content"
-        android:layout_alignBaseline="@+id/ContactUsText"
-        android:layout_alignBottom="@+id/ContactUsText"
-        android:layout_toRightOf="@+id/ContactUsButton"
-        android:layout_toEndOf="@+id/ContactUsButton" />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:text="@string/news"
-        android:ems="10"
-        android:id="@+id/NewsText"
-        android:layout_width="60dp"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:layout_below="@+id/NewsIcon"
-        android:layout_alignLeft="@+id/NewsIcon"
-        android:layout_alignStart="@+id/NewsIcon" />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/PhotoGalleryText"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:paddingLeft="57dp"
-        android:paddingStart="57dp"
-        android:layout_width="wrap_content"
-        android:text="@string/pgallery"
-        android:layout_below="@+id/ContactUsButton"
-        android:layout_toLeftOf="@+id/ContactUsButton"
-        android:layout_toStartOf="@+id/ContactUsButton" />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:text="@string/staff"
-        android:ems="10"
-        android:id="@+id/StaffText"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingLeft="0dp"
-        android:paddingStart="0dp"
-        android:layout_width="wrap_content"
-        android:layout_alignBaseline="@+id/PhotoGalleryText"
-        android:layout_alignBottom="@+id/PhotoGalleryText"
-        android:layout_toLeftOf="@+id/PhotoGalleryButton"
-        android:layout_toStartOf="@+id/PhotoGalleryButton" />
-
-    <ImageButton
-        app:srcCompat="@drawable/scoreboard"
-        android:id="@+id/AthleticsButton"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:tag="athlectsButton"
-        android:clickable="true"
-        android:onClick="athleticsAct"
-        android:cropToPadding="false"
-        android:layout_above="@+id/AthleticsText"
-        android:layout_marginStart="179dp"
-        android:layout_marginLeft="179dp"
-        android:contentDescription="@string/athbtn" />
-
-    <ImageButton
-        app:srcCompat="@drawable/clubs"
-        android:id="@+id/ClubsButton"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:tag="clubs"
-        android:onClick="clubAct"
-        android:layout_above="@+id/ClubsText"
-        android:layout_alignRight="@+id/AcademicsText"
-        android:layout_alignEnd="@+id/AcademicsText"
-        android:contentDescription="@string/clubs_button" />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:text="@string/contact_us"
-        android:ems="10"
-        android:id="@+id/ContactUsText"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingLeft="0dp"
-        android:layout_width="wrap_content"
-        android:layout_marginRight="36dp"
-        android:layout_marginEnd="36dp"
-        android:layout_alignBaseline="@+id/PhotoGalleryText"
-        android:layout_alignBottom="@+id/PhotoGalleryText"
-        android:layout_alignRight="@+id/AcademicsButton"
-        android:layout_alignEnd="@+id/AcademicsButton" />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:text="@string/clubs"
-        android:ems="10"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingLeft="0dp"
-        android:layout_width="70dp"
-        android:id="@+id/ClubsText"
-        android:layout_alignBaseline="@+id/FineArtsText"
-        android:layout_alignBottom="@+id/FineArtsText"
-        android:layout_alignRight="@+id/ClubsButton"
-        android:layout_alignEnd="@+id/ClubsButton" />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:text="@string/counseling"
-        android:ems="10"
-        android:id="@+id/CounselingText"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingLeft="0dp"
-        android:layout_width="70dp"
-        android:layout_below="@+id/CounselingButton"
-        android:layout_alignRight="@+id/CounselingButton"
-        android:layout_alignEnd="@+id/CounselingButton" />
-
-    <ImageButton
-        app:srcCompat="@drawable/contacticon"
-        android:id="@+id/ContactUsButton"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="38dp"
-        android:tag="contact"
-        android:onClick="contactAct"
-        android:layout_below="@+id/AthleticsText"
-        android:layout_alignLeft="@+id/AthleticsButton"
-        android:layout_alignStart="@+id/AthleticsButton" />
-
-    <ImageButton
-        app:srcCompat="@drawable/pasicon"
-        android:id="@+id/PASButton"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:tag="pas"
-        android:onClick="pasAct"
-        android:layout_above="@+id/PASText"
-        android:layout_alignLeft="@+id/AthleticsButton"
-        android:layout_alignStart="@+id/AthleticsButton" />
-
-    <ImageButton
-        app:srcCompat="@drawable/newsicon"
-        android:id="@+id/NewsIcon"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_marginLeft="17dp"
-        android:layout_marginStart="17dp"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:tag="news"
-        android:onClick="newsAct"
-        android:contentDescription="@string/newsact"
-        android:layout_alignParentTop="true"
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:theme="@style/NewPennTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        tools:context="com.phsapp.phsapp.MainActivity"
+        android:background="@drawable/background"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
-    <ImageButton
-        app:srcCompat="@drawable/abouticon"
-        android:id="@+id/AboutUsButton"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:tag="about"
-        android:onClick="aboutAct"
-        android:layout_above="@+id/AboutText"
-        android:layout_alignLeft="@+id/ClubsText"
-        android:layout_alignStart="@+id/ClubsText" />
+    <TableRow
 
-    <ImageButton
-        app:srcCompat="@drawable/key"
-        android:id="@+id/StaffIcon"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:tag="staff"
-        android:onClick="staffAct"
-        android:contentDescription="@string/newsact"
-        android:layout_above="@+id/PhotoGalleryText"
-        android:layout_alignRight="@+id/CounselingText"
-        android:layout_alignEnd="@+id/CounselingText" />
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="30dp">
 
-    <ImageButton
-        android:layout_width="60dp"
-        android:scaleType="fitCenter"
-        android:layout_height="60dp"
-        android:tag="about"
-        android:background="@null"
-        app:srcCompat="@drawable/musicnote"
-        android:clickable="true"
-        android:onClick="fartsAct"
-        android:id="@+id/fartsbutton"
-        android:paddingLeft="3dp"
-        android:layout_above="@+id/FineArtsText"
-        android:layout_alignLeft="@+id/FineArtsText"
-        android:layout_alignStart="@+id/FineArtsText" />
+        <ImageButton
+            android:id="@+id/NewsIcon"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight=".2"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/newsact"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:tag="n"
+            app:srcCompat="@drawable/news" />
 
-</RelativeLayout>
+        <ImageButton
+            android:id="@+id/CalendarButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/calendaract"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:tag="c"
+            app:srcCompat="@drawable/calendar" />
+
+        <ImageButton
+            android:id="@+id/PASButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight=".2"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/parents_and_students_button"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:tag="y"
+            app:srcCompat="@drawable/parents_and_students" />
+
+        <ImageButton
+            android:id="@+id/AcademicsButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight=".2"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/academicsact"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:tag="a"
+            app:srcCompat="@drawable/academicsicon" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/NewsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:ems="10"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/news"
+            android:textColor="?attr/colorControlNormal"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/CalendarText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:ems="10"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/calendar"
+            android:textColor="?attr/colorControlNormal"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/PASText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+
+            android:ems="10"
+            android:gravity="center_vertical|fill_vertical|center_horizontal"
+            android:lines="2"
+            android:text="@string/sap"
+            android:textColor="?attr/colorControlNormal"
+
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/AcademicsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:ems="10"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/academics"
+            android:textColor="?attr/colorControlNormal"
+            android:textSize="12sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp">
+
+        <ImageButton
+            android:id="@+id/CounselingButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight=".25"
+            android:adjustViewBounds="false"
+            android:background="@null"
+            android:contentDescription="@string/counselingbutton"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:tag="o"
+            app:srcCompat="@drawable/counselingicon" />
+
+        <ImageButton
+            android:id="@+id/AthleticsButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight=".25"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:clickable="true"
+            android:contentDescription="@string/athbtn"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:tag="t"
+            app:srcCompat="@drawable/scoreboard" />
+
+        <ImageButton
+            android:id="@+id/fartsbutton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight=".25"
+            android:background="@null"
+            android:clickable="true"
+            android:contentDescription="@string/farts"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:tag="f"
+            app:srcCompat="@drawable/finearts" />
+
+        <ImageButton
+            android:id="@+id/ClubsButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight=".25"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/clubs_button"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:tag="l"
+            app:srcCompat="@drawable/clubs" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/CounselingText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:ems="10"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/counseling"
+            android:textColor="?attr/colorControlNormal"
+
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/AthleticsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:ems="10"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingLeft="0dp"
+            android:paddingStart="0dp"
+            android:text="@string/athletics"
+            android:textColor="?attr/colorControlNormal"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/FineArtsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:ems="10"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingLeft="0dp"
+            android:paddingStart="0dp"
+            android:text="@string/farts"
+            android:textColor="?attr/colorControlNormal"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ClubsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:ems="10"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/clubs"
+
+            android:textColor="?attr/colorControlNormal"
+            android:textSize="12sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp">
+
+        <ImageButton
+            android:id="@+id/StaffIcon"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight=".25"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/staff_button"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:tag="z"
+            app:srcCompat="@drawable/key" />
+
+        <ImageButton
+            android:id="@+id/PhotoGalleryButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight=".25"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/pgact"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:tag="p"
+            app:srcCompat="@drawable/photogallery" />
+
+        <ImageButton
+            android:id="@+id/ContactUsButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight=".25"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/contact_us"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:tag="x"
+            app:srcCompat="@drawable/contact_us" />
+
+        <ImageButton
+            android:id="@+id/AboutUsButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight=".25"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/abouttext"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:tag="u"
+            app:srcCompat="@drawable/abouticon" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/StaffText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:ems="10"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingLeft="0dp"
+            android:paddingStart="0dp"
+            android:text="@string/staff"
+            android:textColor="?attr/colorControlNormal"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/PhotoGalleryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/pgallery"
+            android:textColor="?attr/colorControlNormal"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ContactUsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+
+            android:ems="10"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/contact_us"
+            android:textColor="?attr/colorControlNormal"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/AboutText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:ems="10"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingLeft="0dp"
+            android:paddingStart="0dp"
+            android:text="@string/abtpenn"
+            android:textColor="?attr/colorControlNormal"
+            android:textSize="12sp" />
+
+    </TableRow>
+    </TableLayout>

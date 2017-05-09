@@ -4,14 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.TextView;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.support.customtabs.CustomTabsCallback;
-import android.support.customtabs.CustomTabsClient;
 import android.support.customtabs.CustomTabsIntent;
-import android.support.customtabs.CustomTabsServiceConnection;
-import android.support.customtabs.CustomTabsSession;
 import android.net.Uri;
 import android.widget.Toast;
 
@@ -137,7 +131,6 @@ public class clubActivity extends AppCompatActivity {
                 return "https://sites.google.com/site/thegreatwritersguild2/";
             case R.id.textView53:
                 return "https://penn.phmschools.org/24-hour-theatertalent-show";
-
             default:
                 return "error";
         }

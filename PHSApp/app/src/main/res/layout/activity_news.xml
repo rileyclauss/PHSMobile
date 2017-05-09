@@ -1,32 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_club"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.phsapp.phsapp.clubActivity">
-<!--
-    <WebView
+    tools:context="com.phsapp.phsapp.clubActivity"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <ImageView
+        android:id="@+id/newsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/newsheader" />
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/webview1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" >
-    </WebView>
--->
+        android:layout_below="@id/newsHeader"
+        android:layout_alignParentStart="true">
 
-    <pl.droidsonroids.gif.GifTextView
-        android:background="@drawable/loading"
-        android:layout_width="175dp"
-        android:layout_height="175dp"
-        android:id="@+id/load"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsImage0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag = "0" />
+
+            <TextView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsText0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:tag = "0"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+            <ImageView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsImage1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag = "1"/>
+
+            <TextView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:tag = "1"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+            <ImageView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsImage2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag = "2" />
+
+            <TextView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:tag = "2"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+            <ImageView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsImage3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag = "3" />
+
+            <TextView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:tag = "3"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+            <ImageView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsImage4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag = "4" />
+
+            <TextView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:tag = "4"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+            <ImageView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsImage5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag = "5" />
+
+            <TextView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsText5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:tag = "5"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+            <ImageView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsImage6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag = "6" />
+
+            <TextView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsText6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:tag = "6"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+            <ImageView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsImage7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag = "7" />
+
+            <TextView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsText7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:tag = "7"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+            <ImageView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsImage8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag = "8" />
+
+            <TextView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsText8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:tag = "8"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+            <ImageView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsImage9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag = "9" />
+
+            <TextView
+                android:clickable = "true"
+                android:onClick = "onClick"
+                android:id="@+id/newsText9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:tag = "9"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
     <TextView
         android:text="@string/loading"
         android:layout_width="wrap_content"
@@ -39,112 +250,12 @@
         android:textColorHighlight="@color/accent_material_dark_1"
         android:textColor="@color/accent_material_dark_1" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        app:srcCompat="@drawable/newshead"
-        android:id="@+id/imageView2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:contentDescription="@string/header_of_tab" />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageView2">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-<Space
-    android:layout_width="match_parent"
-    android:layout_height="20dp" />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/blacksquare"
-                android:id="@+id/imageView3"
-                android:visibility="invisible"
-                android:contentDescription="@string/picture_of_article" />
-            <TextView
-                android:text="@string/newsitemone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView1"
-                android:gravity="center_horizontal"
-                android:visibility="invisible" />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/blacksquare"
-                android:id="@+id/imageView4"
-                android:visibility="invisible"
-                android:contentDescription="@string/picture_of_article"/>
-            <TextView
-                android:text="@string/newsitemtwo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView2"
-                android:gravity="center_horizontal"
-                android:visibility="invisible" />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/blacksquare"
-                android:id="@+id/imageView5"
-                android:visibility="invisible"
-                android:contentDescription="@string/picture_of_article" />
-            <TextView
-                android:text="@string/newsitemthree"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView3"
-                android:gravity="center_horizontal"
-                android:visibility="invisible" />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/blacksquare"
-                android:id="@+id/imageView6"
-                android:visibility="invisible"
-                android:contentDescription="@string/picture_of_article"/>
-            <TextView
-                android:text="@string/newsitemfour"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView4"
-                android:gravity="center_horizontal"
-                android:visibility="invisible" />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/blacksquare"
-                android:id="@+id/imageView7"
-                android:visibility="invisible"
-                android:contentDescription="@string/picture_of_article"/>
-            <TextView
-                android:text="@string/newsitemfive"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView5"
-                android:gravity="center_horizontal"
-                android:visibility="invisible" />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/blacksquare"
-                android:id="@+id/imageView8"
-                android:visibility="invisible"
-                android:contentDescription="@string/picture_of_article"/>
-            <TextView
-                android:text="@string/newsitemsix"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView6"
-                android:gravity="center_horizontal"
-                android:visibility="invisible" />
-        </LinearLayout>
-    </ScrollView>
+    <pl.droidsonroids.gif.GifTextView
+        android:id="@+id/load"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/loading" />
+
 </RelativeLayout>

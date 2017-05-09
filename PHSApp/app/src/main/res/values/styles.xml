@@ -1,31 +1,22 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Black.NoTitleBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorPrimaryInverse">@android:color/darker_gray</item>
-    </style>
-    <style name="backgroundtransparent">
+
+   <style name="backgroundtransparent">
         <item name="android:windowBackground">@drawable/splashscreen</item>
         <item name="android:background">@drawable/splashscreen</item>
     </style>
-    <style name="penntheme" parent="Theme.AppCompat.NoActionBar" >
-        <item name="android:windowBackground">@null</item>
-        <item name="android:background">@null</item>
-        <item name="colorAccent">@color/accent_material_dark_1</item>
-        <item name="colorPrimary">@color/primary_dark_material_dark</item>
-        <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
-        <item name="android:colorForeground">@color/accent_material_dark_1</item>
-        <item name="android:textColorPrimary">@color/accent_material_dark_1</item>
-        <item name="android:textColorSecondary">@color/common_google_signin_btn_text_dark</item>
-        <item name="android:textColorSecondaryInverse">@android:color/darker_gray</item>
-        <item name="android:textColorPrimaryInverse">@android:color/darker_gray</item>
-    </style>
     <style name="CustomTextAppearance" parent="TextAppearance.MaterialCalendarWidget.Date">
         <item name="android:textColor">@color/mcv_text_date_dark</item>
+    </style>
+
+    <style name="NewPennTheme" parent="Theme.AppCompat.NoActionBar" >
+        <item name="android:colorForeground">@color/accent_material_dark_1</item>
+        <item name="android:textColorPrimary">?attr/colorAccent</item>
+        <item name="android:textColorSecondary">@color/accent_material_dark_1</item>
+        <item name="android:textColorSecondaryInverse">@color/accent_material_dark_1</item>
+        <item name="android:colorBackground">@color/common_google_signin_btn_text_dark_focused
+        </item>
     </style>
 
 </resources>
