@@ -117,67 +117,11 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getTag().toString().equals("0")){
-            String url = links[0];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("1")){
-            String url = links[1];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("2")){
-            String url = links[2];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("3")){
-            String url = links[3];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("4")){
-            String url = links[4];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("5")){
-            String url = links[5];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("6")){
-            String url = links[6];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("7")){
-            String url = links[7];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("8")){
-            String url = links[8];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("9")){
-            String url = links[9];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-
+        int i = Integer.parseInt(v.getTag().toString());
+        String url = links[i];
+        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+        CustomTabsIntent customTabsIntent = builder.build();
+        customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
     }
 }
 
