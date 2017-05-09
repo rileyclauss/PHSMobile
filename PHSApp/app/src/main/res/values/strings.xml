@@ -102,5 +102,7 @@
     <string name="comittedexcelence">Penn High School is committed to excellence in education!</string>
     <string name="parents_and_students_button">Parents and Students Button</string>
     <string name="staff_button">Staff Button</string>
+    <string name="open_pennant">Open Pennant</string>
+    <string name="baseball">Baseball</string>
 
 </resources>

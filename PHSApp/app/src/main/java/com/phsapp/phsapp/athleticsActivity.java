@@ -1,5 +1,5 @@
 package com.phsapp.phsapp;
-//TODO Divide sections into different sports
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,7 +22,6 @@ import pl.droidsonroids.gif.GifTextView;
 public class athleticsActivity extends AppCompatActivity implements View.OnClickListener, OnRssLoadListener {
 
     private String[] links = new String[10];
-    private String[] imgLinks = new String[10];
     private TextView[] textViews = new TextView[10];
     private ImageView[] views = new ImageView[10];
     private TextView loadtext = null;
@@ -75,17 +74,28 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
     public void onSuccess(List<RssItem> rssItems) {
 
         visibilityFix();
-
-
+        /*
         for (int i = 0; i < 10; i++) { links[i] = rssItems.get(i).getLink(); }
         for (int i = 0; i < 10; i++) { textViews[i].setText(rssItems.get(i).getTitle()); }
+       // for (int i = 0; i < 10; i++) {new ImageDownloaderTask(views[i]).execute(rssItems.get(i).getImageUrl());}
+        //Toast.makeText(this, "Tap on an article for more information" , Toast.LENGTH_LONG).show();*/
+        textViews[0].setText("Category " + rssItems.get(0).getCategory());
+        textViews[1].setText("Category " + rssItems.get(1).getCategory());
+        textViews[2].setText("Category " + rssItems.get(2).getCategory());
+        textViews[3].setText("Category " + rssItems.get(3).getCategory());
+        textViews[4].setText("Category " + rssItems.get(4).getCategory());
+        textViews[5].setText("Category " + rssItems.get(5).getCategory());
+        textViews[6].setText("Category " + rssItems.get(6).getCategory());
+        textViews[7].setText("Category " + rssItems.get(7).getCategory());
+        textViews[8].setText("Category " + rssItems.get(8).getCategory());
+        textViews[9].setText("Category " + rssItems.get(9).getCategory());
 
-        Toast.makeText(this, "Tap on an article for more information" , Toast.LENGTH_LONG).show();
+
     }
 
     @Override
     public void onFailure(String message) {
-        Toast.makeText(this, "An error occured, please check your internet connection." , Toast.LENGTH_LONG).show();
+        Toast.makeText(this, message , Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
@@ -99,68 +109,17 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
         }
     }
 
+
     @Override
     public void onClick(View v) {
-        if (v.getTag().toString().equals("0")){
-            String url = links[0];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("1")){
-            String url = links[1];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("2")){
-            String url = links[2];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("3")){
-            String url = links[3];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("4")){
-            String url = links[4];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("5")){
-            String url = links[5];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("6")){
-            String url = links[6];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("7")){
-            String url = links[7];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("8")){
-            String url = links[8];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
-        else if (v.getTag().toString().equals("9")){
-            String url = links[9];
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
-        }
+        int i = Integer.parseInt(v.getTag().toString());
+        String url = links[i];
+        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+        CustomTabsIntent customTabsIntent = builder.build();
+        customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
+    }
+
+    public void openPennant(View view) {
 
     }
 }
