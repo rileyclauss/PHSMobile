@@ -1,12 +1,11 @@
 package com.phsapp.phsapp;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.customtabs.CustomTabsIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Space;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,16 +20,22 @@ import pl.droidsonroids.gif.GifTextView;
 
 public class athleticsActivity extends AppCompatActivity implements View.OnClickListener, OnRssLoadListener {
 
-    private String[] links = new String[10];
-    private TextView[] textViews = new TextView[10];
-    private ImageView[] views = new ImageView[10];
+
+
+    private TextView[] labels = new TextView[2];
+    private String[][] links = new String[2][5];
+    private Space[][] spacers = new Space[2][5];
+    athleticsEntry[] athleticsEntries = new athleticsEntry[10];
+    private TextView[][] textViews = new TextView[2][5];
+    private ImageView[][] views = new ImageView[2][5];
+    private Boolean[][] entries = new Boolean[2][5]; //Checks to see if that spot is already filled when sorting news articles
     private TextView loadtext = null;
     private pl.droidsonroids.gif.GifTextView loadgif = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news);
+        setContentView(R.layout.activity_athletics);
         loadtext = (TextView) findViewById(R.id.textView);
         loadgif = (pl.droidsonroids.gif.GifTextView) findViewById(R.id.load);
         declareStatic();
@@ -38,30 +43,48 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void declareStatic(){
+        for (int i = 0;i<5;i++){
+            entries[0][i] = false;
+            entries[1][i] = false;
+        }
         loadtext = (TextView) findViewById(R.id.textView);
         loadgif = (GifTextView) findViewById(R.id.load);
 
-        textViews[0] = (TextView) findViewById(R.id.newsText0);
-        textViews[1] = (TextView) findViewById(R.id.newsText1);
-        textViews[2] = (TextView) findViewById(R.id.newsText2);
-        textViews[3] = (TextView) findViewById(R.id.newsText3);
-        textViews[4] = (TextView) findViewById(R.id.newsText4);
-        textViews[5] = (TextView) findViewById(R.id.newsText5);
-        textViews[6] = (TextView) findViewById(R.id.newsText6);
-        textViews[7] = (TextView) findViewById(R.id.newsText7);
-        textViews[8] = (TextView) findViewById(R.id.newsText8);
-        textViews[9] = (TextView) findViewById(R.id.newsText9);
+        labels[0] = (TextView) findViewById(R.id.boysHeader);
+        labels[1] = (TextView) findViewById(R.id.girlsHeader);
 
-        views[0] = (ImageView) findViewById(R.id.newsImage0);
-        views[1] = (ImageView) findViewById(R.id.newsImage1);
-        views[2] = (ImageView) findViewById(R.id.newsImage2);
-        views[3] = (ImageView) findViewById(R.id.newsImage3);
-        views[4] = (ImageView) findViewById(R.id.newsImage4);
-        views[5] = (ImageView) findViewById(R.id.newsImage5);
-        views[6] = (ImageView) findViewById(R.id.newsImage6);
-        views[7] = (ImageView) findViewById(R.id.newsImage7);
-        views[8] = (ImageView) findViewById(R.id.newsImage8);
-        views[9] = (ImageView) findViewById(R.id.newsImage9);
+        textViews[0][0] = (TextView) findViewById(R.id.sportsText0);
+        textViews[0][1] = (TextView) findViewById(R.id.sportsText1);
+        textViews[0][2] = (TextView) findViewById(R.id.sportsText2);
+        textViews[0][3] = (TextView) findViewById(R.id.sportsText3);
+        textViews[0][4] = (TextView) findViewById(R.id.sportsText4);
+        textViews[1][0] = (TextView) findViewById(R.id.sportsText5);
+        textViews[1][1] = (TextView) findViewById(R.id.sportsText6);
+        textViews[1][2] = (TextView) findViewById(R.id.sportsText7);
+        textViews[1][3] = (TextView) findViewById(R.id.sportsText8);
+        textViews[1][4] = (TextView) findViewById(R.id.sportsText9);
+
+        spacers[0][0] = (Space) findViewById(R.id.space0);
+        spacers[0][1] = (Space) findViewById(R.id.space1);
+        spacers[0][2] = (Space) findViewById(R.id.space2);
+        spacers[0][3] = (Space) findViewById(R.id.space3);
+        spacers[0][4] = (Space) findViewById(R.id.space4);
+        spacers[1][0] = (Space) findViewById(R.id.space5);
+        spacers[1][1] = (Space) findViewById(R.id.space6);
+        spacers[1][2] = (Space) findViewById(R.id.space7);
+        spacers[1][3] = (Space) findViewById(R.id.space8);
+        spacers[1][4] = (Space) findViewById(R.id.space9);
+
+        views[0][0] = (ImageView) findViewById(R.id.sportsImage0);
+        views[0][1] = (ImageView) findViewById(R.id.sportsImage1);
+        views[0][2] = (ImageView) findViewById(R.id.sportsImage2);
+        views[0][3] = (ImageView) findViewById(R.id.sportsImage3);
+        views[0][4] = (ImageView) findViewById(R.id.sportsImage4);
+        views[1][0] = (ImageView) findViewById(R.id.sportsImage5);
+        views[1][1] = (ImageView) findViewById(R.id.sportsImage6);
+        views[1][2] = (ImageView) findViewById(R.id.sportsImage7);
+        views[1][3] = (ImageView) findViewById(R.id.sportsImage8);
+        views[1][4] = (ImageView) findViewById(R.id.sportsImage9);
 
     }
 
@@ -72,25 +95,47 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onSuccess(List<RssItem> rssItems) {
-
         visibilityFix();
-        /*
-        for (int i = 0; i < 10; i++) { links[i] = rssItems.get(i).getLink(); }
-        for (int i = 0; i < 10; i++) { textViews[i].setText(rssItems.get(i).getTitle()); }
-       // for (int i = 0; i < 10; i++) {new ImageDownloaderTask(views[i]).execute(rssItems.get(i).getImageUrl());}
-        //Toast.makeText(this, "Tap on an article for more information" , Toast.LENGTH_LONG).show();*/
-        textViews[0].setText("Category " + rssItems.get(0).getCategory());
-        textViews[1].setText("Category " + rssItems.get(1).getCategory());
-        textViews[2].setText("Category " + rssItems.get(2).getCategory());
-        textViews[3].setText("Category " + rssItems.get(3).getCategory());
-        textViews[4].setText("Category " + rssItems.get(4).getCategory());
-        textViews[5].setText("Category " + rssItems.get(5).getCategory());
-        textViews[6].setText("Category " + rssItems.get(6).getCategory());
-        textViews[7].setText("Category " + rssItems.get(7).getCategory());
-        textViews[8].setText("Category " + rssItems.get(8).getCategory());
-        textViews[9].setText("Category " + rssItems.get(9).getCategory());
 
+        int x, y;
+        for (int i = 0;i<10;i++) {
 
+            x = rssItems.get(i).getDescription().indexOf(" src");
+            x += 6;
+            y = rssItems.get(i).getDescription().indexOf(" alt");
+            y -=1;
+
+            athleticsEntries[i] = new athleticsEntry(rssItems.get(i).getTitle(),rssItems.get(i).getDescription().substring(x,y),rssItems.get(i).getCategory(),rssItems.get(i).getLink());
+        }
+
+        for (int i=0;i<10;i++) {
+                if (athleticsEntries[i].getCategory().equals("Girls Sports")) {
+                    int z = 0;
+                    while (entries[1][z]) {
+                        z++;
+                    }
+                    if (!entries[1][z]){
+                        new ImageDownloaderTask(views[1][z]).execute(athleticsEntries[i].getImgLink());
+                        entries[1][z] = true;
+                        links[1][z] = athleticsEntries[i].getLink();
+                        textViews[1][z].setText(athleticsEntries[i].getTitle());
+                        spacers[1][z].setMinimumHeight(15);
+                    }
+                } else if (!athleticsEntries[i].getCategory().equals("Boys Sports") && !athleticsEntries[i].getCategory().equals("Photo Gallery")) {
+                    int z = 0;
+                    while (entries[0][z]){
+                        z++;
+                    }
+                    if (!entries[0][z]) {
+                        new ImageDownloaderTask(views[0][z]).execute(athleticsEntries[i].getImgLink());
+                        entries[0][z] = true;
+                        links[0][z] = athleticsEntries[i].getLink();
+                        textViews[0][z].setText(athleticsEntries[i].getTitle());
+                        spacers[0][z].setMinimumHeight(15);
+                    }
+                }
+        }
+        Toast.makeText(this, "Tap on an article for more information" , Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -103,23 +148,29 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
     private void visibilityFix(){
         loadgif.setVisibility(View.INVISIBLE);
         loadtext.setVisibility(View.INVISIBLE);
-        for (int i=0;i<10;i++){
-            textViews[i].setVisibility(View.VISIBLE);
-            views[i].setVisibility(View.VISIBLE);
+        labels[0].setVisibility(View.VISIBLE);
+        labels[1].setVisibility(View.VISIBLE);
+        for (int i=0;i<5;i++){
+            textViews[0][i].setVisibility(View.VISIBLE);
+            views[0][i].setVisibility(View.VISIBLE);
+            textViews[1][i].setVisibility(View.VISIBLE);
+            views[1][i].setVisibility(View.VISIBLE);
         }
     }
-
 
     @Override
     public void onClick(View v) {
         int i = Integer.parseInt(v.getTag().toString());
-        String url = links[i];
-        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-        CustomTabsIntent customTabsIntent = builder.build();
-        customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
+        if (i < 5) {
+            String url = links[0][i];
+        }
+        //String url = athleticsEntries[i].getLink();
+        //CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+        //CustomTabsIntent customTabsIntent = builder.build();
+        //customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
     }
 
-    public void openPennant(View view) {
+    public void openPennant(View v) {
 
     }
 }
