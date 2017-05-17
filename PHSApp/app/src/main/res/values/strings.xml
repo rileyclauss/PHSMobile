@@ -104,5 +104,9 @@
     <string name="staff_button">Staff Button</string>
     <string name="open_pennant">Open Pennant</string>
     <string name="baseball">Baseball</string>
+    <string name="title_activity_athletics">Ugh</string>
+    <string name="football">Football</string>
+    <string name="girlssports">Girls\' Sports</string>
+    <string name="boyssports">Boys\' Sports</string>
 
 </resources>

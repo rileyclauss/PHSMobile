@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_club"
 
@@ -13,6 +14,15 @@
     tools:context="com.phsapp.phsapp.clubActivity"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin">
+    <Button
+        android:id="@+id/pennantButton"
+        android:clickable="true"
+        android:onClick="openPennant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/open_pennant" />
 
     <ImageView
         android:id="@+id/sportsHeader"
@@ -25,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
+        android:layout_above="@id/pennantButton"
         android:layout_below="@id/sportsHeader"
         android:layout_alignParentStart="true">
 
@@ -34,14 +45,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/baseballHeader"
-                android:layout_width="match_parent"
+                android:id="@+id/boysHeader"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:text="@string/baseball"
-                android:textSize="36sp"
+                android:text="@string/boyssports"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="24sp"
                 android:visibility="invisible" />
-
 
             <ImageView
                 android:id="@+id/sportsImage0"
@@ -64,8 +74,9 @@
                 android:visibility="invisible" />
 
             <Space
+                android:id="@+id/space0"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
+                android:layout_height="0dp"
                 android:visibility="invisible" />
 
             <ImageView
@@ -89,8 +100,9 @@
                 android:visibility="invisible" />
 
             <Space
+                android:id="@+id/space1"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
+                android:layout_height="0dp"
                 android:visibility="invisible" />
 
             <ImageView
@@ -114,8 +126,9 @@
                 android:visibility="invisible" />
 
             <Space
+                android:id="@+id/space2"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
+                android:layout_height="0dp"
                 android:visibility="invisible" />
 
             <ImageView
@@ -139,8 +152,9 @@
                 android:visibility="invisible" />
 
             <Space
+                android:id="@+id/space3"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
+                android:layout_height="0dp"
                 android:visibility="invisible" />
 
             <ImageView
@@ -164,8 +178,24 @@
                 android:visibility="invisible" />
 
             <Space
+                android:id="@+id/space4"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
+                android:layout_height="0dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/girlsHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/girlssports"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="24sp"
+                android:visibility="invisible" />
+
+            <Space
+                android:id="@+id/space5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:visibility="invisible" />
 
             <ImageView
@@ -189,8 +219,9 @@
                 android:visibility="invisible" />
 
             <Space
+                android:id="@+id/space6"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
+                android:layout_height="0dp"
                 android:visibility="invisible" />
 
             <ImageView
@@ -214,8 +245,9 @@
                 android:visibility="invisible" />
 
             <Space
+                android:id="@+id/space7"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
+                android:layout_height="0dp"
                 android:visibility="invisible" />
 
             <ImageView
@@ -239,8 +271,9 @@
                 android:visibility="invisible" />
 
             <Space
+                android:id="@+id/space8"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
+                android:layout_height="0dp"
                 android:visibility="invisible" />
 
             <ImageView
@@ -264,8 +297,9 @@
                 android:visibility="invisible" />
 
             <Space
+                android:id="@+id/space9"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
+                android:layout_height="0dp"
                 android:visibility="invisible" />
 
             <ImageView
@@ -287,77 +321,6 @@
                 android:tag="9"
                 android:text=""
                 android:visibility="invisible" />
-            <TextView
-                android:id="@+id/sportsText10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:gravity="center_horizontal"
-                android:onClick="onClick"
-                android:tag="9"
-                android:text=""
-                android:visibility="invisible" />
-            <TextView
-                android:id="@+id/sportsText11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:gravity="center_horizontal"
-                android:onClick="onClick"
-                android:tag="9"
-                android:text=""
-                android:visibility="invisible" />
-            <TextView
-                android:id="@+id/sportsText12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:gravity="center_horizontal"
-                android:onClick="onClick"
-                android:tag="9"
-                android:text=""
-                android:visibility="invisible" />
-            <TextView
-                android:id="@+id/sportsText13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:gravity="center_horizontal"
-                android:onClick="onClick"
-                android:tag="9"
-                android:text=""
-                android:visibility="invisible" />
-            <TextView
-                android:id="@+id/sportsText14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:gravity="center_horizontal"
-                android:onClick="onClick"
-                android:tag="9"
-                android:text=""
-                android:visibility="invisible" />
-            <TextView
-                android:id="@+id/sportsText15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:gravity="center_horizontal"
-                android:onClick="onClick"
-                android:tag="9"
-                android:text=""
-                android:visibility="invisible" />
-            <TextView
-                android:id="@+id/sportsText16"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:gravity="center_horizontal"
-                android:onClick="onClick"
-                android:tag="9"
-                android:text=""
-                android:visibility="invisible" />
-
 
         </LinearLayout>
 
@@ -383,15 +346,7 @@
         android:layout_centerVertical="true"
         android:background="@drawable/loading" />
 
-    <Button
-        android:id="@+id/pennantButton"
-        android:clickable="true"
-        android:onClick="openPennant"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/open_pennant" />
+
 
 </RelativeLayout>
 

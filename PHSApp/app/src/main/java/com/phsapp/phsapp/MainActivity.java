@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else if (v.getTag().toString().equals("y")){
-            Intent intent = new Intent(this, pasActivity.class);
+            Intent intent = new Intent(this, sapActivity.class);
             startActivity(intent);
         }
         else if (v.getTag().toString().equals("a")){
