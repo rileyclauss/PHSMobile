@@ -23,6 +23,7 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
 
     private String[] links = new String[10];
     private String[] imgLinks = new String[10];
+    public newsEntry newsEntries[] = new newsEntry[10];
     private TextView[] textViews = new TextView[10];
     private ImageView[] views = new ImageView[10];
     private TextView loadtext = null;
@@ -78,17 +79,23 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
 
         int x, y;
         for (int i = 0; i < 10; i++) {
-            x = rssItems.get(i).getDescription().indexOf(" width=");
-            x -= 1;
-            y = rssItems.get(i).getDescription().indexOf("article_image");
-            y -= 67;
-            imgLinks[i] = rssItems.get(i).getDescription().substring(y, x);
+            if (rssItems.get(i).getDescription().contains("article_image")){
+                x = rssItems.get(i).getDescription().indexOf(" width=");
+                x -= 1;
+                y = rssItems.get(i).getDescription().indexOf("article_image");
+                y -= 67;
+                newsEntries[i] = new newsEntry(rssItems.get(i).getTitle(),rssItems.get(i).getDescription().substring(y,x),rssItems.get(i).getCategory(),rssItems.get(i).getLink());
+            }
+        }
+        for (int i = 0; i < 10; i++) {
+            links[i] = newsEntries[i].getLink();
+            textViews[i].setText(newsEntries[i].getTitle());
+            if(imgLinks[i] != null) new ImageDownloaderTask(views[i]).execute(imgLinks[i]);
+            else{
+                views[i].setImageResource(R.drawable.noimage);
+            }
         }
 
-        for (int i = 0; i < 10; i++) { links[i] = rssItems.get(i).getLink(); }
-        for (int i = 0; i < 10; i++) { textViews[i].setText(rssItems.get(i).getTitle()); }
-        for (int i = 0; i < 10; i++) {new ImageDownloaderTask(views[i]).execute(imgLinks[i]);}
-        Toast.makeText(this, "Tap on an article for more information" , Toast.LENGTH_LONG).show();
     }
 
     @Override

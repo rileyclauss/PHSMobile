@@ -17,7 +17,8 @@
     <Button
         android:id="@+id/pennantButton"
         android:clickable="true"
-        android:onClick="openPennant"
+        android:onClick="onClick"
+        android:tag="99"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

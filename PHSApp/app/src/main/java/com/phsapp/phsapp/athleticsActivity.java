@@ -1,7 +1,9 @@
 package com.phsapp.phsapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.customtabs.CustomTabsIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -25,7 +27,7 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
     private TextView[] labels = new TextView[2];
     private String[][] links = new String[2][5];
     private Space[][] spacers = new Space[2][5];
-    athleticsEntry[] athleticsEntries = new athleticsEntry[10];
+    newsEntry[] athleticsEntries = new newsEntry[10];
     private TextView[][] textViews = new TextView[2][5];
     private ImageView[][] views = new ImageView[2][5];
     private Boolean[][] entries = new Boolean[2][5]; //Checks to see if that spot is already filled when sorting news articles
@@ -105,38 +107,42 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
             y = rssItems.get(i).getDescription().indexOf(" alt");
             y -=1;
 
-            athleticsEntries[i] = new athleticsEntry(rssItems.get(i).getTitle(),rssItems.get(i).getDescription().substring(x,y),rssItems.get(i).getCategory(),rssItems.get(i).getLink());
+            athleticsEntries[i] = new newsEntry(rssItems.get(i).getTitle(),rssItems.get(i).getDescription().substring(x,y),rssItems.get(i).getCategory(),rssItems.get(i).getLink());
         }
 
-        for (int i=0;i<10;i++) {
-                if (athleticsEntries[i].getCategory().equals("Girls Sports")) {
-                    int z = 0;
-                    while (entries[1][z]) {
-                        z++;
-                    }
-                    if (!entries[1][z]){
-                        new ImageDownloaderTask(views[1][z]).execute(athleticsEntries[i].getImgLink());
-                        entries[1][z] = true;
-                        links[1][z] = athleticsEntries[i].getLink();
-                        textViews[1][z].setText(athleticsEntries[i].getTitle());
-                        spacers[1][z].setMinimumHeight(15);
-                    }
-                } else if (!athleticsEntries[i].getCategory().equals("Boys Sports") && !athleticsEntries[i].getCategory().equals("Photo Gallery")) {
-                    int z = 0;
-                    while (entries[0][z]){
-                        z++;
-                    }
-                    if (!entries[0][z]) {
-                        new ImageDownloaderTask(views[0][z]).execute(athleticsEntries[i].getImgLink());
-                        entries[0][z] = true;
-                        links[0][z] = athleticsEntries[i].getLink();
-                        textViews[0][z].setText(athleticsEntries[i].getTitle());
-                        spacers[0][z].setMinimumHeight(15);
-                    }
+        //@TODO ERROR CATCHING: Null Pointer Exception catching (Not TryCatch)
+
+
+        for (int i = 0; i < 10; i++) {
+            if (athleticsEntries[i].getCategory().equals("Girls Sports")) {
+                int z = 0;
+                while (entries[1][z]) {
+                    z++;
                 }
+                if (!entries[1][z]) {
+                    new ImageDownloaderTask(views[1][z]).execute(athleticsEntries[i].getImgLink());
+                    entries[1][z] = true;
+                    links[1][z] = athleticsEntries[i].getLink();
+                    textViews[1][z].setText(athleticsEntries[i].getTitle());
+                    spacers[1][z].setMinimumHeight(15);
+                }
+            } else if (!athleticsEntries[i].getCategory().equals("Boys Sports") && !athleticsEntries[i].getCategory().equals("Photo Gallery")) {
+                int z = 0;
+                while (entries[0][z]) {
+                    z++;
+                }
+                if (!entries[0][z]) {
+                    new ImageDownloaderTask(views[0][z]).execute(athleticsEntries[i].getImgLink());
+                    entries[0][z] = true;
+                    links[0][z] = athleticsEntries[i].getLink();
+                    textViews[0][z].setText(athleticsEntries[i].getTitle());
+                    spacers[0][z].setMinimumHeight(15);
+                }
+            }
         }
-        Toast.makeText(this, "Tap on an article for more information" , Toast.LENGTH_LONG).show();
     }
+        //Toast.makeText(this, "Tap on an article for more information" , Toast.LENGTH_LONG).show();
+
 
     @Override
     public void onFailure(String message) {
@@ -160,18 +166,27 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-        int i = Integer.parseInt(v.getTag().toString());
-        if (i < 5) {
-            String url = links[0][i];
+        String url;
+        int x = Integer.parseInt(v.getTag().toString());
+        if (x == 99){
+            url = "http://pennant.phmschools.org/";
+            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+            CustomTabsIntent customTabsIntent = builder.build();
+            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
         }
-        //String url = athleticsEntries[i].getLink();
-        //CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-        //CustomTabsIntent customTabsIntent = builder.build();
-        //customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
+        if (x!=99){
+            if (x < 5) {
+               url = links[0][x];
+            }
+            else{
+                x -=5;
+                url = links[1][x];
+            }
+            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+            CustomTabsIntent customTabsIntent = builder.build();
+            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
+        }
     }
 
-    public void openPennant(View v) {
-
-    }
 }
 

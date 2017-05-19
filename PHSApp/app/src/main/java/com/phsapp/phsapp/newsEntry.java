@@ -1,23 +1,23 @@
 package com.phsapp.phsapp;
 
-class athleticsEntry{
+class newsEntry {
     private String title;
     private String category;
     private String imgLink;
     private String link;
 
     //constructor
-    athleticsEntry(String title, String imgLink, String category, String link){
+    newsEntry(String title, String imgLink, String category, String link){
         this.title = title;
         this.imgLink = imgLink;
         this.category = category;
         this.link = link;
 }
     // getter
-    public String getTitle() { return title; }
-    public String getCategory(){return category;}
-    public String getImgLink(){return imgLink;}
-    public String getLink(){return link;}
+    String getTitle() { return title; }
+    String getCategory(){return category;}
+    String getImgLink(){return imgLink;}
+    String getLink(){return link;}
 
     // setter
     void setTitle(String title) { this.title = title; }
