@@ -7,6 +7,7 @@ import android.support.customtabs.CustomTabsIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Space;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +20,8 @@ import java.util.List;
 
 import pl.droidsonroids.gif.GifTextView;
 
+import static com.phsapp.phsapp.R.id.match_parent;
+
 
 public class athleticsActivity extends AppCompatActivity implements View.OnClickListener, OnRssLoadListener {
 
@@ -27,7 +30,8 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
     private TextView[] labels = new TextView[2];
     private String[][] links = new String[2][5];
     private Space[][] spacers = new Space[2][5];
-    newsEntry[] athleticsEntries = new newsEntry[10];
+    public boolean[] entry = new boolean[2];
+    public newsEntry[] athleticsEntries = new newsEntry[10];
     private TextView[][] textViews = new TextView[2][5];
     private ImageView[][] views = new ImageView[2][5];
     private Boolean[][] entries = new Boolean[2][5]; //Checks to see if that spot is already filled when sorting news articles
@@ -49,6 +53,9 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
             entries[0][i] = false;
             entries[1][i] = false;
         }
+        entry[0] = false;
+        entry[1] = false;
+
         loadtext = (TextView) findViewById(R.id.textView);
         loadgif = (GifTextView) findViewById(R.id.load);
 
@@ -97,56 +104,66 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onSuccess(List<RssItem> rssItems) {
-        visibilityFix();
 
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(match_parent, 20);
         int x, y;
         for (int i = 0;i<10;i++) {
+            if (rssItems.get(i).getDescription().contains("uploads")) {
+                x = rssItems.get(i).getDescription().indexOf(" src");
+                x += 6;
+                y = rssItems.get(i).getDescription().indexOf(" alt");
+                y -= 1;
 
-            x = rssItems.get(i).getDescription().indexOf(" src");
-            x += 6;
-            y = rssItems.get(i).getDescription().indexOf(" alt");
-            y -=1;
-
-            athleticsEntries[i] = new newsEntry(rssItems.get(i).getTitle(),rssItems.get(i).getDescription().substring(x,y),rssItems.get(i).getCategory(),rssItems.get(i).getLink());
+                athleticsEntries[i] = new newsEntry(rssItems.get(i).getTitle(), rssItems.get(i).getDescription().substring(x, y), rssItems.get(i).getCategory(), rssItems.get(i).getLink());
+            }
         }
-
-        //@TODO ERROR CATCHING: Null Pointer Exception catching (Not TryCatch)
-
 
         for (int i = 0; i < 10; i++) {
             if (athleticsEntries[i].getCategory().equals("Girls Sports")) {
+                entry[1] = true;
                 int z = 0;
-                while (entries[1][z]) {
+                while (entries[1][z] && z<5) {
                     z++;
                 }
                 if (!entries[1][z]) {
-                    new ImageDownloaderTask(views[1][z]).execute(athleticsEntries[i].getImgLink());
+                    if(athleticsEntries[i].getImgLink() != null) new ImageDownloaderTask(views[1][z]).execute(athleticsEntries[i].getImgLink());
+                    else{views[1][z].setImageResource(R.drawable.noimage);}
                     entries[1][z] = true;
-                    links[1][z] = athleticsEntries[i].getLink();
-                    textViews[1][z].setText(athleticsEntries[i].getTitle());
-                    spacers[1][z].setMinimumHeight(15);
+                    if (athleticsEntries[i].getLink() != null) links[1][z] = athleticsEntries[i].getLink();
+                    if (athleticsEntries[i].getTitle() != null) textViews[1][z].setText(athleticsEntries[i].getTitle());
+                    else { textViews[1][z].setText(R.string.noTitle);}
+                    spacers[1][z].setLayoutParams(params);
                 }
             } else if (!athleticsEntries[i].getCategory().equals("Boys Sports") && !athleticsEntries[i].getCategory().equals("Photo Gallery")) {
+                entry[0] = true;
                 int z = 0;
-                while (entries[0][z]) {
+                while (entries[0][z] && z<5) {
                     z++;
                 }
                 if (!entries[0][z]) {
-                    new ImageDownloaderTask(views[0][z]).execute(athleticsEntries[i].getImgLink());
+                    if(athleticsEntries[i].getImgLink() != null) new ImageDownloaderTask(views[0][z]).execute(athleticsEntries[i].getImgLink());
+                    else{ views[0][z].setImageResource(R.drawable.noimage);}
                     entries[0][z] = true;
-                    links[0][z] = athleticsEntries[i].getLink();
-                    textViews[0][z].setText(athleticsEntries[i].getTitle());
-                    spacers[0][z].setMinimumHeight(15);
+                    if (athleticsEntries[i].getLink() != null) links[0][z] = athleticsEntries[i].getLink();
+                    if (athleticsEntries[i].getTitle() != null) textViews[0][z].setText(athleticsEntries[i].getTitle());
+                    else { textViews[0][z].setText(R.string.noTitle); }
+                    spacers[0][z].setLayoutParams(params);
                 }
             }
+            if (i == 9 && !entry[0]){
+                textViews[0][1].setText(R.string.noentries);
+            }
+            if (i == 9 && !entry[1]){
+                textViews[1][1].setText(R.string.noentries);
+            }
         }
+        visibilityFix();
     }
-        //Toast.makeText(this, "Tap on an article for more information" , Toast.LENGTH_LONG).show();
 
 
     @Override
     public void onFailure(String message) {
-        Toast.makeText(this, message , Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "An error occured, please check your internet connection." , Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

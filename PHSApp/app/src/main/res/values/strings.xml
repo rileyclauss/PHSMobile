@@ -108,5 +108,7 @@
     <string name="football">Football</string>
     <string name="girlssports">Girls\' Sports</string>
     <string name="boyssports">Boys\' Sports</string>
+    <string name="noentries">No entries at this time, check Pennant for more information.</string>
+    <string name="noTitle">No Title Available</string>
 
 </resources>

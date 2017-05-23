@@ -23,10 +23,11 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
 
     private String[] links = new String[10];
     private String[] imgLinks = new String[10];
-    public newsEntry newsEntries[] = new newsEntry[10];
+    public newsEntry[] newsEntries = new newsEntry[10];
     private TextView[] textViews = new TextView[10];
     private ImageView[] views = new ImageView[10];
     private TextView loadtext = null;
+    public int x, y;
     private pl.droidsonroids.gif.GifTextView loadgif = null;
 
     @Override
@@ -77,23 +78,27 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
 
         visibilityFix();
 
-        int x, y;
+
         for (int i = 0; i < 10; i++) {
+            x = 0;
+            y = 0;
             if (rssItems.get(i).getDescription().contains("article_image")){
                 x = rssItems.get(i).getDescription().indexOf(" width=");
                 x -= 1;
                 y = rssItems.get(i).getDescription().indexOf("article_image");
                 y -= 67;
-                newsEntries[i] = new newsEntry(rssItems.get(i).getTitle(),rssItems.get(i).getDescription().substring(y,x),rssItems.get(i).getCategory(),rssItems.get(i).getLink());
+                imgLinks[i] = rssItems.get(i).getDescription().substring(y,x);
             }
+            else { imgLinks[i] = "err"; }
+            newsEntries[i] = new newsEntry(rssItems.get(i).getTitle(),imgLinks[i],rssItems.get(i).getCategory(),rssItems.get(i).getLink());
         }
         for (int i = 0; i < 10; i++) {
-            links[i] = newsEntries[i].getLink();
-            textViews[i].setText(newsEntries[i].getTitle());
-            if(imgLinks[i] != null) new ImageDownloaderTask(views[i]).execute(imgLinks[i]);
-            else{
-                views[i].setImageResource(R.drawable.noimage);
-            }
+            if (newsEntries[i].getLink() != null) links[i] = newsEntries[i].getLink();
+            else { Toast.makeText(this, "Some entries do not have a working link.", Toast.LENGTH_SHORT).show(); }
+            if (newsEntries[i].getTitle() != null) textViews[i].setText(newsEntries[i].getTitle());
+            else { textViews[i].setText(R.string.noTitle);}
+            if(!imgLinks[i].equals("err")) new ImageDownloaderTask(views[i]).execute(imgLinks[i]);
+            else { views[i].setImageResource(R.drawable.noimage); }
         }
 
     }
