@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-
+    public Intent intent = new Intent();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.NewPennTheme);
@@ -16,53 +16,44 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v){
-        if (v.getTag().toString().equals("n")){
-            Intent intent = new Intent(this, newsActivity.class);
-            startActivity(intent);
+        intent = null;
+        char target = v.getTag().toString().charAt(0);
+        switch (target){
+            case 'n':
+               intent =  new Intent(this, newsActivity.class);
+                break;
+            case 'c':
+                intent = new Intent(this, calendarActivity.class);
+                break;
+            case 'y':
+               intent = new Intent(this, sapActivity.class);
+                break;
+            case 'a':
+                intent = new Intent(this, academicsActivity.class);
+                break;
+            case 'o':
+                intent = new Intent(this, counselingActivity.class);
+                break;
+            case 't':
+                intent = new Intent(this, athleticsActivity.class);
+                break;
+            case 'f':
+                intent = new Intent(this, fineartsActivity.class);
+                break;
+            case 'l':
+                intent = new Intent(this, clubActivity.class);
+                break;
+            case 'p':
+                intent = new Intent(this, photogalleryActivity.class);
+                break;
+            case 'u':
+                intent = new Intent(this, aboutActivity.class);
+                break;
+            case 'x':
+                intent = new Intent(this, contactActivity.class);
+                break;
+
         }
-        else if (v.getTag().toString().equals("c")){
-            Intent intent = new Intent(this, calendarActivity.class);
-            startActivity(intent);
-        }
-        else if (v.getTag().toString().equals("y")){
-            Intent intent = new Intent(this, sapActivity.class);
-            startActivity(intent);
-        }
-        else if (v.getTag().toString().equals("a")){
-            Intent intent = new Intent(this, academicsActivity.class);
-            startActivity(intent);
-        }
-        else if (v.getTag().toString().equals("o")){
-            Intent intent = new Intent(this, counselingActivity.class);
-            startActivity(intent);
-        }
-        else if (v.getTag().toString().equals("t")){
-            Intent intent = new Intent(this, athleticsActivity.class);
-            startActivity(intent);
-        }
-        else if (v.getTag().toString().equals("f")){
-            Intent intent = new Intent(this, fartsActivity.class);
-            startActivity(intent);
-        }
-        else if (v.getTag().toString().equals("l")){
-            Intent intent = new Intent(this, clubActivity.class);
-            startActivity(intent);
-        }
-        else if (v.getTag().toString().equals("z")){
-            Intent intent = new Intent(this, staffActivity.class);
-            startActivity(intent);
-        }
-        else if (v.getTag().toString().equals("p")){
-            Intent intent = new Intent(this, photogalleryActivity.class);
-            startActivity(intent);
-        }
-        else if (v.getTag().toString().equals("x")){
-            Intent intent = new Intent(this, contactActivity.class);
-            startActivity(intent);
-        }
-        else if (v.getTag().toString().equals("u")){
-            Intent intent = new Intent(this, aboutActivity.class);
-            startActivity(intent);
-        }
+        startActivity(intent);
     }
 }

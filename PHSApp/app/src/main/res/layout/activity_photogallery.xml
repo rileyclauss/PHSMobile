@@ -9,5 +9,11 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.phsapp.phsapp.photogalleryActivity">
-
+    <ImageView
+        android:id="@+id/photoGalleryHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/phogalheader" />
 </RelativeLayout>

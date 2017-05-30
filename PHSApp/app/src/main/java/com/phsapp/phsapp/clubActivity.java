@@ -138,7 +138,7 @@ public class clubActivity extends AppCompatActivity {
     }
     public void onClick(View v) {
         String url = parser(v);
-        if (url=="error"){
+        if (url.equals("error")){
             Toast.makeText(clubActivity.this, "An unexpected error occured, please try again", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);

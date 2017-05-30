@@ -15,10 +15,10 @@
     <ImageView
         android:id="@+id/clubsHead"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:onClick="onClick"
-        android:textSize="36sp"
-        app:srcCompat="@drawable/clubheader" />
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/clubheader" />
 
 
     <ScrollView

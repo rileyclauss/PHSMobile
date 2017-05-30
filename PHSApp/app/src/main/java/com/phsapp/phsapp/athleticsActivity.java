@@ -189,7 +189,7 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
             url = "http://pennant.phmschools.org/";
             CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
             CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
+            customTabsIntent.launchUrl(this, Uri.parse(url));
         }
         if (x!=99){
             if (x < 5) {
@@ -201,7 +201,7 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
             }
             CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
             CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
+            customTabsIntent.launchUrl(this, Uri.parse(url));
         }
     }
 

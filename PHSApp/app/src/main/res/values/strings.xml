@@ -110,5 +110,13 @@
     <string name="boyssports">Boys\' Sports</string>
     <string name="noentries">No entries at this time, check Pennant for more information.</string>
     <string name="noTitle">No Title Available</string>
+    <string name="testing_schedule">Testing Schedule</string>
+    <string name="program_of_studies">Program of Studies</string>
+    <string name="alted_information">Alternative Education Information</string>
+    <string name="links">Links</string>
+    <string name="testDatesInfo">This is a current list of test dates that may affect multiple groups of students during the school day.</string>
+    <string name="programofstudiesInfo">Our mission is to provide an educational environment for students to reach their highest academic achievement. We will prepare them to be responsible citizens with the skills to be lifelong learners ready to adapt to a changing world.</string>
+    <string name="altedInfo">P-H-M offers two alternative programs designed to provide each student with the resources and support necessary to successfully complete a program of studies leading to a high school diploma as well as obtain marketable work skills.</string>
+    <string name="linksInfo">Penn High School enhances student achievement and supports student learning through the use of many digital resources.</string>
 
 </resources>

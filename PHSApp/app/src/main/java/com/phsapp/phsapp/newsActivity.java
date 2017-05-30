@@ -125,7 +125,6 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
         String url = links[i];
         CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
         CustomTabsIntent customTabsIntent = builder.build();
-        customTabsIntent.launchUrl(getApplicationContext(), Uri.parse(url));
+        customTabsIntent.launchUrl(this, Uri.parse(url));
     }
 }
-
