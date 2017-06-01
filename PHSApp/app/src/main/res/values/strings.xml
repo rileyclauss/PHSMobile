@@ -9,7 +9,7 @@
     <string name="sap">Students and Parents</string>
     <string name="academics">Academics</string>
     <string name="academicsact">academics button</string>
-    <string name="farts">Fine Arts</string> <!-- it's short for fine arts -->
+    <string name="finearts">Fine Arts</string>
     <string name="athletics">Athletics</string>
     <string name="pgact">photo gallery button</string>
     <string name="abtpenn">About Penn</string>
@@ -118,5 +118,13 @@
     <string name="programofstudiesInfo">Our mission is to provide an educational environment for students to reach their highest academic achievement. We will prepare them to be responsible citizens with the skills to be lifelong learners ready to adapt to a changing world.</string>
     <string name="altedInfo">P-H-M offers two alternative programs designed to provide each student with the resources and support necessary to successfully complete a program of studies leading to a high school diploma as well as obtain marketable work skills.</string>
     <string name="linksInfo">Penn High School enhances student achievement and supports student learning through the use of many digital resources.</string>
+    <string name="HACInfotext">Home Access Center is the website Penn uses to track students\' grades, manage scheduling, and track student attendance. This button will take you to the login page.</string>
+    <string name="HACText">Home Access Center (HAC)</string>
+    <string name="CanvasInfotext">Canvas is the system Penn teachers use to distribute agendas and assignments to students throughout the year. This button will take you to the login page.</string>
+    <string name="CanvasText">PHM Canvas</string>
+    <string name="PennSiteInfotext">The Penn website contains all information pertinent to Penn students and staff. This button will take you to the homepage.</string>
+    <string name="PennSiteText">Penn Website</string>
+    <string name="backInfoText">This button will take you back to the previous page.</string>
+    <string name="backText">Back</string>
 
 </resources>
