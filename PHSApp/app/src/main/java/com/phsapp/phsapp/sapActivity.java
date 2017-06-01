@@ -11,7 +11,7 @@ public class sapActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pas);
 
 
-        //@TODO Links to: Canvas, HAC (Custom Tabs?), Parking Info, Link to Announcements,
+        //@TODO Links to: Canvas, HAC (Custom Tabs!), Parking Info, Link to Announcements,
         //@TODO Attendance phone number and info, link to SAP Page
 
 

@@ -34,7 +34,7 @@
         <activity android:name=".contactActivity" />
         <activity android:name=".photogalleryActivity" />
         <activity android:name=".athleticsActivity" />
-        <activity android:name=".fartsActivity" />
+        <activity android:name=".fineartsActivity" />
 
     </application>
 

@@ -53,7 +53,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag="n"
+            android:tag='n'
             app:srcCompat="@drawable/news" />
 
         <ImageButton
@@ -67,7 +67,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag="c"
+            android:tag='c'
             app:srcCompat="@drawable/calendar" />
 
         <ImageButton
@@ -81,7 +81,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag="y"
+            android:tag='y'
             app:srcCompat="@drawable/parents_and_students" />
 
         <ImageButton
@@ -95,7 +95,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag="a"
+            android:tag='a'
             app:srcCompat="@drawable/academicsicon" />
     </TableRow>
 
@@ -131,13 +131,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".25"
-
             android:ems="10"
             android:gravity="center_vertical|fill_vertical|center_horizontal"
             android:lines="2"
             android:text="@string/sap"
             android:textColor="?attr/colorControlNormal"
-
             android:textSize="12sp" />
 
         <TextView
@@ -169,7 +167,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag="o"
+            android:tag='o'
             app:srcCompat="@drawable/counselingicon" />
 
         <ImageButton
@@ -184,7 +182,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag="t"
+            android:tag='t'
             app:srcCompat="@drawable/scoreboard" />
 
         <ImageButton
@@ -197,7 +195,7 @@
             android:contentDescription="@string/farts"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag="f"
+            android:tag='f'
             app:srcCompat="@drawable/finearts" />
 
         <ImageButton
@@ -211,7 +209,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag="l"
+            android:tag='l'
             app:srcCompat="@drawable/clubs" />
     </TableRow>
 
@@ -229,7 +227,6 @@
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/counseling"
             android:textColor="?attr/colorControlNormal"
-
             android:textSize="12sp" />
 
         <TextView
@@ -287,7 +284,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag="z"
+            android:tag='z'
             app:srcCompat="@drawable/key" />
 
         <ImageButton
@@ -301,7 +298,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag="p"
+            android:tag='p'
             app:srcCompat="@drawable/photogallery" />
 
         <ImageButton
@@ -315,7 +312,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag="x"
+            android:tag='x'
             app:srcCompat="@drawable/contact_us" />
 
         <ImageButton
@@ -329,7 +326,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag="u"
+            android:tag='u'
             app:srcCompat="@drawable/abouticon" />
     </TableRow>
 

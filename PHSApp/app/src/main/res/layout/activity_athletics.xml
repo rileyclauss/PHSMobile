@@ -17,7 +17,8 @@
     <Button
         android:id="@+id/pennantButton"
         android:clickable="true"
-        android:onClick="openPennant"
+        android:onClick="onClick"
+        android:tag="99"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -30,7 +31,7 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        android:src="@drawable/athleticshead" />
+        android:src="@drawable/athleticsheader" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

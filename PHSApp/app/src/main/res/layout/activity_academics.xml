@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_academics"
     android:layout_width="match_parent"
@@ -8,6 +8,87 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.phsapp.phsapp.academicsActivity">
+    tools:context="com.phsapp.phsapp.academicsActivity"
+    android:orientation="vertical">
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/academicsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/academicsheader" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <Button
+        android:clickable="true"
+        android:onClick="onClick"
+        android:id="@+id/testingDaysButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/testing_schedule"
+        android:tag='a'/>
+
+    <TextView
+        android:id="@+id/testingDaysTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/testDatesInfo"
+        android:gravity="center_horizontal"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <Button
+        android:clickable="true"
+        android:onClick="onClick"
+        android:id="@+id/programButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/program_of_studies"
+        android:tag='b'/>
+    <TextView
+        android:id="@+id/programTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/programofstudiesInfo"
+        android:gravity="center_horizontal"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+    <Button
+        android:clickable="true"
+        android:onClick="onClick"
+        android:id="@+id/pennwayInfoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alted_information"
+        android:tag='c'/>
+    <TextView
+        android:id="@+id/altedTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/altedInfo"
+        android:gravity="center_horizontal"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+    <Button
+        android:clickable="true"
+        android:onClick="onClick"
+        android:id="@+id/linksButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/links"
+        android:tag='d'/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linksTextView"
+        android:text="@string/linksInfo"
+        android:gravity="center_horizontal"/>
+
+</LinearLayout>
