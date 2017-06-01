@@ -59,14 +59,15 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="15dp" />
+
     <Button
-        android:clickable="true"
-        android:onClick="onClick"
-        android:id="@+id/pennwayInfoButton"
+        android:id="@+id/altedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/alted_information"
-        android:tag='c'/>
+        android:clickable="true"
+        android:onClick="onClick"
+        android:tag='c'
+        android:text="@string/alted_information" />
     <TextView
         android:id="@+id/altedTextView"
         android:layout_width="match_parent"
