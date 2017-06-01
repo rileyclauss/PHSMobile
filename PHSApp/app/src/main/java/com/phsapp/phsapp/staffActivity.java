@@ -1,8 +1,7 @@
 package com.phsapp.phsapp;
 
-/**
- * Created by Micah Focht on 5/30/2017.
- */
 
-public class staffActivity {
+import android.support.v7.app.AppCompatActivity;
+
+public class staffActivity extends AppCompatActivity {
 }
