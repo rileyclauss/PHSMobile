@@ -19,10 +19,8 @@ class newsEntry {
     String getImgLink(){return imgLink;}
     String getLink(){return link;}
 
-    // setter
-    void setTitle(String title) { this.title = title; }
-    void setCategory(String category){this.category = category;}
-    void setImgLink(String imgLink){this.imgLink= imgLink;}
-    void setLink(String link){this.link = link;}
-
+    void setImgLink(String newImgLink){ this.imgLink = newImgLink;}
+    void setTitle(String newTitle){this.title = newTitle;}
+    void setCategory(String newCategory){this.category = newCategory;}
+    void setLink(String newLink){this.link = newLink;}
 }

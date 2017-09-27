@@ -183,7 +183,7 @@
             android:onClick="onClick"
             android:scaleType="fitCenter"
             android:tag='t'
-            app:srcCompat="@drawable/scoreboard" />
+            app:srcCompat="@drawable/athleticsiconnew" />
 
         <ImageButton
             android:id="@+id/fartsbutton"

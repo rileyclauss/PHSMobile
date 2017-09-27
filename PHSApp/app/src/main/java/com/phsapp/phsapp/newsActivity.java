@@ -13,10 +13,9 @@ import android.widget.Toast;
 import com.crazyhitty.chdev.ks.rssmanager.OnRssLoadListener;
 import com.crazyhitty.chdev.ks.rssmanager.RssItem;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
-import pl.droidsonroids.gif.GifTextView;
 
 
 public class newsActivity extends AppCompatActivity implements View.OnClickListener, OnRssLoadListener {
@@ -41,8 +40,6 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void declareStatic(){
-        loadtext = (TextView) findViewById(R.id.textView);
-        loadgif = (GifTextView) findViewById(R.id.load);
 
         textViews[0] = (TextView) findViewById(R.id.newsText0);
         textViews[1] = (TextView) findViewById(R.id.newsText1);
@@ -94,10 +91,10 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
         }
         for (int i = 0; i < 10; i++) {
             if (newsEntries[i].getLink() != null) links[i] = newsEntries[i].getLink();
-            else { Toast.makeText(this, "Some entries do not have a working link.", Toast.LENGTH_SHORT).show(); }
+            else { Toast.makeText(this, "Some entries may not have a working link.", Toast.LENGTH_SHORT).show(); }
             if (newsEntries[i].getTitle() != null) textViews[i].setText(newsEntries[i].getTitle());
             else { textViews[i].setText(R.string.noTitle);}
-            if(!imgLinks[i].equals("err")) new ImageDownloaderTask(views[i]).execute(imgLinks[i]);
+            if(!imgLinks[i].equals("err")) Picasso.with(this).load(imgLinks[i]).into(views[i]);//new ImageDownloaderTask(views[i]).execute(imgLinks[i]);
             else { views[i].setImageResource(R.drawable.noimage); }
         }
 

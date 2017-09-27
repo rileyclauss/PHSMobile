@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             case 'x':
                 intent = new Intent(this, contactActivity.class);
                 break;
-
+            // Need a case for staff links
         }
         startActivity(intent);
     }

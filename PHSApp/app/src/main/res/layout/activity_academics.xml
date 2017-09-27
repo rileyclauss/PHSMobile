@@ -28,14 +28,14 @@
         android:id="@+id/testingDaysButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/testing_schedule"
+        android:text="@string/school_schedule"
         android:tag='a'/>
 
     <TextView
         android:id="@+id/testingDaysTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/testDatesInfo"
+        android:text="@string/schoolCalendarInfo"
         android:gravity="center_horizontal"/>
 
     <Space

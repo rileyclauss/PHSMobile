@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.crazyhitty.chdev.ks.rssmanager.OnRssLoadListener;
 import com.crazyhitty.chdev.ks.rssmanager.RssItem;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -101,10 +102,8 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
         String[] urlArr = {"http://pennant.phmschools.org/feed/"};
         new RssReader(athleticsActivity.this).showDialog(false).urls(urlArr).parse(this);
     }
-
     @Override
     public void onSuccess(List<RssItem> rssItems) {
-
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(match_parent, 20);
         int x, y;
         for (int i = 0;i<10;i++) {
@@ -117,36 +116,57 @@ public class athleticsActivity extends AppCompatActivity implements View.OnClick
                 athleticsEntries[i] = new newsEntry(rssItems.get(i).getTitle(), rssItems.get(i).getDescription().substring(x, y), rssItems.get(i).getCategory(), rssItems.get(i).getLink());
             }
         }
-
+        athleticsEntries[1].setImgLink(null);
+        athleticsEntries[1].setTitle(null);
+        athleticsEntries[1].setCategory(null);
+        athleticsEntries[1].setLink(null);
         for (int i = 0; i < 10; i++) {
+            if(athleticsEntries[i].getCategory() == null) {
+                athleticsEntries[i].setCategory("Boys Sports");
+                Toast.makeText(this, "Some articles may be in the wrong category.", Toast.LENGTH_SHORT).show();
+            }
             if (athleticsEntries[i].getCategory().equals("Girls Sports")) {
                 entry[1] = true;
                 int z = 0;
-                while (entries[1][z] && z<5) {
+                while (entries[1][z] && z < 5) {
                     z++;
                 }
                 if (!entries[1][z]) {
-                    if(athleticsEntries[i].getImgLink() != null) new ImageDownloaderTask(views[1][z]).execute(athleticsEntries[i].getImgLink());
-                    else{views[1][z].setImageResource(R.drawable.noimage);}
+                    if (athleticsEntries[i].getImgLink() != null)
+                        Picasso.with(this).load(athleticsEntries[i].getImgLink()).into(views[1][z]);
+                    else {
+                        views[1][z].setImageResource(R.drawable.noimage);
+                    }
                     entries[1][z] = true;
-                    if (athleticsEntries[i].getLink() != null) links[1][z] = athleticsEntries[i].getLink();
-                    if (athleticsEntries[i].getTitle() != null) textViews[1][z].setText(athleticsEntries[i].getTitle());
-                    else { textViews[1][z].setText(R.string.noTitle);}
+                    if (athleticsEntries[i].getLink() != null)
+                        links[1][z] = athleticsEntries[i].getLink();
+                    if (athleticsEntries[i].getTitle() != null)
+                        textViews[1][z].setText(athleticsEntries[i].getTitle());
+                    else {
+                        textViews[1][z].setText(R.string.noTitle);
+                    }
                     spacers[1][z].setLayoutParams(params);
                 }
-            } else if (!athleticsEntries[i].getCategory().equals("Boys Sports") && !athleticsEntries[i].getCategory().equals("Photo Gallery")) {
+            } else if (athleticsEntries[i].getCategory().equals("Boys Sports") || athleticsEntries[i].getCategory().equals("Photo Gallery")) {
                 entry[0] = true;
                 int z = 0;
-                while (entries[0][z] && z<5) {
+                while (entries[0][z] && z < 5) {
                     z++;
                 }
                 if (!entries[0][z]) {
-                    if(athleticsEntries[i].getImgLink() != null) new ImageDownloaderTask(views[0][z]).execute(athleticsEntries[i].getImgLink());
-                    else{ views[0][z].setImageResource(R.drawable.noimage);}
+                    if (athleticsEntries[i].getImgLink() != null)
+                        Picasso.with(this).load(athleticsEntries[i].getImgLink()).into(views[0][z]);
+                    else {
+                        views[0][z].setImageResource(R.drawable.noimage);
+                    }
                     entries[0][z] = true;
-                    if (athleticsEntries[i].getLink() != null) links[0][z] = athleticsEntries[i].getLink();
-                    if (athleticsEntries[i].getTitle() != null) textViews[0][z].setText(athleticsEntries[i].getTitle());
-                    else { textViews[0][z].setText(R.string.noTitle); }
+                    if (athleticsEntries[i].getLink() != null)
+                        links[0][z] = athleticsEntries[i].getLink();
+                    if (athleticsEntries[i].getTitle() != null)
+                        textViews[0][z].setText(athleticsEntries[i].getTitle());
+                    else {
+                        textViews[0][z].setText(R.string.noTitle);
+                    }
                     spacers[0][z].setLayoutParams(params);
                 }
             }
