@@ -102,13 +102,13 @@
     <string name="comittedexcelence">Penn High School is committed to excellence in education!</string>
     <string name="parents_and_students_button">Parents and Students Button</string>
     <string name="staff_button">Staff Button</string>
-    <string name="open_pennant">Open Pennant</string>
+    <string name="open_pennant">Open The Pennant</string>
     <string name="baseball">Baseball</string>
     <string name="title_activity_athletics">Ugh</string>
     <string name="football">Football</string>
     <string name="girlssports">Girls\' Sports</string>
     <string name="boyssports">Boys\' Sports</string>
-    <string name="noentries">No entries at this time, check Pennant for more information.</string>
+    <string name="noentries">No entries at this time, check The Pennant for more information.</string>
     <string name="noTitle">No Title Available</string>
     <string name="school_schedule">School Year Schedule</string>
     <string name="program_of_studies">Program of Studies</string>
@@ -126,5 +126,6 @@
     <string name="PennSiteText">Penn Website</string>
     <string name="backInfoText">This button will take you back to the previous page.</string>
     <string name="backText">Back</string>
+    <string name="credits">App developed by Riley Clauss and Micah Focht. Art by James Morris.</string>
 
 </resources>

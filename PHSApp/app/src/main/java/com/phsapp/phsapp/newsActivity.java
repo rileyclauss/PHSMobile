@@ -94,7 +94,7 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
             else { Toast.makeText(this, "Some entries may not have a working link.", Toast.LENGTH_SHORT).show(); }
             if (newsEntries[i].getTitle() != null) textViews[i].setText(newsEntries[i].getTitle());
             else { textViews[i].setText(R.string.noTitle);}
-            if(!imgLinks[i].equals("err")) Picasso.with(this).load(imgLinks[i]).into(views[i]);//new ImageDownloaderTask(views[i]).execute(imgLinks[i]);
+            if(!imgLinks[i].equals("err")) Picasso.with(this).load(imgLinks[i]).into(views[i]);
             else { views[i].setImageResource(R.drawable.noimage); }
         }
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_club"
@@ -8,21 +7,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingStart="@dimen/activity_horizontal_margin"
     android:paddingEnd="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.phsapp.phsapp.clubActivity"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin">
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.phsapp.phsapp.clubActivity">
+
     <Button
         android:id="@+id/pennantButton"
-        android:clickable="true"
-        android:onClick="onClick"
-        android:tag="99"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:tag="99"
         android:text="@string/open_pennant" />
 
     <ImageView
@@ -32,13 +32,14 @@
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:src="@drawable/athleticsheader" />
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
+        android:layout_height="wrap_content"
         android:layout_above="@id/pennantButton"
-        android:layout_below="@id/sportsHeader"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/sportsHeader">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,7 +53,7 @@
                 android:text="@string/boyssports"
                 android:textColor="@color/common_google_signin_btn_text_dark_default"
                 android:textSize="24sp"
-                android:visibility="invisible" />
+                android:visibility="visible" />
 
             <ImageView
                 android:id="@+id/sportsImage0"
@@ -61,7 +62,7 @@
                 android:clickable="true"
                 android:onClick="onClick"
                 android:tag="0"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/sportsText0"
@@ -72,13 +73,13 @@
                 android:onClick="onClick"
                 android:tag="0"
                 android:text=""
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <Space
                 android:id="@+id/space0"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:visibility="invisible" />
+                android:layout_height="20dp"
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/sportsImage1"
@@ -87,7 +88,7 @@
                 android:clickable="true"
                 android:onClick="onClick"
                 android:tag="1"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/sportsText1"
@@ -98,13 +99,13 @@
                 android:onClick="onClick"
                 android:tag="1"
                 android:text=""
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <Space
                 android:id="@+id/space1"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:visibility="invisible" />
+                android:layout_height="20dp"
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/sportsImage2"
@@ -113,7 +114,7 @@
                 android:clickable="true"
                 android:onClick="onClick"
                 android:tag="2"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/sportsText2"
@@ -124,13 +125,13 @@
                 android:onClick="onClick"
                 android:tag="2"
                 android:text=""
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <Space
                 android:id="@+id/space2"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:visibility="invisible" />
+                android:layout_height="20dp"
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/sportsImage3"
@@ -139,7 +140,7 @@
                 android:clickable="true"
                 android:onClick="onClick"
                 android:tag="3"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/sportsText3"
@@ -150,13 +151,13 @@
                 android:onClick="onClick"
                 android:tag="3"
                 android:text=""
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <Space
                 android:id="@+id/space3"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:visibility="invisible" />
+                android:layout_height="20dp"
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/sportsImage4"
@@ -165,7 +166,7 @@
                 android:clickable="true"
                 android:onClick="onClick"
                 android:tag="4"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/sportsText4"
@@ -176,13 +177,13 @@
                 android:onClick="onClick"
                 android:tag="4"
                 android:text=""
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <Space
                 android:id="@+id/space4"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:visibility="invisible" />
+                android:layout_height="20dp"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/girlsHeader"
@@ -191,13 +192,13 @@
                 android:text="@string/girlssports"
                 android:textColor="@color/common_google_signin_btn_text_dark_default"
                 android:textSize="24sp"
-                android:visibility="invisible" />
+                android:visibility="visible" />
 
             <Space
                 android:id="@+id/space5"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:visibility="invisible" />
+                android:layout_height="20dp"
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/sportsImage5"
@@ -206,7 +207,7 @@
                 android:clickable="true"
                 android:onClick="onClick"
                 android:tag="5"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/sportsText5"
@@ -217,13 +218,13 @@
                 android:onClick="onClick"
                 android:tag="5"
                 android:text=""
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <Space
                 android:id="@+id/space6"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:visibility="invisible" />
+                android:layout_height="20dp"
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/sportsImage6"
@@ -232,7 +233,7 @@
                 android:clickable="true"
                 android:onClick="onClick"
                 android:tag="6"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/sportsText6"
@@ -243,13 +244,13 @@
                 android:onClick="onClick"
                 android:tag="6"
                 android:text=""
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <Space
                 android:id="@+id/space7"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:visibility="invisible" />
+                android:layout_height="20dp"
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/sportsImage7"
@@ -258,7 +259,7 @@
                 android:clickable="true"
                 android:onClick="onClick"
                 android:tag="7"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/sportsText7"
@@ -269,13 +270,13 @@
                 android:onClick="onClick"
                 android:tag="7"
                 android:text=""
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <Space
                 android:id="@+id/space8"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:visibility="invisible" />
+                android:layout_height="20dp"
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/sportsImage8"
@@ -284,7 +285,7 @@
                 android:clickable="true"
                 android:onClick="onClick"
                 android:tag="8"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/sportsText8"
@@ -295,13 +296,13 @@
                 android:onClick="onClick"
                 android:tag="8"
                 android:text=""
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <Space
                 android:id="@+id/space9"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:visibility="invisible" />
+                android:layout_height="20dp"
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/sportsImage9"
@@ -310,7 +311,7 @@
                 android:clickable="true"
                 android:onClick="onClick"
                 android:tag="9"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/sportsText9"
@@ -321,23 +322,110 @@
                 android:onClick="onClick"
                 android:tag="9"
                 android:text=""
-                android:visibility="invisible" />
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/miscHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Misc."
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="24sp"
+                android:visibility="gone" />
+
+            <Space
+                android:id="@+id/space10"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/sportsImage10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:tag="10"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/sportsText10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:tag="10"
+                android:text=""
+                android:visibility="gone" />
+
+            <Space
+                android:id="@+id/space11"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/sportsImage11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:tag="11"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/sportsText11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:tag="11"
+                android:text=""
+                android:visibility="gone" />
+
+            <Space
+                android:id="@+id/space12"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/sportsImage12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:tag="12"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/sportsText12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:tag="12"
+                android:text=""
+                android:visibility="gone" />
 
         </LinearLayout>
 
     </ScrollView>
 
     <TextView
-        android:text="@string/loading"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:layout_marginTop="14dp"
         android:layout_below="@+id/load"
         android:layout_centerHorizontal="true"
-        android:typeface="sans"
+        android:layout_marginTop="14dp"
+        android:text="@string/loading"
+        android:textColor="@color/accent_material_dark_1"
         android:textColorHighlight="@color/accent_material_dark_1"
-        android:textColor="@color/accent_material_dark_1" />
+        android:typeface="sans" />
 
     <pl.droidsonroids.gif.GifTextView
         android:id="@+id/load"
@@ -346,7 +434,6 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:background="@drawable/loading" />
-
 
 
 </RelativeLayout>

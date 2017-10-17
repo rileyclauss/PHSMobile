@@ -269,14 +269,19 @@
                 android:layout_width="1dp"
                 android:layout_height="20dp" />
 
-            <Button
-                android:id="@+id/credits_btn"
+            <TextView
+                android:id="@+id/textView79"
                 android:layout_width="match_parent"
-                android:clickable="true"
-                android:onClick="onClick"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.05"
-                android:text="Credits" />
+                android:text="@string/credits"
+                android:textAlignment="center"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="11sp" />
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="25dp" />
+
+
         </LinearLayout>
     </ScrollView>
 
