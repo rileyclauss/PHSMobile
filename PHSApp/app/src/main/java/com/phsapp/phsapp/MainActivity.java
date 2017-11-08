@@ -1,7 +1,10 @@
 package com.phsapp.phsapp;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.customtabs.CustomTabsIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -41,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, fineartsActivity.class);
                 break;
             case 'l':
-                intent = new Intent(this, clubActivity.class);
+                CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+                builder.setToolbarColor(Color.DKGRAY);
+                CustomTabsIntent customTabsIntent = builder.build();
+                customTabsIntent.launchUrl(this, Uri.parse("https://penn.phmschools.org/students-and-parents/get-involved/students/clubs"));
                 break;
             case 'p':
                 intent = new Intent(this, photogalleryActivity.class);
@@ -54,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             // Need a case for staff links
         }
-        startActivity(intent);
+        if(target !='l'){startActivity(intent);}
+
     }
 }

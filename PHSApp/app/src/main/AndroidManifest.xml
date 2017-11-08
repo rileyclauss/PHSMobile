@@ -29,7 +29,6 @@
         <activity android:name=".calendarActivity" />
         <activity android:name=".counselingActivity" />
         <activity android:name=".academicsActivity" />
-        <activity android:name=".clubActivity" />
         <activity android:name=".aboutActivity" />
         <activity android:name=".contactActivity" />
         <activity android:name=".photogalleryActivity" />

@@ -10,16 +10,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.crazyhitty.chdev.ks.rssmanager.OnRssLoadListener;
-import com.crazyhitty.chdev.ks.rssmanager.RssItem;
+import com.crazyhitty.chdev.ks.rssmanager.RSS;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 
-public class newsActivity extends AppCompatActivity implements View.OnClickListener, OnRssLoadListener {
+public class newsActivity extends AppCompatActivity implements View.OnClickListener, RssReader.RssCallback{
 
+    private RssReader rssReader = new RssReader(this);
     private String[] links = new String[10];
     private String[] imgLinks = new String[10];
     public newsEntry[] newsEntries = new newsEntry[10];
@@ -66,28 +65,32 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void loadFeeds() {
-        String[] urlArr = {"https://penn.phmschools.org/rss.xml"};
-        new RssReader(newsActivity.this).showDialog(false).urls(urlArr).parse(this);
+        String[] urls = {"https://penn.phmschools.org/rss.xml"};
+        rssReader.loadFeeds(urls);
     }
 
     @Override
-    public void onSuccess(List<RssItem> rssItems) {
-
+    public void rssFeedsLoaded(List<RSS> rssList) {
         visibilityFix();
 
-
-        for (int i = 0; i < 10; i++) {
+        //CrazyHitty: This is where it gets to before it crashes.
+        //Once it reads this line, or any code that uses rssList,
+        // it gives the Attribute Base error:
+        rssList.get(0).getChannel().getItems().get(0).getDescription();
+        /*for (int i = 0; i < 10; i++) {
             x = 0;
             y = 0;
-            if (rssItems.get(i).getDescription().contains("article_image")){
-                x = rssItems.get(i).getDescription().indexOf(" width=");
+            if (rssItems.get(0).getChannel().getItems().get(i).getDescription().contains("article_image")){
+                x = rssItems.get(0).getChannel().getItems().get(i).getDescription().indexOf(" width=");
                 x -= 1;
-                y = rssItems.get(i).getDescription().indexOf("article_image");
+                y = rssItems.get(0).getChannel().getItems().get(i).getDescription().indexOf("article_image");
                 y -= 67;
-                imgLinks[i] = rssItems.get(i).getDescription().substring(y,x);
+                imgLinks[i] = rssItems.get(0).getChannel().getItems().get(i).getDescription().substring(y,x);
             }
             else { imgLinks[i] = "err"; }
-            newsEntries[i] = new newsEntry(rssItems.get(i).getTitle(),imgLinks[i],rssItems.get(i).getCategory(),rssItems.get(i).getLink());
+            newsEntries[i] = new newsEntry(rssItems.get(0).getChannel().getItems().get(i).getTitle(),
+                    imgLinks[i],rssItems.get(0).getChannel().getItems().get(i).getCategory(),
+                    rssItems.get(0).getChannel().getItems().get(i).getLink());
         }
         for (int i = 0; i < 10; i++) {
             if (newsEntries[i].getLink() != null) links[i] = newsEntries[i].getLink();
@@ -97,11 +100,11 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
             if(!imgLinks[i].equals("err")) Picasso.with(this).load(imgLinks[i]).into(views[i]);
             else { views[i].setImageResource(R.drawable.noimage); }
         }
-
+*/
     }
 
     @Override
-    public void onFailure(String message) {
+    public void unableToReadRssFeeds(String message) {
         Toast.makeText(this, "An error occured, please check your internet connection." , Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
