@@ -127,5 +127,6 @@
     <string name="backInfoText">This button will take you back to the previous page.</string>
     <string name="backText">Back</string>
     <string name="credits">App developed by Riley Clauss and Micah Focht. Art by James Morris.</string>
+    <string name="Athleticsmisc">Misc.</string>
 
 </resources>

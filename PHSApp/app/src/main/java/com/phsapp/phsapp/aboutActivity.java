@@ -10,4 +10,8 @@ public class aboutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about); //Sets layout to activity_about
     }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

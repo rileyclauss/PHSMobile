@@ -183,7 +183,7 @@
             android:onClick="onClick"
             android:scaleType="fitCenter"
             android:tag='t'
-            app:srcCompat="@drawable/athleticsiconnew" />
+            app:srcCompat="@drawable/athleticsiconnew" android:focusable="true"/>
 
         <ImageButton
             android:id="@+id/fartsbutton"
@@ -196,7 +196,7 @@
             android:onClick="onClick"
             android:scaleType="fitCenter"
             android:tag='f'
-            app:srcCompat="@drawable/finearts" />
+            app:srcCompat="@drawable/finearts" android:focusable="true"/>
 
         <ImageButton
             android:id="@+id/ClubsButton"
@@ -281,11 +281,13 @@
             android:adjustViewBounds="true"
             android:background="@null"
             android:contentDescription="@string/staff_button"
+            android:clickable="true"
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
             android:tag='z'
-            app:srcCompat="@drawable/key" />
+            app:srcCompat="@drawable/key"
+            android:focusable="true" />
 
         <ImageButton
             android:id="@+id/PhotoGalleryButton"

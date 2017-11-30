@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.crazyhitty.chdev.ks.rssmanager.RSS;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
 
@@ -27,6 +28,9 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
     private TextView loadtext = null;
     public int x, y;
     private pl.droidsonroids.gif.GifTextView loadgif = null;
+
+    public newsActivity() {
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,18 +69,17 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void loadFeeds() {
-        String[] urls = {"https://penn.phmschools.org/rss.xml"};
-        rssReader.loadFeeds(urls);
+        String[] urlArr = {"https://www.drupal.org/planeta/rss.xml"};
+        rssReader.loadFeeds(urlArr);
+
     }
 
     @Override
     public void rssFeedsLoaded(List<RSS> rssList) {
         visibilityFix();
 
-        //CrazyHitty: This is where it gets to before it crashes.
-        //Once it reads this line, or any code that uses rssList,
-        // it gives the Attribute Base error:
-        rssList.get(0).getChannel().getItems().get(0).getDescription();
+
+
         /*for (int i = 0; i < 10; i++) {
             x = 0;
             y = 0;
@@ -105,7 +108,8 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void unableToReadRssFeeds(String message) {
-        Toast.makeText(this, "An error occured, please check your internet connection." , Toast.LENGTH_LONG).show();
+
+        Toast.makeText(this, message , Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

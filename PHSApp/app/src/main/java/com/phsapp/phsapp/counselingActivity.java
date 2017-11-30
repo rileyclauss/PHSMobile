@@ -9,4 +9,9 @@ public class counselingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_counseling);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

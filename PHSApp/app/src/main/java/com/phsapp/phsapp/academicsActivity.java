@@ -23,6 +23,10 @@ public class academicsActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_academics);  //Sets view to activity_academics
         Toast.makeText(this, "Click any button for more information.", Toast.LENGTH_LONG).show();
     }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 
     public void customTab(String url) {  //from onClick function, opens Custom Tab page
         CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();  //basic CustomTabs construction

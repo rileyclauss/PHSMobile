@@ -8,7 +8,7 @@ public class staffActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stafflinks);
+        //setContentView(R.layout.activity_stafflinks);
         //@TODO Design and implement stafflinks
     }
 }

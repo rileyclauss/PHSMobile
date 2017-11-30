@@ -10,4 +10,8 @@ public class contactActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
     }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

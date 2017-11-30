@@ -21,15 +21,16 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View v){
         intent = null;
         char target = v.getTag().toString().charAt(0);
+        String url = null;
         switch (target){
             case 'n':
                intent =  new Intent(this, newsActivity.class);
                 break;
             case 'c':
-                intent = new Intent(this, calendarActivity.class);
+                url = "https://penn.phmschools.org/calendars";
                 break;
             case 'y':
-               intent = new Intent(this, sapActivity.class);
+                url = "https://penn.phmschools.org/students-and-parents";
                 break;
             case 'a':
                 intent = new Intent(this, academicsActivity.class);
@@ -38,16 +39,13 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, counselingActivity.class);
                 break;
             case 't':
-                intent = new Intent(this, athleticsActivity.class);
+                url = "https://penn.phmschools.org/sports-news/";
                 break;
             case 'f':
-                intent = new Intent(this, fineartsActivity.class);
+                url = "https://penn.phmschools.org/performing-arts";
                 break;
             case 'l':
-                CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-                builder.setToolbarColor(Color.DKGRAY);
-                CustomTabsIntent customTabsIntent = builder.build();
-                customTabsIntent.launchUrl(this, Uri.parse("https://penn.phmschools.org/students-and-parents/get-involved/students/clubs"));
+                url = "https://penn.phmschools.org/students-and-parents/get-involved/students/clubs";
                 break;
             case 'p':
                 intent = new Intent(this, photogalleryActivity.class);
@@ -58,9 +56,20 @@ public class MainActivity extends AppCompatActivity {
             case 'x':
                 intent = new Intent(this, contactActivity.class);
                 break;
-            // Need a case for staff links
+            case 'z':
+                intent = new Intent(this, staffActivity.class);
+                break;
         }
-        if(target !='l'){startActivity(intent);}
+        if (target == 'l' || target == 'c' || target == 't' || target == 'f' || target == 'y') {
+            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+            builder.setToolbarColor(Color.DKGRAY);
+            CustomTabsIntent customTabsIntent = builder.build();
+            customTabsIntent.launchUrl(this, Uri.parse(url));
+        }
+
+        else {
+            startActivity(intent);
+        }
 
     }
 }

@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -19,22 +20,21 @@
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".newsActivity" />
-        <activity android:name=".sapActivity" />
-        <activity android:name=".calendarActivity" />
         <activity android:name=".counselingActivity" />
         <activity android:name=".academicsActivity" />
         <activity android:name=".aboutActivity" />
         <activity android:name=".contactActivity" />
         <activity android:name=".photogalleryActivity" />
-        <activity android:name=".athleticsActivity" />
-        <activity android:name=".fineartsActivity" />
+        <activity android:name=".staffActivity" />
 
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>
