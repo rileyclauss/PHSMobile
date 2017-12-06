@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.crazyhitty.chdev.ks.rssmanager.RSS;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -75,12 +76,12 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void rssFeedsLoaded(List<RSS> rssList) {
+    public void rssFeedsLoaded(List<RSS> rssItems) {
         visibilityFix();
 
 
 
-        /*for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             x = 0;
             y = 0;
             if (rssItems.get(0).getChannel().getItems().get(i).getDescription().contains("article_image")){
@@ -103,7 +104,7 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
             if(!imgLinks[i].equals("err")) Picasso.with(this).load(imgLinks[i]).into(views[i]);
             else { views[i].setImageResource(R.drawable.noimage); }
         }
-*/
+
     }
 
     @Override

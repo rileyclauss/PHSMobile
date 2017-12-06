@@ -51,9 +51,9 @@
             android:background="@null"
             android:contentDescription="@string/newsact"
             android:cropToPadding="false"
-            android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag='n'
+            android:onClick="onClick"
+            android:tag="an"
             app:srcCompat="@drawable/news" />
 
         <ImageButton
@@ -67,7 +67,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag='c'
+            android:tag="l0"
             app:srcCompat="@drawable/calendar" />
 
         <ImageButton
@@ -81,7 +81,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag='y'
+            android:tag="l1"
             app:srcCompat="@drawable/parents_and_students" />
 
         <ImageButton
@@ -95,7 +95,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag='a'
+            android:tag="aa"
             app:srcCompat="@drawable/academicsicon" />
     </TableRow>
 
@@ -112,6 +112,8 @@
             android:ems="10"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/news"
+            android:onClick="onClick"
+            android:tag="an"
             android:textColor="?attr/colorControlNormal"
             android:textSize="12sp" />
 
@@ -123,6 +125,8 @@
             android:ems="10"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/calendar"
+            android:onClick="onClick"
+            android:tag="l0"
             android:textColor="?attr/colorControlNormal"
             android:textSize="12sp" />
 
@@ -135,6 +139,8 @@
             android:gravity="center_vertical|fill_vertical|center_horizontal"
             android:lines="2"
             android:text="@string/sap"
+            android:onClick="onClick"
+            android:tag="l1"
             android:textColor="?attr/colorControlNormal"
             android:textSize="12sp" />
 
@@ -146,6 +152,8 @@
             android:ems="10"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/academics"
+            android:onClick="onClick"
+            android:tag="aa"
             android:textColor="?attr/colorControlNormal"
             android:textSize="12sp" />
 
@@ -167,7 +175,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag='o'
+            android:tag="l2"
             app:srcCompat="@drawable/counselingicon" />
 
         <ImageButton
@@ -182,7 +190,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag='t'
+            android:tag="l3"
             app:srcCompat="@drawable/athleticsiconnew" android:focusable="true"/>
 
         <ImageButton
@@ -195,7 +203,7 @@
             android:contentDescription="@string/finearts"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag='f'
+            android:tag="l4"
             app:srcCompat="@drawable/finearts" android:focusable="true"/>
 
         <ImageButton
@@ -209,7 +217,7 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag='l'
+            android:tag="l5"
             app:srcCompat="@drawable/clubs" />
     </TableRow>
 
@@ -226,6 +234,8 @@
             android:ems="10"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/counseling"
+            android:onClick="onClick"
+            android:tag="l2"
             android:textColor="?attr/colorControlNormal"
             android:textSize="12sp" />
 
@@ -239,6 +249,8 @@
             android:paddingLeft="0dp"
             android:paddingStart="0dp"
             android:text="@string/athletics"
+            android:onClick="onClick"
+            android:tag="l3"
             android:textColor="?attr/colorControlNormal"
             android:textSize="12sp" />
 
@@ -252,6 +264,8 @@
             android:paddingLeft="0dp"
             android:paddingStart="0dp"
             android:text="@string/finearts"
+            android:onClick="onClick"
+            android:tag="l4"
             android:textColor="?attr/colorControlNormal"
             android:textSize="12sp" />
 
@@ -263,7 +277,8 @@
             android:ems="10"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/clubs"
-
+            android:onClick="onClick"
+            android:tag="l5"
             android:textColor="?attr/colorControlNormal"
             android:textSize="12sp" />
     </TableRow>
@@ -283,9 +298,9 @@
             android:contentDescription="@string/staff_button"
             android:clickable="true"
             android:cropToPadding="false"
-            android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag='z'
+            android:onClick="onClick"
+            android:tag="az"
             app:srcCompat="@drawable/key"
             android:focusable="true" />
 
@@ -300,8 +315,8 @@
             android:cropToPadding="false"
             android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag='p'
-            app:srcCompat="@drawable/photogallery" />
+            android:tag="l6"
+            app:srcCompat="@drawable/pennwebsite" />
 
         <ImageButton
             android:id="@+id/ContactUsButton"
@@ -312,9 +327,9 @@
             android:background="@null"
             android:contentDescription="@string/contact_us"
             android:cropToPadding="false"
-            android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag='x'
+            android:onClick="onClick"
+            android:tag="ax"
             app:srcCompat="@drawable/contact_us" />
 
         <ImageButton
@@ -326,9 +341,9 @@
             android:background="@null"
             android:contentDescription="@string/abouttext"
             android:cropToPadding="false"
-            android:onClick="onClick"
             android:scaleType="fitCenter"
-            android:tag='u'
+            android:onClick="onClick"
+            android:tag="au"
             app:srcCompat="@drawable/abouticon" />
     </TableRow>
 
@@ -346,6 +361,8 @@
             android:gravity="center_vertical|center_horizontal"
             android:paddingLeft="0dp"
             android:paddingStart="0dp"
+            android:onClick="onClick"
+            android:tag="az"
             android:text="@string/staff"
             android:textColor="?attr/colorControlNormal"
             android:textSize="12sp" />
@@ -356,7 +373,9 @@
             android:layout_height="wrap_content"
             android:layout_weight=".25"
             android:gravity="center_vertical|center_horizontal"
-            android:text="@string/pgallery"
+            android:onClick="onClick"
+            android:tag="l6"
+            android:text="@string/psite"
             android:textColor="?attr/colorControlNormal"
             android:textSize="12sp" />
 
@@ -365,7 +384,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".25"
-
+            android:onClick="onClick"
+            android:tag="ax"
             android:ems="10"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/contact_us"
@@ -381,6 +401,8 @@
             android:gravity="center_vertical|center_horizontal"
             android:paddingLeft="0dp"
             android:paddingStart="0dp"
+            android:onClick="onClick"
+            android:tag="au"
             android:text="@string/abtpenn"
             android:textColor="?attr/colorControlNormal"
             android:textSize="12sp" />

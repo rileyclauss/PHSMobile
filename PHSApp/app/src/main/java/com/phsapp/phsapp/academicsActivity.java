@@ -6,6 +6,7 @@ import android.support.customtabs.CustomTabsIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Space;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ public class academicsActivity extends AppCompatActivity implements View.OnClick
     boolean linkstatus = false;   //flag for whether the buttons are for links or Test Schedule, PoS, etc.
     public TextView textViews[] = new TextView[4];  //Text Views under buttons, used for context
     public Button buttons[] = new Button[4];        //Buttons to access respective pages
+    public Space[] HacSpace = new Space[1];
 
 
     @Override
@@ -22,6 +24,18 @@ public class academicsActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_academics);  //Sets view to activity_academics
         Toast.makeText(this, "Click any button for more information.", Toast.LENGTH_LONG).show();
+        textViews[0] = (TextView) findViewById(R.id.testingDaysTextView); // All these assign to
+        buttons[0] = (Button) findViewById(R.id.testingDaysButton);       // their respective
+        HacSpace[0] = (Space) findViewById(R.id.HacSpacer);
+        // objects
+        textViews[1] = (TextView) findViewById(R.id.programTextView);     //All these assign to
+        buttons[1] = (Button) findViewById(R.id.programButton);           //their respective
+        //objects
+        textViews[2] = (TextView) findViewById(R.id.altedTextView);       //
+        buttons[2] = (Button) findViewById(R.id.altedButton);             //
+        //
+        textViews[3] = (TextView) findViewById(R.id.linksTextView);       //
+        buttons[3] = (Button) findViewById(R.id.linksButton);             // end
     }
     @Override
     protected void onDestroy() {
@@ -36,36 +50,27 @@ public class academicsActivity extends AppCompatActivity implements View.OnClick
 
     boolean links(boolean x) {  //Function to switch between information and Links routine
 
-        textViews[0] = (TextView) findViewById(R.id.testingDaysTextView); // All these assign to
-        buttons[0] = (Button) findViewById(R.id.testingDaysButton);       // their respective
-                                                                          // objects
-        textViews[1] = (TextView) findViewById(R.id.programTextView);     //
-        buttons[1] = (Button) findViewById(R.id.programButton);           //
-                                                                          //
-        textViews[2] = (TextView) findViewById(R.id.altedTextView);       //
-        buttons[2] = (Button) findViewById(R.id.altedButton);             //
-                                                                          //
-        textViews[3] = (TextView) findViewById(R.id.linksTextView);       //
-        buttons[3] = (Button) findViewById(R.id.linksButton);             // end
-
-
         if (!x) {  //x is a holder for whether the user is on the links page or the info page. True is info to links, false is vice versa
-            textViews[0].setText(R.string.HACInfotext);   //sets various text boxes and buttons to
-            buttons[0].setText(R.string.HACText);                                       //their respective info
+            textViews[0].setVisibility(View.VISIBLE);
+            buttons[0].setVisibility(View.VISIBLE);
+            HacSpace[0].setVisibility(View.VISIBLE);
+            textViews[0].setText(R.string.HACInfotext);    //sets various text boxes and buttons to
+            buttons[0].setText(R.string.HACText);                                        //their respective info
 
             textViews[1].setText(R.string.CanvasInfotext);
             buttons[1].setText(R.string.CanvasText);
 
-            textViews[2].setText(R.string.PennSiteInfotext);
-            buttons[2].setText(R.string.PennSiteText);
+            textViews[2].setText(R.string.CleverInfotext);
+            buttons[2].setText(R.string.CleverText);
 
             textViews[3].setText(R.string.backInfoText);
             buttons[3].setText(R.string.backText);
             return true;
         }
         else {
-            textViews[0].setText(R.string.schoolCalendarInfo);
-            buttons[0].setText(R.string.school_schedule);
+            textViews[0].setVisibility(View.GONE);
+            buttons[0].setVisibility(View.GONE);
+            HacSpace[0].setVisibility(View.GONE);
 
             textViews[1].setText(R.string.programofstudiesInfo);
             buttons[1].setText(R.string.program_of_studies);
@@ -84,9 +89,6 @@ public class academicsActivity extends AppCompatActivity implements View.OnClick
         // this gets it to determine which button is being pressed.
         if (!linkstatus) {       //If the screen is not on the links page
             switch (target) {    //SwitchCase for which button is pressed
-                case 'a':
-                    customTab("https://penn.phmschools.org/calendars#Penn High School Public Calendar"); //Opens to the general penn calendar page
-                    break;
                 case 'b':
                     customTab("https://penn.phmschools.org/program-studies"); //Opens page to PoS page
                     break;
@@ -107,7 +109,7 @@ public class academicsActivity extends AppCompatActivity implements View.OnClick
                     customTab("https://phm.instructure.com/login/ldap"); //opens Canvas page
                     break;
                 case 'c':
-                    customTab("https://penn.phmschools.org"); //Opens Penn website
+                    customTab("http://clever.com/in/phmschools"); //Opens Clever website
                     break;
                 case 'd':
                     linkstatus = links(true); //Pressing the Back button revers the changes made by the "Links" page

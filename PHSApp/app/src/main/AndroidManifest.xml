@@ -25,11 +25,9 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".newsActivity" />
-        <activity android:name=".counselingActivity" />
         <activity android:name=".academicsActivity" />
         <activity android:name=".aboutActivity" />
         <activity android:name=".contactActivity" />
-        <activity android:name=".photogalleryActivity" />
         <activity android:name=".staffActivity" />
 
         <meta-data

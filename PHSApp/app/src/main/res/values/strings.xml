@@ -14,7 +14,7 @@
     <string name="pgact">photo gallery button</string>
     <string name="abtpenn">About Penn</string>
     <string name="news">News</string>
-    <string name="pgallery">Photo Gallery</string>
+    <string name="psite">Penn Website</string>
     <string name="staff">Staff Links</string>
     <string name="athbtn">athletics button</string>
     <string name="clubsbtn">clubs button</string>
@@ -110,11 +110,9 @@
     <string name="boyssports">Boys\' Sports</string>
     <string name="noentries">No entries at this time, check The Pennant for more information.</string>
     <string name="noTitle">No Title Available</string>
-    <string name="school_schedule">School Year Schedule</string>
     <string name="program_of_studies">Program of Studies</string>
     <string name="alted_information">Alternative Education Information</string>
-    <string name="links">Links</string>
-    <string name="schoolCalendarInfo">This is a page containing multiple helpful calendars for students, parent, and staff. There are calendars for: black or gold days, testing dates, athletic events, fine arts events, and general building usage events.</string>
+    <string name="links">HAC/Canvas/Academic Links</string>
     <string name="programofstudiesInfo">Our mission is to provide an educational environment for students to reach their highest academic achievement. We will prepare them to be responsible citizens with the skills to be lifelong learners ready to adapt to a changing world.</string>
     <string name="altedInfo">P-H-M offers two alternative programs designed to provide each student with the resources and support necessary to successfully complete a program of studies leading to a high school diploma as well as obtain marketable work skills.</string>
     <string name="linksInfo">Penn High School enhances student achievement and supports student learning through the use of many digital resources.</string>
@@ -122,8 +120,8 @@
     <string name="HACText">Home Access Center (HAC)</string>
     <string name="CanvasInfotext">Canvas is the system Penn teachers use to distribute agendas and assignments to students throughout the year. This button will take you to the login page.</string>
     <string name="CanvasText">PHM Canvas</string>
-    <string name="PennSiteInfotext">The Penn website contains all information pertinent to Penn students and staff. This button will take you to the homepage.</string>
-    <string name="PennSiteText">Penn Website</string>
+    <string name="CleverInfotext">HOLDER TEXT. HOLDER TEXT. HOLDER TEXT. HOLDER TEXT. HOLDER TEXT. HOLDER TEXT. HOLDER TEXT. HOLDER TEXT. HOLDER TEXT. HOLDER TEXT. </string>
+    <string name="CleverText">Clever</string>
     <string name="backInfoText">This button will take you back to the previous page.</string>
     <string name="backText">Back</string>
     <string name="credits">App developed by Riley Clauss and Micah Focht. Art by James Morris.</string>
