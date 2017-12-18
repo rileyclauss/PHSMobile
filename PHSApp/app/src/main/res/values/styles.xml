@@ -16,8 +16,7 @@
         <item name="android:textColorPrimary">?attr/colorAccent</item>
         <item name="android:textColorSecondary">@color/accent_material_dark_1</item>
         <item name="android:textColorSecondaryInverse">@color/accent_material_dark_1</item>
-        <item name="android:colorBackground">@color/common_google_signin_btn_text_dark_focused
-        </item>
+        <item name="android:colorBackground">@android:color/background_dark</item>
     </style>
 
     <style name="NewPennTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

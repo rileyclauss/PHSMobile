@@ -1,9 +1,7 @@
 package com.phsapp.phsapp;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.customtabs.CustomTabsIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,27 +18,31 @@ import java.util.List;
 
 public class newsActivity extends AppCompatActivity implements View.OnClickListener, RssReader.RssCallback{
 
+
+    public newsEntry[] newsEntries = new newsEntry[10];
     private RssReader rssReader = new RssReader(this);
+
+
     private String[] links = new String[10];
     private String[] imgLinks = new String[10];
-    public newsEntry[] newsEntries = new newsEntry[10];
     private TextView[] textViews = new TextView[10];
     private ImageView[] views = new ImageView[10];
     private TextView loadtext = null;
     public int x, y;
     private pl.droidsonroids.gif.GifTextView loadgif = null;
 
-    public newsActivity() {
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
+
         loadtext = (TextView) findViewById(R.id.textView);
         loadgif = (pl.droidsonroids.gif.GifTextView) findViewById(R.id.load);
+
         declareStatic();
-        loadFeeds();
+        String[] urlArr = {"https://www.drupal.org/planeta/rss.xml"};
+        rssReader.loadFeeds(urlArr);
     }
 
     private void declareStatic(){
@@ -69,17 +71,10 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private void loadFeeds() {
-        String[] urlArr = {"https://www.drupal.org/planeta/rss.xml"};
-        rssReader.loadFeeds(urlArr);
-
-    }
 
     @Override
     public void rssFeedsLoaded(List<RSS> rssItems) {
         visibilityFix();
-
-
 
         for (int i = 0; i < 10; i++) {
             x = 0;
@@ -109,7 +104,6 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void unableToReadRssFeeds(String message) {
-
         Toast.makeText(this, message , Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
@@ -127,9 +121,6 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         int i = Integer.parseInt(v.getTag().toString());
-        String url = links[i];
-        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-        CustomTabsIntent customTabsIntent = builder.build();
-        customTabsIntent.launchUrl(this, Uri.parse(url));
+        customTab.openTab(this,links[i]);
     }
 }

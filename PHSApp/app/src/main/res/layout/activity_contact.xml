@@ -32,34 +32,37 @@
             android:layout_width="match_parent"
             android:layout_height="15dp"/>
 
-        <TextView
-            android:text="In Person:"
+        <EditText
+            android:id="@+id/staffName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:id="@+id/textView80"
+            android:hint="@string/staff_name"
+            android:inputType="text"
+            android:textAlignment="center"
             android:textSize="18sp"
-            android:textStyle="normal|bold"
-            android:textAlignment="center" />
+            android:textStyle="normal" />
 
-        <TextView
-            android:text="56100 Bittersweet Road "
+        <EditText
+            android:id="@+id/staffPosition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView81"
+            android:hint="@string/staff_position"
             android:textAlignment="center" />
 
-        <TextView
-            android:text="Mishawaka IN 46545 "
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView82"
-            android:textAlignment="center" />
+            android:onClick="onClick"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/search_directory"/>
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="15dp"/>
+
         <TextView
-            android:text="Over the Phone"
+            android:text="@string/main_office"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView83"
@@ -68,16 +71,19 @@
             android:textAlignment="center" />
 
         <TextView
-            android:text="(574) 258-9500"
+            android:id="@+id/textView84"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView84"
-            android:textAlignment="center" />
+            android:text="@string/_574_258_9500"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="15dp"/>
+
         <TextView
-            android:text="Attendance"
+            android:text="@string/attendance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView85"
@@ -86,18 +92,19 @@
             android:textAlignment="center" />
 
         <TextView
-            android:text="(574) 258-9501"
+            android:id="@+id/textView86"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView86"
-            android:textAlignment="center" />
+            android:text="@string/_574_258_9501"
+            android:textAlignment="center"
+            android:textSize="18sp" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="15dp"/>
 
         <TextView
-            android:text="Over Email"
+            android:text="@string/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView87"
@@ -106,12 +113,12 @@
             android:textAlignment="center" />
 
         <TextView
-            android:text="crallo@phm.k12.in.us"
+            android:id="@+id/textView88"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView88"
-            android:textAlignment="center" />
-
+            android:text="@string/schooladdress"
+            android:textAlignment="center"
+            android:textSize="18sp" />
     </LinearLayout>
 
 </RelativeLayout>

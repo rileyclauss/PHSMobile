@@ -2,5 +2,72 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/staffHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/staffheader" />
 
+    <Button
+        android:id="@+id/testingDaysButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:tag='a'
+        android:text="@string/CanvasText"
+        android:visibility="visible"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/testingDaysTextView"
+        android:text="@string/CanvasInfotext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:visibility="visible" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <Button
+        android:clickable="true"
+        android:onClick="onClick"
+        android:id="@+id/programButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tac"
+        android:tag='b'
+        android:focusable="true" />
+    <TextView
+        android:id="@+id/programTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tacInfoText"
+        android:gravity="center_horizontal"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <Button
+        android:id="@+id/altedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:tag='c'
+        android:text="@string/aesop"
+        android:focusable="true" />
+    <TextView
+        android:id="@+id/altedTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aesopInfoText"
+        android:gravity="center_horizontal"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
 </LinearLayout>

@@ -126,5 +126,18 @@
     <string name="backText">Back</string>
     <string name="credits">App developed by Riley Clauss and Micah Focht. Art by James Morris.</string>
     <string name="Athleticsmisc">Misc.</string>
+    <string name="tac">TAC</string>
+    <string name="aesop">Aesop</string>
+    <string name="tacInfoText">Teacher Access Center (TAC) is a browser-based student information system that allows you to view and record information about the students for whom you are responsible. TAC can be used by teachers, substitutes, and activity advisors.</string>
+    <string name="aesopInfoText">AESOPFILLERTEXTAESOPFILLERTEXTAESOPFILLERTEXTAESOPFILLERTEXTAESOPFILLERTEXTAESOPFILLERTEXTAESOPFILLERTEXTAESOPFILLERTEXT</string>
+    <string name="search_directory">Search Directory</string>
+    <string name="staff_name">Staff Name</string>
+    <string name="staff_position">Staff Position</string>
+    <string name="main_office">Main Office:</string>
+    <string name="_574_258_9500">(574) 258-9500</string>
+    <string name="attendance">Attendance:</string>
+    <string name="_574_258_9501">(574) 258-9501</string>
+    <string name="address">Address:</string>
+    <string name="schooladdress">Penn High School, 56100 Bittersweet Rd., Mishawaka, IN 46545</string>
 
 </resources>

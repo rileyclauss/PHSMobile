@@ -42,12 +42,6 @@ public class academicsActivity extends AppCompatActivity implements View.OnClick
         super.onDestroy();
     }
 
-    public void customTab(String url) {  //from onClick function, opens Custom Tab page
-        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();  //basic CustomTabs construction
-        CustomTabsIntent customTabsIntent = builder.build();                //
-        customTabsIntent.launchUrl(this, Uri.parse(url));                   //url is link to desired page
-    }
-
     boolean links(boolean x) {  //Function to switch between information and Links routine
 
         if (!x) {  //x is a holder for whether the user is on the links page or the info page. True is info to links, false is vice versa
@@ -90,10 +84,10 @@ public class academicsActivity extends AppCompatActivity implements View.OnClick
         if (!linkstatus) {       //If the screen is not on the links page
             switch (target) {    //SwitchCase for which button is pressed
                 case 'b':
-                    customTab("https://penn.phmschools.org/program-studies"); //Opens page to PoS page
+                    customTab.openTab(this, "https://penn.phmschools.org/program-studies"); //Opens page to PoS page
                     break;
                 case 'c':
-                    customTab("https://penn.phmschools.org/alternative-education-0");  //Opens page to AltEd page
+                    customTab.openTab(this, "https://penn.phmschools.org/alternative-education-0");  //Opens page to AltEd page
                     break;
                 case 'd':
                     linkstatus = links(false);  //Pressing the button labelled "Links" goes to the 'links' function, switching the buttons & text
@@ -103,13 +97,13 @@ public class academicsActivity extends AppCompatActivity implements View.OnClick
         else{
             switch (target) { //SwitchCase for which button is pressed
                 case 'a':
-                    customTab("http://hac.phmschools.org/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess%2fClasses%2fClasswork"); //Opens HAC Page
+                    customTab.openTab(this, "http://hac.phmschools.org/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess%2fClasses%2fClasswork"); //Opens HAC Page
                     break;
                 case 'b':
-                    customTab("https://phm.instructure.com/login/ldap"); //opens Canvas page
+                    customTab.openTab(this, "https://phm.instructure.com/login/ldap"); //opens Canvas page
                     break;
                 case 'c':
-                    customTab("http://clever.com/in/phmschools"); //Opens Clever website
+                    customTab.openTab(this, "http://clever.com/in/phmschools"); //Opens Clever website
                     break;
                 case 'd':
                     linkstatus = links(true); //Pressing the Back button revers the changes made by the "Links" page

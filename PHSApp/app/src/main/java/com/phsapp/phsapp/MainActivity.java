@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     public Intent intent = new Intent();
@@ -56,10 +59,7 @@ public class MainActivity extends AppCompatActivity {
             case 'l':
                 int site = v.getTag().toString().charAt(1);
                 site -= '0';
-                CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-                builder.setToolbarColor(Color.DKGRAY);
-                CustomTabsIntent customTabsIntent = builder.build();
-                customTabsIntent.launchUrl(this, Uri.parse(links[site]));
+                customTab.openTab(this, links[site]);
                 break;
         }
 
