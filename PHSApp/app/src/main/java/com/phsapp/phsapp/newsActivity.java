@@ -13,23 +13,26 @@ import com.crazyhitty.chdev.ks.rssmanager.RSS;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
 import com.squareup.picasso.Picasso;
 
+
+import java.io.InputStream;
 import java.util.List;
 
 
-public class newsActivity extends AppCompatActivity implements View.OnClickListener, RssReader.RssCallback{
+public class newsActivity extends AppCompatActivity implements View.OnClickListener{
+
+//}, RssReader.RssCallback{
 
 
     public newsEntry[] newsEntries = new newsEntry[10];
-    private RssReader rssReader = new RssReader(this);
+   // private RssReader rssReader = new RssReader(this);
 
 
     private String[] links = new String[10];
     private String[] imgLinks = new String[10];
     private TextView[] textViews = new TextView[10];
     private ImageView[] views = new ImageView[10];
-    private TextView loadtext = null;
     public int x, y;
-    private pl.droidsonroids.gif.GifTextView loadgif = null;
+
 
 
     @Override
@@ -37,17 +40,25 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-        loadtext = (TextView) findViewById(R.id.textView);
-        loadgif = (pl.droidsonroids.gif.GifTextView) findViewById(R.id.load);
+
+
 
         declareStatic();
         String[] urlArr = {"https://www.drupal.org/planeta/rss.xml"};
-        rssReader.loadFeeds(urlArr);
+       // rssReader.loadFeeds(urlArr);
+    }
+
+
+
+
+    @Override
+    public void onClick(View v) {
+
     }
 
     private void declareStatic(){
 
-        textViews[0] = (TextView) findViewById(R.id.newsText0);
+        /*textViews[0] = (TextView) findViewById(R.id.newsText0);
         textViews[1] = (TextView) findViewById(R.id.newsText1);
         textViews[2] = (TextView) findViewById(R.id.newsText2);
         textViews[3] = (TextView) findViewById(R.id.newsText3);
@@ -68,14 +79,15 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
         views[7] = (ImageView) findViewById(R.id.newsImage7);
         views[8] = (ImageView) findViewById(R.id.newsImage8);
         views[9] = (ImageView) findViewById(R.id.newsImage9);
-
+*/
     }
 
 
+
+/*
     @Override
     public void rssFeedsLoaded(List<RSS> rssItems) {
         visibilityFix();
-
         for (int i = 0; i < 10; i++) {
             x = 0;
             y = 0;
@@ -122,5 +134,5 @@ public class newsActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         int i = Integer.parseInt(v.getTag().toString());
         customTab.openTab(this,links[i]);
-    }
+    } */
 }
