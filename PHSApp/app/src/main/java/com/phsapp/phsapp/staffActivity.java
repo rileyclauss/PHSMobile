@@ -26,6 +26,6 @@ public class staffActivity extends AppCompatActivity {
                 url = "https://adminweb.aesoponline.com/access";
                 break;
         }
-        customTab.openTab(this, url);
+        //customTab.openTab(this, url);
     }
 }

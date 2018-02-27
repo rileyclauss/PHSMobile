@@ -1,8 +1,8 @@
 package com.phsapp.phsapp;
 
-import android.net.Uri;
+//import android.net.Uri;
 import android.os.Bundle;
-import android.support.customtabs.CustomTabsIntent;
+//import android.support.customtabs.CustomTabsIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;

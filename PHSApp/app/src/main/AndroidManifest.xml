@@ -4,7 +4,6 @@
 
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26" />
     <application
         android:allowBackup="true"
         android:fullBackupContent="true"
@@ -29,8 +28,8 @@
         <activity android:name=".customTab" />
 
         <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:name="foobar"
+            android:value="android:value"/>
     </application>
 
 </manifest>

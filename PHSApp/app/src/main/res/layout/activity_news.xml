@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_news"
 
     android:layout_width="match_parent"
@@ -32,14 +31,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
             <ImageView
                 android:clickable = "true"
                 android:onClick = "onClick"
                 android:id="@+id/newsImage0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag = "0" />
-
+                android:tag = "0"
+                android:focusable="true" />
             <TextView
                 android:clickable = "true"
                 android:onClick = "onClick"
@@ -49,7 +51,7 @@
                 android:gravity="center_horizontal"
                 android:text=""
                 android:tag = "0"
-                />
+                android:focusable="true" />
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="15dp" />
@@ -59,8 +61,8 @@
                 android:id="@+id/newsImage1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag = "1"/>
-
+                android:tag = "1"
+                android:focusable="true" />
             <TextView
                 android:clickable = "true"
                 android:onClick = "onClick"
@@ -69,7 +71,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text=""
-                android:tag = "1"/>
+                android:tag = "1"
+                android:focusable="true" />
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="15dp" />
@@ -79,8 +82,8 @@
                 android:id="@+id/newsImage2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag = "2" />
-
+                android:tag = "2"
+                android:focusable="true" />
             <TextView
                 android:clickable = "true"
                 android:onClick = "onClick"
@@ -89,7 +92,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text=""
-                android:tag = "2"/>
+                android:tag = "2"
+                android:focusable="true" />
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="15dp" />
@@ -99,7 +103,8 @@
                 android:id="@+id/newsImage3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag = "3" />
+                android:tag = "3"
+                android:focusable="true" />
 
             <TextView
                 android:clickable = "true"
@@ -109,7 +114,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text=""
-                android:tag = "3"/>
+                android:tag = "3"
+                android:focusable="true" />
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="15dp" />
@@ -119,7 +125,8 @@
                 android:id="@+id/newsImage4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag = "4" />
+                android:tag = "4"
+                android:focusable="true" />
 
             <TextView
                 android:clickable = "true"
@@ -129,7 +136,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text=""
-                android:tag = "4"/>
+                android:tag = "4"
+                android:focusable="true" />
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="15dp" />
@@ -139,7 +147,8 @@
                 android:id="@+id/newsImage5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag = "5" />
+                android:tag = "5"
+                android:focusable="true" />
 
             <TextView
                 android:clickable = "true"
@@ -149,7 +158,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text=""
-                android:tag = "5"/>
+                android:tag = "5"
+                android:focusable="true" />
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="15dp" />
@@ -159,7 +169,8 @@
                 android:id="@+id/newsImage6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag = "6" />
+                android:tag = "6"
+                android:focusable="true" />
 
             <TextView
                 android:clickable = "true"
@@ -169,7 +180,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text=""
-                android:tag = "6"/>
+                android:tag = "6"
+                android:focusable="true" />
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="15dp" />
@@ -179,7 +191,8 @@
                 android:id="@+id/newsImage7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag = "7" />
+                android:tag = "7"
+                android:focusable="true" />
 
             <TextView
                 android:clickable = "true"
@@ -189,7 +202,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text=""
-                android:tag = "7"/>
+                android:tag = "7"
+                android:focusable="true" />
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="15dp" />
@@ -199,7 +213,8 @@
                 android:id="@+id/newsImage8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag = "8" />
+                android:tag = "8"
+                android:focusable="true" />
 
             <TextView
                 android:clickable = "true"
@@ -209,7 +224,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text=""
-                android:tag = "8"/>
+                android:tag = "8"
+                android:focusable="true" />
 
             <Space
                 android:layout_width="match_parent"
@@ -220,7 +236,8 @@
                 android:id="@+id/newsImage9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag = "9" />
+                android:tag = "9"
+                android:focusable="true" />
 
             <TextView
                 android:clickable = "true"
@@ -230,7 +247,11 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text=""
-                android:tag = "9"/>
+                android:tag = "9"
+                android:focusable="true" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
 
         </LinearLayout>

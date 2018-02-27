@@ -1,10 +1,10 @@
 package com.phsapp.phsapp;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.net.Uri;
+//import android.graphics.Color;
+//import android.net.Uri;
 import android.os.Bundle;
-import android.support.customtabs.CustomTabsIntent;
+//import android.support.customtabs.CustomTabsIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;

@@ -7,10 +7,6 @@
         <item name="android:background">@drawable/splashscreen</item>
     </style>
 
-    <style name="CustomTextAppearance" parent="TextAppearance.MaterialCalendarWidget.Date">
-        <item name="android:textColor">@color/mcv_text_date_dark</item>
-    </style>
-
     <style name="NewPennTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:colorForeground">@color/accent_material_dark_1</item>
         <item name="android:textColorPrimary">?attr/colorAccent</item>
@@ -18,9 +14,5 @@
         <item name="android:textColorSecondaryInverse">@color/accent_material_dark_1</item>
         <item name="android:colorBackground">@android:color/background_dark</item>
     </style>
-
-    <style name="NewPennTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="NewPennTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
